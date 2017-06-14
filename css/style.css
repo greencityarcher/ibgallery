@@ -1387,7 +1387,8 @@ h1, h2, h3 {
 @media (min-width: 980px) {
   .page-content__wrap {
     padding-left: 45px;
-    padding-right: 45px; } }
+    padding-right: 45px;
+    padding-top: 0; } }
 
 .catalog {
   width: 100%;
