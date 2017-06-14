@@ -1,0 +1,71 @@
+
+
+.main-nav.opened .main-menu {
+  display: block;
+}
+
+.main-nav__btn-wrap {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+}
+
+.main-nav__mobile-menu-btn {
+  display: block;
+  position: relative;
+  padding: 0;
+  width: 21px;
+  height: 21px;
+  background-color: white;
+  outline: none;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    box-sizing: border-box;
+    display: block;
+    width: 21px;
+    border: 1px solid #242424;
+    box-shadow: 0 9px 0 0 #242424, 0 -9px 0 0 #242424;
+  }
+}
+
+/*при открытой навигации кнопка выглядит как крестик*/
+.main-nav.opened .main-nav__mobile-menu-btn {
+  &::before {
+    box-shadow: none;
+    box-sizing: border-box;
+    width: 30px;
+    height: 2px;
+    background-color: #242424;
+    left: 0px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 0px;
+    box-sizing: border-box;
+    display: block;
+    width: 30px;
+    border: 1px solid #242424;
+    height: 2px;
+    background-color: #242424;
+    transform: rotate(-45deg);
+  }
+}
+
+@media #{$tablet-width} {
+  .main-nav {
+    display: block;
+    position: static;
+  }
+
+  .main-nav__mobile-menu-btn {
+    display: none;
+  }
+}

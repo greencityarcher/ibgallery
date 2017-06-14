@@ -1,0 +1,139 @@
+
+.good{
+  box-sizing: border-box;
+  position: relative;
+  width: 265px;
+  min-height: 300px;
+}
+
+.good__base-info{
+  position: relative;
+  min-height: 300px;
+}
+
+
+.good__link{
+  position: relative;
+  text-decoration: none;
+  display: block;
+  font-size: 0;
+  margin-bottom: 18px;
+}
+.good__id{
+  display: none;
+}
+.good:hover .good__id{
+  display: inline-block;
+  position: absolute;
+  bottom:0;
+  left: 0;
+  font-size: 14px;
+  color: white;
+  line-height: 32px;
+  background-color: #282828;
+  padding-left: 7px;
+  padding-right: 7px;
+  z-index: 10;
+}
+
+
+
+
+.good__names{
+  max-width: 265px;
+
+}
+
+.good:hover .good__back{
+  position: absolute;
+  box-sizing: border-box;
+  padding: 13px;
+  top:-13px;
+  left: -13px;
+  display: block;
+  width: 292px;
+  z-index: 20;
+  background-color: white;
+  border-radius: 1px;
+  box-shadow: 0 0 15px rgba(49, 54, 54, 0.25);
+}
+.good:hover .good__link{
+  position: relative;
+}
+.good__names{
+  position: relative;
+}
+
+
+.good:hover .good__info{
+  display: block;
+}
+
+
+
+.good__photo{
+  width: 265px;
+  height: 175px;
+}
+.good__brand{
+  font-size: 16px;
+  line-height: 20px;
+  color: #6e6e6e;
+
+}
+.good__name{
+  margin: 0;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.good__name-link{
+  text-decoration: underline;
+  color: #282828;
+}
+
+
+.good__name-link:hover{
+  color: #ff851e;
+}
+.good__price{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  font-size: 20px;
+  line-height: 22px;
+  color: #282828;
+}
+.good__price-value{
+  font-size: 28px;
+  line-height: 22px;
+  color: #282828;
+}
+
+.good__info{
+  display: none;
+}
+
+.good__description{
+  color: #282828;
+font-size: 16px;
+font-weight: 300;
+line-height: 18px;
+}
+.good__to-liked{
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d4d4d4;
+  background-image:linear-gradient(to top, #dcdcdc, #f4f3f4);
+  color:#807f76;
+  line-height: 35px;
+  text-decoration: none;
+  padding-left: 12px;
+  padding-right: 12px;
+
+}

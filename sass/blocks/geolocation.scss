@@ -1,0 +1,74 @@
+
+.geolocation{
+
+  position: relative;
+}
+
+
+.geolocation__current{
+  position: absolute;
+  right:55px;
+  bottom: -6px;
+  font-size: 11px;
+  color:#e6432f;
+  text-decoration: none;
+  letter-spacing: 1px;
+
+}
+.geolocation__current-style{
+  position: relative;
+
+
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left:0;
+    border-bottom: 2px dotted #e6432f;
+    width: 100%;
+  }
+}
+
+.geolocation__picker{
+  display: none;
+  position: absolute;
+  z-index: 50;
+  top:0;
+  left:0;
+
+  background-color: white;
+  padding: 20px 10px;
+  border: 1px solid #bcbebd;
+  width: 220px;
+  height: 250px;
+  overflow-y: scroll;
+}
+
+/*Геолокация скрыта, так как от нее отказались*/
+.geolocation:hover .geolocation__picker{
+  display: none;
+}
+
+.geolocation__header{
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+
+}
+.geolocation__region-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.geolocation__region-link{
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ff851e;
+  cursor: pointer;
+}
+
+.geolocation__region-link:hover{
+  color:#eb6500;
+}

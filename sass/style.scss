@@ -1,0 +1,25 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "global/fonts.scss";
+@import "global/grid.scss";
+@import "blocks/overlay.scss";
+@import "blocks/all-page.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-menu.scss";
+@import "blocks/search.scss";
+@import "blocks/search-hint.scss";
+@import "blocks/main-nav.scss";
+
+@import "blocks/left-sidebar.scss";
+@import "blocks/sub-menu.scss";
+@import "blocks/catalog-menu.scss";
+
+@import "blocks/call-request.scss";
+@import "blocks/fabrics-menu.scss";
+
+@import "blocks/page-content.scss";
+@import "blocks/catalog.scss";
+@import "blocks/good.scss";
+@import "blocks/geolocation.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/hidden.scss";

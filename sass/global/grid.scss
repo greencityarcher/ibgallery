@@ -1,0 +1,39 @@
+
+.grid{
+  max-width: 100%;
+  min-width: 320px;
+position: relative;
+}
+
+.grid__sidebar{
+  display: none;
+}
+.grid__main-wrapper{
+  position: relative;
+
+}
+
+
+.grid__page-content{
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+@media #{$tablet-width}{
+
+  .grid__sidebar{
+    display: block;
+    position: absolute;
+    width: 65px;
+    top: 0;
+    bottom:0;
+    background-color: #f4f3ef;
+
+  }
+  .grid__main-info-wrap{
+    box-sizing: border-box;
+    margin-left: 65px;
+  }
+}

@@ -1,0 +1,12 @@
+.catalog{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.catalog__item{
+  margin-right: 26px;
+  margin-bottom: 26px;
+  float: left;
+}

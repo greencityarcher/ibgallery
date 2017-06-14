@@ -1,0 +1,47 @@
+.call-request__number{
+  display: none;
+}
+  .call-request__popup-link{
+    display: block;
+    width: 20px;
+    height: 22px;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-image: svg-load('../icons/phone.svg', stroke=#404040);
+  }
+
+@media #{$desktop-width}{
+  .call-request{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .call-request__number{
+    display: block;
+    font-size: 22px;
+    line-height: 31px;
+    font-weight: 400;
+    color:#282828;
+    text-decoration: none;
+  }
+  .call-request__popup-link{
+    background-image: none;
+    position: relative;
+    width: auto;
+    color:#e6432f;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: 6px;
+      left:0;
+      border-bottom: 2px dotted #e6432f;
+      width: 100%;
+    }
+  }
+
+}

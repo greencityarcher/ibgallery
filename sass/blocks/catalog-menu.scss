@@ -1,0 +1,215 @@
+.catalog-menu {
+  .catalog-menu__category-list {
+    display: none;
+    list-style-type: none;
+  }
+  /*стили для ссылок категорий в каталоге*/
+  .catalog-menu__section-link {
+    background-color: #f4f3ef;
+    padding-left: 70px;
+    width: 100%;
+  }
+}
+/*место под иконки*/
+.catalog-menu__section-link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 37px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*вставка иконок
+  иконка и модификатор элемента имеют одинаковое название*/
+/*серые иконки*/
+@each $category in $catalog-menu-categories {
+  .catalog-menu__section-link--#{$category}::before {
+    background-image: svg-load('../icons/#{$category}.svg', stroke=#95979a, fill=none, stroke-width=2);
+  }
+  /*оранжевые иконки*/
+  @each $link in $catalog-icon-links {
+    .catalog-menu__section-link--#{$link}::before {
+      background-image: svg-load('../icons/#{$link}.svg', stroke=#ff8618, fill=none, stroke-width=2);
+    }
+  }
+
+  .catalog-menu__item--enter-wide {
+    display: none;
+  }
+}
+/*дубликаты этих ссылок вынесены на уровень вверх в мобильном меню*/
+
+.catalog-menu__item--discount,
+.catalog-menu__item--instock {
+  display: none;
+}
+/*стили для 980*/
+@media #{$tablet-width} {
+  .catalog-menu {
+    display: block;
+    box-sizing: border-box;
+    position: fixed;
+    top:70px;
+    z-index: 20;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 65px;
+    height: auto;
+    background-color: #f4f3ef;
+    box-shadow: none;
+    font-size: 0;
+
+    &:hover {
+      width: 320px;
+      overflow: visible;
+      border-right: 2px solid $catalog-menu-border-color;
+    }
+    /*
+  поведение пунктов первого уровня меню по наведению мыши
+  */
+    .catalog-menu__section-link:hover {
+      background-color: #ff851e;
+      border-color: #ff851e;
+      color: white;
+    }
+    @each $icon in $catalog-icons {
+      .catalog-menu__section-link--#{$icon}:hover::before {
+        background-image: svg-load('../icons/#{$icon}.svg', stroke=#ffffff, fill=none, stroke-width=2);
+      }
+    }
+    /*ссылка для входа стилизуется отдельно*/
+    .catalog-menu__section-link--personal {
+      margin-top: 50px;
+      border-top: 2px solid $catalog-menu-border-color;
+
+      &::before {
+        background-image: svg-load('../icons/personal.svg', stroke=#e7412a, fill=none, stroke-width=2);
+      }
+    }
+    /*убираем автоматические стрелочки для ссылок на подменю*/
+    .catalog-menu__section-link::after {
+      display: none;
+    }
+    /*показываем их по наведению*/
+    .catalog-menu__section-link:hover::after {
+      display: block;
+      border-color: white;
+    }
+    /*показываем скрытые в мобильной версии ссылки-дубликаты*/
+    .catalog-menu__item--discount,
+    .catalog-menu__item--instock {
+      display: block;
+    }
+    /*сворачиваем короткие пункты меню*/
+    .catalog-menu__item--collapsing {
+      width: 160px;
+    }
+    /*переносим пункт меню , чтобы он находился рядом с предыдущим*/
+    .catalog-menu__item--collapsing-right {
+      margin-left: 160px;
+      box-sizing: border-box;
+      margin-top: -50px;
+      border-left: 2px solid $catalog-menu-border-color;
+    }
+    /*стилизуем выпадающее меню подкатегорий*/
+    /*Заголовок категории*/
+    .catalog-menu__category-header {
+      display: inline;
+      background: none;
+      border-bottom: none;
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 50px;
+      color: $lightorange-color;
+      text-decoration: none;
+      margin-bottom: 14px;
+
+      &:hover {
+        background: none;
+      }
+    }
+    /*контейнер выпадающего подменю каталога*/
+    .catalog-menu__category-list {
+      display: none;
+      position: absolute;
+      list-style-type: none;
+      top: 0;
+      bottom: 0;
+      left: 320px;
+      width: 320px;
+      z-index: 10;
+      box-shadow: 3px 0 8px rgba(49, 54, 54, 0.2);
+      background-color: white;
+      padding-left: 25px;
+      padding-top: 20px;
+      font-family: "Helvetica Neue Light", Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 23px;
+      font-weight: 200;
+    }
+    /*списки ссылок на подкатегории*/
+    .catalog-menu__subcategory-list {
+      list-style-type: none;
+    }
+    /*при наведении на категорию показывается выпадающее подменю этой категории*/
+    .catalog-menu__item:hover .catalog-menu__category-list {
+      display: block;
+    }
+
+    .catalog-menu__category-name {
+      display: inline;
+      background: none;
+      border-bottom: none;
+      line-height: 25px;
+      text-decoration: none;
+      color: #282828;
+
+      &:hover {
+        color: $lightorange-color;
+        text-decoration: underline;
+        background: none;
+      }
+      /*убираем стрелки у ссылок на раскрывающиеся категории*/
+      &:after {
+        display: none;
+      }
+    }
+    /*стилизуем ссылки последнего уровня*/
+    .catalog-menu__subcategory-link {
+      display: inline;
+      background: none;
+      border-bottom: none;
+      text-decoration: none;
+      color: $blackgrey-color;
+      line-height: 23px;
+
+      &:hover {
+        color: $lightorange-color;
+        text-decoration: underline;
+        background: none;
+      }
+    }
+  }
+}
+@media #{$desktop-width} {
+  .catalog-menu__section-link--enter {
+    margin-top: 100px;
+  }
+  /*возвращаем свернутые на планшете пункты меню в изначальное состояние*/
+  .catalog-menu__item--collapsing {
+    width: 318px;
+    border: none;
+  }
+
+  .catalog-menu__item--collapsing-right {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}

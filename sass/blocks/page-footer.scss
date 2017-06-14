@@ -1,0 +1,224 @@
+.page-footer {
+  box-sizing: border-box;
+  width: 100%;
+  background: #f4f3ef;
+  position: relative;
+}
+.page-footer__user-id{
+    display: block;
+    box-sizing: border-box;
+    height: 35px;
+    width: 100%;
+    background-color: #ff851e;
+    line-height: 35px;
+    color: white;
+    text-align: center;
+    order: -1;
+}
+.page-footer__copy-info{
+  display: none;
+}
+.page-footer__nav-section{
+  display: none;
+}
+.page-footer__nav-section--contacts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 18px;
+}
+.page-footer__nav-section--contacts .page-footer__nav-section-header{
+  display: none;
+}
+.page-footer__nav-link--mail{
+  display: none;
+}
+
+.page-footer__nav-text{
+  display: none;
+}
+
+
+
+.page-footer__social-links{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 63px 8px 53px;
+  background-color: #818181;
+  display: flex;
+  justify-content: space-between;
+  order: -2;
+}
+
+.page-footer__social-link{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page-footer__social-link:hover{
+  background-color: #ff8618;
+}
+
+.page-footer__social-link--vk{
+  background-image: svg-load('../icons/vk-icon.svg' stroke=#ffffff);
+}
+.page-footer__social-link--in{
+  background-image: svg-load('../icons/in-icon.svg' stroke=#ffffff);
+
+}
+.page-footer__social-link--f{
+  background-image: svg-load('../icons/f-icon.svg' stroke=#ffffff);
+}
+
+.page-footer__phone{
+  font-size: 22px;
+  display: block;
+  line-height: 22px;
+  padding-top: 20px;
+  color:#282828;
+  order:2;
+}
+
+.page-footer__work-hours{
+  display: block;
+  padding-top: 8px;
+  font-size: 16px;
+  line-height: 23px;
+  color: #282828;
+  order:3;
+}
+
+
+@media #{$tablet-width} {
+  .page-footer {
+    display: block;
+    padding: 15px 28px 26px 25px;
+    background: #818181;
+    width: auto;
+  }
+.page-footer__user-id{
+  display: none;
+}
+  .page-footer__nav {
+    display: flex;
+    justify-content:space-between;
+    border-bottom: 1px solid white;
+    font-family: "Helvetica Neue Light", Helvetica, sans-serif;
+    font-weight: 300;
+    color: white;
+    padding-bottom: 8px;
+
+  }
+
+  .page-footer__nav-section {
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .page-footer__nav-section--contacts {
+    padding-right: 0;
+
+  }
+
+  .page-footer__nav-section-header {
+    margin: 0;
+    font-size: 20px;
+    line-height: 50px;
+
+    font-weight: 100;
+  }
+
+  .page-footer__nav-section--contacts .page-footer__nav-section-header{
+    display: block;
+  }
+  .page-footer__nav-link--mail{
+    display: inline;
+  }
+  .page-footer__nav-text{
+    display: inline;
+  }
+
+  .page-footer__social-links{
+    display:list-item;
+    padding: 25px 0 0 0;
+    text-align: left;
+  }
+  .page-footer__nav-link {
+    text-decoration: underline;
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 27px;
+  }
+
+  .page-footer__nav-link:hover {
+    text-decoration: none;
+  }
+
+  .page-footer__phone {
+    font-size: 18px;
+    line-height: 30px;
+    color: white;
+    padding-top: 0;
+  }
+
+  .page-footer__work-hours{
+    display: none;
+  }
+
+  .page-footer__nav-text {
+    font-size: 14px;
+    line-height: 27px;
+  }
+
+  .page-footer__copy-info {
+    padding-top: 20px;
+    color: #bfbfbf;
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .page-footer__disclaimer {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .page-footer__dac-link {
+    color: white;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  .page-footer__dac-link::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/dac.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+@media #{$desktop-width} {
+  .page-footer {
+    padding-left: 156px;
+    padding-right: 156px;
+  }
+}

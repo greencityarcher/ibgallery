@@ -1,0 +1,215 @@
+.main-menu {
+  display: none;
+/*
+  position: absolute;
+  left: 0;
+  top: 69px;
+*/
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+
+
+  position: relative;
+  width: 100vw;
+  margin-top: 70px;
+
+
+  /*все ссылки мобильного меню одинаковы*/
+  a{
+    @extend .mobile-menu-link;
+  }
+
+  /*ссылки с подкатегориями имеют стрелку*/
+  a:not(:only-child) {
+    @extend .link-arrow;
+  }
+  .main-menu__link--no-sub-mobile{
+    &::after{
+      display: none;
+    }
+  }
+
+  /*стилизация ссылки поиска*/
+
+  .main-menu__link--search {
+    padding-left: 60px;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: svg-load('../icons/search.svg', stroke=#404040, fill=none, stroke-width=2);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px;
+    }
+  }
+
+}
+
+
+
+.main-menu.opened{
+  display: block;
+}
+
+.main-menu__item {
+  position: relative;
+}
+
+
+
+/*подменю показывается по клику*/
+ .main-menu__item.active .sub-menu {
+  display: block;
+}
+
+/* меню фабрик в мобильной версии не раскрывается*/
+.main-menu__item:hover .sub-menu.fabrics-menu {
+  display: none;
+}
+
+
+
+
+
+
+
+
+.main-menu__desktop-link-wrap {
+  display: none;
+}
+
+.main-menu__toggle {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+
+/*-------------tablet styles-------------------------*/
+
+@media #{$tablet-width} {
+  .main-menu {
+    width: auto;
+    display: block;
+    position: fixed;
+    left: 265px;
+    top:0;
+    margin-top: 0;
+    z-index: 20;
+
+    /*подменю показывается при наведении*/
+    .main-menu__item:hover .sub-menu {
+      display: block;
+    }
+
+    .main-menu__link {
+      display: block;
+      position: relative;
+      height: 68px;
+      text-decoration: none;
+      color: #282828;
+      font-size: 16px;
+      line-height: 68px;
+      padding-left: 15px;
+      padding-right: 15px;
+      background-color: white;
+      border: none;
+
+      &:hover {
+        background-color: $lightorange-color;
+        color: white;
+    }
+
+
+  }
+  /*декоративные точки для разворачивающихся пунктов меню*/
+    .main-menu__link:not(:only-child)::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      bottom: 17px;
+      top: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #282828;
+    }
+
+    .main-menu__link:not(:only-child):hover::after {
+      background-color: white;
+      border-color: white;
+    }
+
+
+  /*ссылка на каталог в широких версиях скрывается*/
+    .main-menu__link--catalog {
+      display: none;
+    }
+
+  /*ссылка на вход на широких версиях скрывается*/
+    .main-menu__link--user {
+      display: none;
+    }
+
+
+
+
+  }
+
+  .main-menu__item {
+    display: inline-block;
+    width: auto;
+    border-bottom: none;
+
+  }
+
+  .main-menu__item:hover .sub-menu {
+    display: block;
+  }
+
+  .main-menu__item:hover .sub-menu.fabrics-menu {
+    display: block;
+  }
+
+
+
+/*для широких версий ссылка из главного меню скрывается*/
+  .main-menu__item--search {
+    display: none;
+  }
+
+
+
+
+
+
+  .main-menu__item--catalog:hover {
+    overflow: visible;
+  }
+  /*отображение разного текста на разных версиях*/
+
+  .main-menu__desktop-link-wrap {
+    display: inline;
+  }
+
+  .main-menu__mobile-link-wrap {
+    display: none;
+  }
+}
+
+/*скрываем вынесенные на уровень вверх ссылки из мобильного меню*/
+
+@media #{$tablet-width}{
+  .main-menu__item--discount-mobile,
+  .main-menu__item--instock-mobile{
+    display: none;
+  }
+}

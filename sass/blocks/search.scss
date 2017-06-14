@@ -1,0 +1,141 @@
+.search {
+  display: none;
+}
+@media #{$tablet-width} {
+  /*стили поиска для закрытого состояния*/
+  .search {
+    display: block;
+    height: 68px;
+    position: relative;
+    width: 65px;
+
+
+
+    .search__toggle {
+      display: block;
+      width: 65px;
+      height: 68px;
+      position: relative;
+      padding: 0;
+      background-color: #f4f3ef;
+      cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 27px;
+          height: 26px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: svg-load('../icons/search.svg', stroke=#404040, fill=none, stroke-width=2);
+        }
+      }
+    .search__form {
+      display: none;
+    }
+  }
+  /*
+стили поиска для закрытого состояния
+*/
+  .search.closed {
+
+
+
+
+  }
+  /*стилизация поиска в открытом состоянии*/
+  .search.opened {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    height: 68px;
+    z-index: 100;
+
+
+    .search__toggle {
+      background-image: none;
+      background-color:white;
+
+      &::before {
+        content: "";
+        width: 31px;
+        height: 1px;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background-color: #424242;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+
+      &::after {
+        content: "";
+        width: 31px;
+        height: 1px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        background-color: #424242;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+    }
+
+    .search__form {
+      display: flex;
+      flex-grow: 1;
+      flex-wrap: nowrap;
+      position: relative;
+
+    }
+
+    .search__query-input {
+      height: 68px;
+      box-sizing: border-box;
+      flex-grow: 1;
+      margin: 0;
+      padding-left: 28px;
+      padding-right: 28px;
+      border: none;
+      outline: none;
+      font-size: 40px;
+      color: #424242;
+      font-weight: 200;
+
+
+    }
+
+    .search__submit-btn {
+      flex-grow: 0;
+      flex-shrink: 0;
+      font-size: 30px;
+      color: white;
+      box-sizing: border-box;
+      border: none;
+      box-shadow: none;
+      height: 68px;
+      width: 171px;
+      background-color: #ff851e;
+      font-weight: 300;
+      padding: 0;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .search__result {
+      position: absolute;
+      left: 0;
+      top: 69px;
+      display: none;
+    }
+    /*при открытом поиске скрывается user-id*/
+    ~.page-header__user-id{
+      display: none;
+    }
+  }
+}

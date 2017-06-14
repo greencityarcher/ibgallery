@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 30 26" style="enable-background:new 0 0 30 26;" xml:space="preserve">
+
+<g>
+	<line  x1="6" y1="14" x2="6" y2="13"/>
+	<line  x1="14" y1="14" x2="14" y2="13"/>
+	<rect x="1" y="1"  width="9" height="24"/>
+	<rect x="10" y="1"  width="9" height="24"/>
+	<rect x="19" y="1"  width="10" height="8"/>
+	<rect x="19" y="9"  width="10" height="8"/>
+	<rect x="19" y="17"  width="10" height="8"/>
+</g>
+</svg>

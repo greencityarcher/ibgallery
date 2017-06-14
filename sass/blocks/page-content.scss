@@ -1,0 +1,122 @@
+
+
+
+.page-content__wrap{
+  box-sizing: border-box;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #282828;
+}
+
+.page-content__wrap{
+h1{
+  font-size: 50px;
+  margin-bottom: 44px;
+}
+h2{
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+h3{
+  font-size: 25px;
+  line-height: 70px;
+}
+
+p{
+  max-width: 823px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+dl{
+  background-color: #f4f3ef;
+  box-sizing: border-box;
+  max-width: 655px;
+  margin-top: 26px;
+  padding: 30px 120px 29px 64px;
+
+  font-size: 20px;
+  color: #282828;
+  line-height: 28px;
+}
+dt{
+  margin-bottom: 20px;
+}
+
+.list {
+  padding-left: 0;
+  list-style: none;
+  font-size: 16px;
+}
+.list li{
+  padding-left: 65px;
+  position: relative;
+  &::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top:7px;
+    left: 31px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #242424;
+
+  }
+}
+
+.order-list{
+
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+
+/*нумерованный список с номерами из псевдоэлементов
+хорошо отображается до 10 пунктов*/
+.order-list li{
+
+  counter-increment: flag;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 30px;
+
+  &::before{
+    content: counter(flag);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+
+  }
+  &::after{
+    content:".";
+    font-weight: bold;
+    position: absolute;
+    left: 9px;
+    top:0;
+  }
+
+
+}
+
+p a, ul a{
+  color:#ff851e;
+  text-decoration: underline;
+  &:hover{
+    color: #eb6500;
+    text-decoration: none;
+  }
+}
+
+}
+
+
+@media #{$tablet-width}{
+
+  .page-content__wrap{
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+}

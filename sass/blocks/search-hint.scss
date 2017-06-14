@@ -1,0 +1,77 @@
+.search-hint {
+  width: 585px;
+  box-shadow: 0 0 15px rgba(49, 54, 54, 0.25);
+  background: white;
+  font-size: 16px;
+
+  .search-hint__section--categories {
+    color: #818181;
+  }
+
+  .search-hint__section-header {
+    background-color: #f4f3ef;
+    color: #282828;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    padding-left: 27px;
+  }
+
+  .search-hint__results {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 27px;
+    list-style: none;
+  }
+
+  .search-hint__section--goods {
+  .search-hint__result-item {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .search-hint__result-link {
+    color: #282828;
+    text-decoration: none;
+
+    &:hover {
+      color: #ff851e;
+      text-decoration: underline;
+    }
+  }
+
+  .search-hint__result-link--unimportant {
+    color: #818181;
+  }
+
+  .search-hint__unimportant .search-hint__result-link {
+    color: #818181;
+  }
+
+  .search-hint__good-brand {
+    color: #818181;
+  }
+
+  .search-hint__photo-link {
+    font-size: 0;
+    text-decoration: none;
+  }
+
+  .search-hint__good-photo {
+    display: block;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    background-color: #959595;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .search-hint__good-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 18px;
+  }
+}
