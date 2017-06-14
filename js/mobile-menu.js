@@ -24,7 +24,7 @@ $("#mobile-menu-btn").click(function() {
 
 if ($(window).width()<980){
 
-$(".main-menu__link").click(function() {
+$(".mobile-menu-link").click(function() {
     $(this).hide();
     $(this).siblings().show();
     $(this).parent().siblings().hide();

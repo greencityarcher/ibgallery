@@ -715,7 +715,9 @@ h1, h2, h3 {
   /*стили для ссылок категорий в каталоге*/ }
   .catalog-menu .catalog-menu__category-list {
     display: none;
-    list-style-type: none; }
+    list-style: none;
+    margin: 0;
+    padding: 0; }
   .catalog-menu .catalog-menu__section-link {
     background-color: #f4f3ef;
     padding-left: 70px;
@@ -904,6 +906,11 @@ h1, h2, h3 {
 .catalog-menu__item--instock {
   display: none; }
 
+.catalog-menu__subcategory-list {
+  padding: 0;
+  margin: 0;
+  display: none; }
+
 /*стили для 980*/
 @media (min-width: 980px) {
   .catalog-menu {
@@ -1020,14 +1027,17 @@ h1, h2, h3 {
       -webkit-box-shadow: 3px 0 8px rgba(49, 54, 54, 0.2);
               box-shadow: 3px 0 8px rgba(49, 54, 54, 0.2);
       background-color: white;
-      padding-left: 25px;
       padding-top: 20px;
       font-family: "Helvetica Neue Light", Helvetica, sans-serif;
       font-size: 16px;
       line-height: 23px;
       font-weight: 200; }
     .catalog-menu .catalog-menu__subcategory-list {
-      list-style-type: none; }
+      list-style: none;
+      display: block;
+      margin-left: 20px; }
+    .catalog-menu .catalog-menu__subcategory-header {
+      display: none; }
     .catalog-menu .catalog-menu__item:hover .catalog-menu__category-list {
       display: block; }
     .catalog-menu .catalog-menu__category-name {
@@ -1268,6 +1278,7 @@ h1, h2, h3 {
           box-sizing: border-box;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 70px;
   color: #282828; }
 
 .page-content__wrap {
