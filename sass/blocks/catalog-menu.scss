@@ -39,6 +39,11 @@
     }
   }
 
+//в мобильной версии эта ссылка находится на уровень выше
+.catalog-menu__section-link--personal {
+  display: none;
+}
+
   .catalog-menu__item--enter-wide {
     display: none;
   }
@@ -96,6 +101,7 @@
     }
     /*ссылка для входа стилизуется отдельно*/
     .catalog-menu__section-link--personal {
+      display: block;
       margin-top: 50px;
       border-top: 2px solid $catalog-menu-border-color;
 

@@ -605,38 +605,39 @@ h1, h2, h3 {
   .main-nav__mobile-menu-btn::before {
     content: "";
     position: absolute;
-    top: 11px;
+    top: 9.5px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     display: block;
     width: 21px;
     border: 1px solid #242424;
-    -webkit-box-shadow: 0 9px 0 0 #242424, 0 -9px 0 0 #242424;
-            box-shadow: 0 9px 0 0 #242424, 0 -9px 0 0 #242424; }
+    -webkit-box-shadow: 0 8px 0 0 #242424, 0 -8px 0 0 #242424;
+            box-shadow: 0 8px 0 0 #242424, 0 -8px 0 0 #242424; }
 
 /*при открытой навигации кнопка выглядит как крестик*/
-.main-nav.opened .main-nav__mobile-menu-btn::before {
+.main-nav__mobile-menu-btn--close::before {
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 30px;
+  width: 29.5px;
   height: 2px;
   background-color: #242424;
-  left: 0px;
+  left: -4.5px;
+  top: 9.5px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg); }
 
-.main-nav.opened .main-nav__mobile-menu-btn::after {
+.main-nav__mobile-menu-btn--close::after {
   content: "";
   position: absolute;
-  top: 11px;
-  left: 0px;
+  top: 9px;
+  left: -4.5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
-  width: 30px;
+  width: 29.5px;
   border: 1px solid #242424;
   height: 2px;
   background-color: #242424;
@@ -754,6 +755,9 @@ h1, h2, h3 {
 .catalog-menu__section-link--instock::before {
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 37 29.3' style='enable-background:new 0 0 37 29.3;' xml:space='preserve' stroke='%23ff8618' fill='none' stroke-width='2'%3E %3Cg%3E %3Cpolygon points='5,28.3 1,28.3 1,8.6 18.5,1.2 36,8.6 36,28.3 32,28.3 32,12.3 5,12.3 '/%3E %3Cg%3E %3Crect x='10' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='16' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='13' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='19' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='22' y='22.3' width='6' height='6'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E"); }
 
+.catalog-menu__section-link--personal {
+  display: none; }
+
 .catalog-menu__item--enter-wide {
   display: none; }
 
@@ -769,6 +773,9 @@ h1, h2, h3 {
 
 .catalog-menu__section-link--instock::before {
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 37 29.3' style='enable-background:new 0 0 37 29.3;' xml:space='preserve' stroke='%23ff8618' fill='none' stroke-width='2'%3E %3Cg%3E %3Cpolygon points='5,28.3 1,28.3 1,8.6 18.5,1.2 36,8.6 36,28.3 32,28.3 32,12.3 5,12.3 '/%3E %3Cg%3E %3Crect x='10' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='16' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='13' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='19' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='22' y='22.3' width='6' height='6'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E"); }
+
+.catalog-menu__section-link--personal {
+  display: none; }
 
 .catalog-menu__item--enter-wide {
   display: none; }
@@ -786,6 +793,9 @@ h1, h2, h3 {
 .catalog-menu__section-link--instock::before {
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 37 29.3' style='enable-background:new 0 0 37 29.3;' xml:space='preserve' stroke='%23ff8618' fill='none' stroke-width='2'%3E %3Cg%3E %3Cpolygon points='5,28.3 1,28.3 1,8.6 18.5,1.2 36,8.6 36,28.3 32,28.3 32,12.3 5,12.3 '/%3E %3Cg%3E %3Crect x='10' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='16' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='13' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='19' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='22' y='22.3' width='6' height='6'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E"); }
 
+.catalog-menu__section-link--personal {
+  display: none; }
+
 .catalog-menu__item--enter-wide {
   display: none; }
 
@@ -801,6 +811,9 @@ h1, h2, h3 {
 
 .catalog-menu__section-link--instock::before {
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 37 29.3' style='enable-background:new 0 0 37 29.3;' xml:space='preserve' stroke='%23ff8618' fill='none' stroke-width='2'%3E %3Cg%3E %3Cpolygon points='5,28.3 1,28.3 1,8.6 18.5,1.2 36,8.6 36,28.3 32,28.3 32,12.3 5,12.3 '/%3E %3Cg%3E %3Crect x='10' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='16' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='13' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='19' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='22' y='22.3' width='6' height='6'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E"); }
+
+.catalog-menu__section-link--personal {
+  display: none; }
 
 .catalog-menu__item--enter-wide {
   display: none; }
@@ -818,6 +831,9 @@ h1, h2, h3 {
 .catalog-menu__section-link--instock::before {
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 37 29.3' style='enable-background:new 0 0 37 29.3;' xml:space='preserve' stroke='%23ff8618' fill='none' stroke-width='2'%3E %3Cg%3E %3Cpolygon points='5,28.3 1,28.3 1,8.6 18.5,1.2 36,8.6 36,28.3 32,28.3 32,12.3 5,12.3 '/%3E %3Cg%3E %3Crect x='10' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='16' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='13' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='19' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='22' y='22.3' width='6' height='6'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E"); }
 
+.catalog-menu__section-link--personal {
+  display: none; }
+
 .catalog-menu__item--enter-wide {
   display: none; }
 
@@ -833,6 +849,9 @@ h1, h2, h3 {
 
 .catalog-menu__section-link--instock::before {
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 37 29.3' style='enable-background:new 0 0 37 29.3;' xml:space='preserve' stroke='%23ff8618' fill='none' stroke-width='2'%3E %3Cg%3E %3Cpolygon points='5,28.3 1,28.3 1,8.6 18.5,1.2 36,8.6 36,28.3 32,28.3 32,12.3 5,12.3 '/%3E %3Cg%3E %3Crect x='10' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='16' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='13' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='19' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='22' y='22.3' width='6' height='6'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E"); }
+
+.catalog-menu__section-link--personal {
+  display: none; }
 
 .catalog-menu__item--enter-wide {
   display: none; }
@@ -850,6 +869,9 @@ h1, h2, h3 {
 .catalog-menu__section-link--instock::before {
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 37 29.3' style='enable-background:new 0 0 37 29.3;' xml:space='preserve' stroke='%23ff8618' fill='none' stroke-width='2'%3E %3Cg%3E %3Cpolygon points='5,28.3 1,28.3 1,8.6 18.5,1.2 36,8.6 36,28.3 32,28.3 32,12.3 5,12.3 '/%3E %3Cg%3E %3Crect x='10' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='16' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='13' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='19' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='22' y='22.3' width='6' height='6'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E"); }
 
+.catalog-menu__section-link--personal {
+  display: none; }
+
 .catalog-menu__item--enter-wide {
   display: none; }
 
@@ -865,6 +887,9 @@ h1, h2, h3 {
 
 .catalog-menu__section-link--instock::before {
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 37 29.3' style='enable-background:new 0 0 37 29.3;' xml:space='preserve' stroke='%23ff8618' fill='none' stroke-width='2'%3E %3Cg%3E %3Cpolygon points='5,28.3 1,28.3 1,8.6 18.5,1.2 36,8.6 36,28.3 32,28.3 32,12.3 5,12.3 '/%3E %3Cg%3E %3Crect x='10' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='16' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='13' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='19' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='22' y='22.3' width='6' height='6'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E"); }
+
+.catalog-menu__section-link--personal {
+  display: none; }
 
 .catalog-menu__item--enter-wide {
   display: none; }
@@ -882,6 +907,9 @@ h1, h2, h3 {
 .catalog-menu__section-link--instock::before {
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 37 29.3' style='enable-background:new 0 0 37 29.3;' xml:space='preserve' stroke='%23ff8618' fill='none' stroke-width='2'%3E %3Cg%3E %3Cpolygon points='5,28.3 1,28.3 1,8.6 18.5,1.2 36,8.6 36,28.3 32,28.3 32,12.3 5,12.3 '/%3E %3Cg%3E %3Crect x='10' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='16' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='13' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='19' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='22' y='22.3' width='6' height='6'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E"); }
 
+.catalog-menu__section-link--personal {
+  display: none; }
+
 .catalog-menu__item--enter-wide {
   display: none; }
 
@@ -897,6 +925,9 @@ h1, h2, h3 {
 
 .catalog-menu__section-link--instock::before {
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 37 29.3' style='enable-background:new 0 0 37 29.3;' xml:space='preserve' stroke='%23ff8618' fill='none' stroke-width='2'%3E %3Cg%3E %3Cpolygon points='5,28.3 1,28.3 1,8.6 18.5,1.2 36,8.6 36,28.3 32,28.3 32,12.3 5,12.3 '/%3E %3Cg%3E %3Crect x='10' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='16' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='13' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='19' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='22' y='22.3' width='6' height='6'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E"); }
+
+.catalog-menu__section-link--personal {
+  display: none; }
 
 .catalog-menu__item--enter-wide {
   display: none; }
@@ -983,6 +1014,7 @@ h1, h2, h3 {
     .catalog-menu .catalog-menu__section-link--personal:hover::before {
       background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 33 32.8' style='enable-background:new 0 0 33 32.8;' xml:space='preserve' stroke='%23ffffff' fill='none' stroke-width='2'%3E %3Cg%3E %3Ccircle class='st0' cx='16.3' cy='11.2' r='4.5'/%3E %3Ccircle class='st0' cx='16.5' cy='16.6' r='15.2'/%3E %3Cpath d='M24.8,23.5h-17v-0.2c0-4,4.1-6.8,8.1-6.8h0.8c3.9,0,8.1,2.9,8.1,6.7V23.5z'/%3E %3C/g%3E %3C/svg%3E"); }
     .catalog-menu .catalog-menu__section-link--personal {
+      display: block;
       margin-top: 50px;
       border-top: 2px solid #e4e3e1; }
       .catalog-menu .catalog-menu__section-link--personal::before {
