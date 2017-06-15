@@ -10,7 +10,6 @@
   padding-left: 0;
   list-style-type: none;
 
-
   position: relative;
   width: 100vw;
   margin-top: 70px;
@@ -32,8 +31,7 @@
   }
 
   /*стилизация ссылки поиска*/
-
-  .main-menu__link--search {
+  .main-menu__link--search, .main-menu__link--user {
     padding-left: 60px;
 
     &::before {
@@ -42,7 +40,7 @@
       height: 24px;
       background-position: center;
       background-repeat: no-repeat;
-      background-image: svg-load('../icons/search.svg', stroke=#404040, fill=none, stroke-width=2);
+
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -52,6 +50,19 @@
 
 }
 
+.main-menu__link--user{
+    @extend .link-arrow;
+    &::before{
+  background-image: svg-load('../icons/personal.svg', stroke=#404040, fill=none, stroke-width=2);
+}
+}
+
+.main-menu__link--search{
+  @extend .link-arrow;
+    &::before{
+  background-image: svg-load('../icons/search.svg', stroke=#404040, fill=none, stroke-width=2);
+}
+}
 
 
 .main-menu.opened{
@@ -75,15 +86,6 @@
 }
 
 
-
-
-
-
-
-
-.main-menu__desktop-link-wrap {
-  display: none;
-}
 
 .main-menu__toggle {
   display: block;

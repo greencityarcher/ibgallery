@@ -1,0 +1,9 @@
+.mobile-only{
+  display: block;
+}
+
+@media #{$tablet-width} {
+  .mobile-only {
+    display: none;
+  }
+}

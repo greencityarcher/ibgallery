@@ -11,6 +11,13 @@
     padding-left: 70px;
     width: 100%;
   }
+
+  .catalog-menu__subcategory-header.catalog-menu__subcategory-header, .catalog-menu__category-header{
+    background-color: #f4f3ef;
+    &:hover{
+      background-color: $lightgrey-color;
+    }
+  }
 }
 /*место под иконки*/
 .catalog-menu__section-link::before {
@@ -38,22 +45,9 @@
       background-image: svg-load('../icons/#{$link}.svg', stroke=#ff8618, fill=none, stroke-width=2);
     }
   }
-
-//в мобильной версии эта ссылка находится на уровень выше
-.catalog-menu__section-link--personal {
-  display: none;
 }
 
-  .catalog-menu__item--enter-wide {
-    display: none;
-  }
-}
-/*дубликаты этих ссылок вынесены на уровень вверх в мобильном меню*/
 
-.catalog-menu__item--discount,
-.catalog-menu__item--instock {
-  display: none;
-}
 
 .catalog-menu__subcategory-list{
   padding: 0;

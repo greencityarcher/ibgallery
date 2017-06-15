@@ -1,0 +1,8 @@
+.wide-only{
+display: none;
+}
+@media #{$tablet-width}{
+  .wide-only{
+  display: block;
+  }
+}
