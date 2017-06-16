@@ -106,11 +106,15 @@ position: fixed;
 z-index: 50;
 
 }
+.page-header__wrapper{
+position: relative;
+}
 
 //прилипающий блок больше не нужен, он выпадает из потока
 .page-header__sticky-wrapper{
   position: absolute;
   z-index: 0;
+
 }
 
 
