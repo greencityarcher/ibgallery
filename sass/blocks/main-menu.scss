@@ -98,12 +98,15 @@
 @media #{$tablet-width} {
   .main-menu {
     width: auto;
+    max-width: 415px;
     display: block;
-    position: fixed;
-    left: 265px;
+    
+
+    position: relative;
+    left: 300px;
     top:0;
     margin-top: 0;
-    z-index: 20;
+
 
     /*подменю показывается при наведении*/
     .main-menu__item:hover .sub-menu {
@@ -118,10 +121,11 @@
       color: #282828;
       font-size: 16px;
       line-height: 68px;
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 12px;
+      padding-right: 13px;
       background-color: white;
       border: none;
+
 
       &:hover {
         background-color: $lightorange-color;
@@ -184,13 +188,6 @@
 
 
 /*для широких версий ссылка из главного меню скрывается*/
-  .main-menu__item--search {
-    display: none;
-  }
-
-
-
-
 
 
   .main-menu__item--catalog:hover {
@@ -198,20 +195,4 @@
   }
   /*отображение разного текста на разных версиях*/
 
-  .main-menu__desktop-link-wrap {
-    display: inline;
-  }
-
-  .main-menu__mobile-link-wrap {
-    display: none;
-  }
-}
-
-/*скрываем вынесенные на уровень вверх ссылки из мобильного меню*/
-
-@media #{$tablet-width}{
-  .main-menu__item--discount-mobile,
-  .main-menu__item--instock-mobile{
-    display: none;
-  }
 }

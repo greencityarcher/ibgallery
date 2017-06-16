@@ -4,30 +4,29 @@
 
 .main-nav__btn-wrap {
   position: absolute;
-  top: 22px;
-  left: 22px;
+  top: 24px;
+  left: 20px;
 }
 
 .main-nav__mobile-menu-btn {
   display: block;
   position: relative;
   padding: 0;
-  width: 21px;
-  height: 21px;
+  width: 24px;
+  height: 24px;
   background-color: white;
   outline: none;
   border: none;
-
-
+  
   &::before {
     content: "";
     position: absolute;
-    top: 9.5px;
+    top: 11px;
     box-sizing: border-box;
     display: block;
-    width: 21px;
+    width: 25px;
     border: 1px solid #242424;
-    box-shadow: 0 8px 0 0 #242424, 0 -8px 0 0 #242424;
+    box-shadow: 0 10px 0 0 #242424, 0 -10px 0 0 #242424;
   }
 }
 /*при открытой навигации кнопка выглядит как крестик*/
@@ -36,28 +35,27 @@
   &::before {
     box-shadow: none;
     box-sizing: border-box;
-    width: 29.5px;
+    width: 34px;
     height: 2px;
     background-color: #242424;
-    left: -4.5px;
-    top: 9.5px;
+    top: 11px;
+    left:-5px;
     transform: rotate(45deg);
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: 9px;
-    left: -4.5px;
+    top: 11px;
+    left:-5px;
+
     box-sizing: border-box;
     display: block;
-    width: 29.5px;
+    width: 34px;
     border: 1px solid #242424;
     height: 2px;
     background-color: #242424;
     transform: rotate(-45deg);
-
-
   }
 }
 @media #{$tablet-width} {

@@ -19,7 +19,9 @@
       <div class="page-header__sticky-wrapper">
         <div class="page-header__wrapper">
           <div class="main-nav__btn-wrap">
-            <button class="main-nav__mobile-menu-btn" id="mobile-menu-btn"></button>
+            <button class="main-nav__mobile-menu-btn" id="mobile-menu-btn">
+
+            </button>
           </div>
           <div class="search" id="header-search">
             <a class="search__toggle" id="header-search-toggle" href="/search.html"></a>
@@ -121,13 +123,13 @@
         <nav class="main-nav" id="main-nav">
 
           <ul class="main-menu">
-            <li class="main-menu__item  main-menu__item--search">
+            <li class="main-menu__item  main-menu__item--search  mobile-only">
               <a class="main-menu__link  main-menu__link--search  main-menu__link--arrow">Поиск</a>
             </li>
 
             <li class="main-menu__item  main-menu__item--catalog"><a class="main-menu__link  main-menu__link--catalog  mobile-menu-link" href="#">Каталог</a>
               <ul class="sub-menu  catalog-menu">
-                <li class="sub-menu__item  sub-menu__item--back"><a class="catalog-menu__section-link  sub-menu__link--back" href="#">Назад</a></li>
+                <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link--back" href="#">Назад</a></li>
                 <li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--kitchens  mobile-menu-link" href="#">Кухни</a>
                   <ul class="catalog-menu__category-list">
                     <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link--back" href="#">Назад</a></li>
@@ -390,36 +392,44 @@
                 <li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--extra  mobile-menu-link" href="#">Дополнительно</a>
                   <ul class="catalog-menu__category-list">
                     <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link--back" href="#">Назад</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Назначение</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Мебель для кухни</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Мебель для столовой</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Мебель для гостиной</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Мебель для спальни</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Рабочее место</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Мебель для детской</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Мебель для прихожей</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Мебель для гардеробной комнаты</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Мебель для ванной комнаты</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Садовая мебель</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Мебель для ТВ</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Дизайнерская мебель</a></li>
-
+                    <li class="catalog-menu__category-list-item  mobile-only"><a class="catalog-menu__category-header" href="#">Дополнительно</a></li>
                     <li class="catalog-menu__category-list-item">
-                      <a class="catalog-menu__category-header  mobile-menu-link" href="#">Стили</a>
+                      <a class="catalog-menu__category-name  catalog-menu__category-name--header-style  mobile-menu-link" href="#">Назначение</a>
+                      <ul class="catalog-menu__subcategory-list  catalog-menu__subcategory-list--no-margin">
+                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link--back" href="#">Назад</a></li>
+                        <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Назначение</a></li>
+                        <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для кухни</a></li>
+                        <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для столовой</a></li>
+                        <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для гостиной</a></li>
+                        <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для спальни</a></li>
+                        <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Рабочее место</a></li>
+                        <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для детской</a></li>
+                        <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для прихожей</a></li>
+                        <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для гардеробной комнаты</a></li>
+                        <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для ванной комнаты</a></li>
+                        <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Садовая мебель</a></li>
+                        <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для ТВ</a></li>
+                        <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Дизайнерская мебель</a></li>
+                      </ul>
                     </li>
-                    <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link--back" href="#">Назад</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Классическая мебель</a></li>
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Современная мебель</a></li>
+                    <li class="catalog-menu__category-list-item">
+                      <a class="catalog-menu__category-name  catalog-menu__category-name--header-style  mobile-menu-link" href="#">Стили</a>
+                      <ul class="catalog-menu__subcategory-list  catalog-menu__subcategory-list--no-margin">
+                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link--back" href="#">Назад</a></li>
 
-                    <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Дизайнеры мебели</a></li>
-                  </ul>
-
+                          <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Стили</a></li>
+                          <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Классическая мебель</a></li>
+                          <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Современная мебель</a></li>
+                      </ul>
+                      <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  catalog-menu__category-name--header-style" href="#">Дизайнеры мебели</a></li>
                 </li>
+              </ul>
                 <li class="sub-menu__item  catalog-menu__item  catalog-menu__item--collapsing  catalog-menu__item--discount wide-only"><a class="catalog-menu__section-link  catalog-menu__section-link--discount" id="discount" href="#">Со скидкой</a></li>
                 <li class="sub-menu__item  catalog-menu__item  catalog-menu__item--collapsing  catalog-menu__item--collapsing-right  catalog-menu__item--instock  wide-only"><a class="catalog-menu__section-link  catalog-menu__section-link--instock" href="#">В наличии</a></li>
                 <li class="sub-menu__item  catalog-menu__item  wide-only"><a class="catalog-menu__section-link   catalog-menu__section-link--personal" href="#">Войти на сайт</a>
               </ul>
               </li>
+            </li>
             <li class="main-menu__item  mobile-only"><a class="main-menu__link" href="#">Со скидкой</a></li>
             <li class="main-menu__item  mobile-only"><a class="main-menu__link" href="#">В наличии</a></li>
               <!--End of catalog menu-->

@@ -12,14 +12,17 @@
     width: 100%;
   }
 
-  .catalog-menu__subcategory-header.catalog-menu__subcategory-header, .catalog-menu__category-header{
+  .catalog-menu__category-header,
+  .catalog-menu__subcategory-header.catalog-menu__subcategory-header {
     background-color: #f4f3ef;
-    &:hover{
+
+    &:hover {
       background-color: $lightgrey-color;
     }
   }
 }
 /*место под иконки*/
+
 .catalog-menu__section-link::before {
   content: "";
   display: block;
@@ -47,22 +50,18 @@
   }
 }
 
-
-
-.catalog-menu__subcategory-list{
+.catalog-menu__subcategory-list {
   padding: 0;
   margin: 0;
   display: none;
 }
-
-
 /*стили для 980*/
 @media #{$tablet-width} {
   .catalog-menu {
     display: block;
     box-sizing: border-box;
     position: fixed;
-    top:70px;
+    top: 69px;
     z-index: 20;
     left: 0;
     bottom: 0;
@@ -145,7 +144,6 @@
         background: none;
       }
     }
-
     /*контейнер выпадающего подменю каталога*/
     .catalog-menu__category-list {
       display: none;
@@ -155,7 +153,7 @@
       bottom: 0;
       left: 320px;
       width: 320px;
-      z-index: 10;
+      z-index: 20;
       box-shadow: 3px 0 8px rgba(49, 54, 54, 0.2);
       background-color: white;
       padding-top: 20px;
@@ -170,11 +168,13 @@
       display: block;
       margin-left: 20px;
     }
+    .catalog-menu__subcategory-list--no-margin{
+      margin-left: 0;
+    }
 
-.catalog-menu__subcategory-header{
-  display: none;
-}
-
+    .catalog-menu__subcategory-header {
+      display: none;
+    }
     /*при наведении на категорию показывается выпадающее подменю этой категории*/
     .catalog-menu__item:hover .catalog-menu__category-list {
       display: block;
@@ -198,6 +198,20 @@
         display: none;
       }
     }
+
+    .catalog-menu__category-name--header-style {
+
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 50px;
+      color: $lightorange-color;
+      text-decoration: none;
+      margin-bottom: 14px;
+      &:hover{
+        text-decoration: none;
+      }
+
+    }
     /*стилизуем ссылки последнего уровня*/
     .catalog-menu__subcategory-link {
       display: inline;
@@ -216,6 +230,7 @@
   }
 }
 @media #{$desktop-width} {
+
   .catalog-menu__section-link--enter {
     margin-top: 100px;
   }
@@ -228,5 +243,6 @@
   .catalog-menu__item--collapsing-right {
     margin-left: 0;
     margin-top: 0;
+    width: 318px;
   }
 }

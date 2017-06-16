@@ -10,18 +10,28 @@
   color: #282828;
 }
 
+
+@media #{$tablet-width}{
+  .page-content__wrap{
+    padding-left: 0;
+  }
+}
+
 .page-content__wrap{
 h1{
   font-size: 50px;
   margin-bottom: 44px;
+  margin-top: 32px;
+  margin-bottom: 30px;
 }
 h2{
   font-size: 35px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 h3{
   font-size: 25px;
   line-height: 70px;
+  margin-top: 5px;
 }
 
 p{
@@ -34,7 +44,8 @@ dl{
   background-color: #f4f3ef;
   box-sizing: border-box;
   max-width: 655px;
-  margin-top: 26px;
+  margin-top: 0;
+
   padding: 30px 120px 29px 64px;
 
   font-size: 20px;
@@ -42,13 +53,18 @@ dl{
   line-height: 28px;
 }
 dt{
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+
+}
+dd{
+  margin-left: 0px;
 }
 
 .list {
   padding-left: 0;
   list-style: none;
   font-size: 16px;
+  line-height: 24px;
 }
 .list li{
   padding-left: 65px;

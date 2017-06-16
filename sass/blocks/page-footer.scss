@@ -123,10 +123,12 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
+    max-width: 152px;
   }
 
   .page-footer__nav-section--contacts {
     padding-right: 0;
+    max-width: 271px;
 
   }
 
@@ -140,6 +142,7 @@
 
   .page-footer__nav-section--contacts .page-footer__nav-section-header{
     display: block;
+
   }
   .page-footer__nav-link--mail{
     display: inline;
