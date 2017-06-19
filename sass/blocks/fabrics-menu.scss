@@ -22,7 +22,7 @@
 /*построено на radiobutton и label c применением селектора ~*/
 
   #fabrics-menu__popular-toggle:checked ~ .fabrics-menu__brand-lists .fabrics-menu__sublist--popular {
-    display: block;
+    display: flex;
   }
 
   #fabrics-menu__popular-toggle:checked ~ .fabrics-menu__panel .fabrics-menu__sublist-label--popular {

@@ -1488,7 +1488,10 @@ h1, h2, h3 {
     /*ссылка-иконка для поиска*/
     /*стилизация блоков ссылок на фабрики*/ }
     .fabrics-menu #fabrics-menu__popular-toggle:checked ~ .fabrics-menu__brand-lists .fabrics-menu__sublist--popular {
-      display: block; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex; }
     .fabrics-menu #fabrics-menu__popular-toggle:checked ~ .fabrics-menu__panel .fabrics-menu__sublist-label--popular {
       background-color: #ff8618; }
     .fabrics-menu #fabrics-menu__a-toggle:checked ~ .fabrics-menu__brand-lists .fabrics-menu__sublist--a {
