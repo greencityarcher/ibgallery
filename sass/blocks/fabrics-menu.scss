@@ -103,6 +103,9 @@
     position: relative;
     list-style-type: none;
     margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .fabrics-menu__sublist-label {

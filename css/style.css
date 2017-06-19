@@ -1542,7 +1542,17 @@ h1, h2, h3 {
     .fabrics-menu .fabrics-menu__sublist--popular {
       position: relative;
       list-style-type: none;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
     .fabrics-menu .fabrics-menu__sublist-label {
       display: inline-block;
       position: relative;
