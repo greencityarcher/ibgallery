@@ -107,14 +107,6 @@
     font-size: 0;
 
 
-
-    /*подменю показывается при наведении*/
-    .main-menu__item:hover .sub-menu {
-      display: block;
-
-
-    }
-
     .main-menu__link {
       display: block;
       position: relative;
@@ -127,13 +119,6 @@
       padding-right: 13px;
       background-color: white;
       border: none;
-
-      &:hover {
-        background-color: $lightorange-color;
-        color: white;
-    }
-
-
   }
   /*декоративные точки для разворачивающихся пунктов меню*/
     .main-menu__link:not(:only-child)::after {
@@ -148,11 +133,6 @@
       left: 50%;
       transform: translateX(-50%);
       background-color: #282828;
-    }
-
-    .main-menu__link:not(:only-child):hover::after {
-      background-color: white;
-      border-color: white;
     }
 
 
@@ -175,12 +155,21 @@
     display: inline-block;
     width: auto;
     border-bottom: none;
-
-
   }
+/*подменю показывается при наведении*/
+  .main-menu__item:hover  {
+    .sub-menu{
+      display: block;
+    }
+    .main-menu__link{
+        background-color: $lightorange-color;
+        color: white;
+        &::after{
+          background-color: white;
+          border-color: white;
+        }
+    }
 
-  .main-menu__item:hover .sub-menu {
-    display: block;
   }
 
   .main-menu__item:hover .sub-menu.fabrics-menu {

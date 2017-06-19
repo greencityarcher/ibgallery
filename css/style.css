@@ -85,7 +85,8 @@
   padding: 0;
   font-family: "Helvetica Neue Light", Helvetica, sans-serif;
   min-width: 320px;
-  max-width: 100%; }
+  max-width: 100%;
+  min-height: 100%; }
 
 h1, h2, h3 {
   font-family: "Helvetica Neue Light", Helvetica, sans-serif;
@@ -1087,12 +1088,9 @@ h1, h2, h3 {
     top: 0;
     margin-top: 0;
     font-size: 0;
-    /*подменю показывается при наведении*/
     /*декоративные точки для разворачивающихся пунктов меню*/
     /*ссылка на каталог в широких версиях скрывается*/
     /*ссылка на вход на широких версиях скрывается*/ }
-    .main-menu .main-menu__item:hover .sub-menu {
-      display: block; }
     .main-menu .main-menu__link {
       display: block;
       position: relative;
@@ -1105,9 +1103,6 @@ h1, h2, h3 {
       padding-right: 13px;
       background-color: white;
       border: none; }
-      .main-menu .main-menu__link:hover {
-        background-color: #ff8618;
-        color: white; }
     .main-menu .main-menu__link:not(:only-child)::after {
       content: "";
       position: absolute;
@@ -1122,9 +1117,6 @@ h1, h2, h3 {
           -ms-transform: translateX(-50%);
               transform: translateX(-50%);
       background-color: #282828; }
-    .main-menu .main-menu__link:not(:only-child):hover::after {
-      background-color: white;
-      border-color: white; }
     .main-menu .main-menu__link--catalog {
       display: none; }
     .main-menu .main-menu__link--user {
@@ -1133,8 +1125,15 @@ h1, h2, h3 {
     display: inline-block;
     width: auto;
     border-bottom: none; }
+  /*подменю показывается при наведении*/
   .main-menu__item:hover .sub-menu {
     display: block; }
+  .main-menu__item:hover .main-menu__link {
+    background-color: #ff8618;
+    color: white; }
+    .main-menu__item:hover .main-menu__link::after {
+      background-color: white;
+      border-color: white; }
   .main-menu__item:hover .sub-menu.fabrics-menu {
     display: block; }
   /*для широких версий ссылка из главного меню скрывается*/
@@ -1187,6 +1186,15 @@ h1, h2, h3 {
     width: 100%;
     padding: 0;
     height: 68px;
+    -webkit-transition-property: width;
+    -o-transition-property: width;
+    transition-property: width;
+    -webkit-transition-duration: 100ms;
+         -o-transition-duration: 100ms;
+            transition-duration: 100ms;
+    -webkit-transition-timing-function: ease;
+         -o-transition-timing-function: ease;
+            transition-timing-function: ease;
     /*при открытом поиске скрывается user-id*/ }
     .opened.search .search__toggle {
       background-image: none;

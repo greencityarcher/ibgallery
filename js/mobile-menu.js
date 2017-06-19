@@ -5,7 +5,7 @@ var menuOpened = false;
 
 
 function openMenu(){
-  $("#main-nav").addClass("opened");
+ $("#main-nav").addClass("opened");
   $("#mobile-menu-btn").addClass("main-nav__mobile-menu-btn--close");
   $("#sidebar").hide();
   $('#footer-social-links').hide();

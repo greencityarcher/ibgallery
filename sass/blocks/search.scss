@@ -51,7 +51,10 @@
     width: 100%;
     padding: 0;
     height: 68px;
-
+    transition-property: width;
+    transition-duration: 100ms;
+    transition-timing-function: ease;
+    
 
 
     .search__toggle {
