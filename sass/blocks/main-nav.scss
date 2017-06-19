@@ -6,6 +6,7 @@
   position: absolute;
   top: 24px;
   left: 20px;
+  z-index: 35;
 }
 
 .main-nav__mobile-menu-btn {
@@ -17,7 +18,7 @@
   background-color: white;
   outline: none;
   border: none;
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -62,6 +63,7 @@
   .main-nav {
     display: block;
     position: static;
+    margin-top: -69px;
   }
 
   .main-nav__mobile-menu-btn {

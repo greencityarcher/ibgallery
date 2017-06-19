@@ -7,6 +7,12 @@ var postcss = require ("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var inlinesvg = require("postcss-inline-svg");
 var flexibility = require ("postcss-flexibility");
+var mqpacker = require ("css-mqpacker");
+
+/*
+var minify = require ("gulp-csso");
+var rename = require ("gulp-rename");
+*/
 
 gulp.task('style', function(){
   gulp.src("sass/style.scss")
@@ -16,11 +22,17 @@ gulp.task('style', function(){
     autoprefixer({browsers:[
       "last 3 versions"
     ]}),
-    inlinesvg, flexibility
+    inlinesvg, flexibility,
+    mqpacker({
+      sort: true
+    })
   ]))
-
-
   .pipe(gulp.dest("css"))
+/*
+  .pipe(minify())
+  .pipe(rename("style.min.css"))
+  */
+
   .pipe(server.stream());
 });
 
@@ -30,5 +42,6 @@ gulp.task("serve", ["style"], function(){
   });
   gulp.watch("sass/**/*.scss", ["style"]);
   gulp.watch("*.html")
+  gulp.watch("js/**/*.js")
   .on("change", server.reload);
 });

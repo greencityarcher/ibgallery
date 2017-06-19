@@ -8,12 +8,14 @@
 @media #{$tablet-width} {
   .fabrics-menu {
     box-sizing: border-box;
-    z-index: 30;
+
+    display: block;
     width: 95vw;
 
     left: -230px;
     padding-left: 0;
     padding-top: 10px;
+    z-index: 100;
 
 
 /*--------------------механика работы подменю без js--------------------------------------*/

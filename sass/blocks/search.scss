@@ -8,13 +8,13 @@
     height: 68px;
     position: relative;
     width: 65px;
-
+    z-index: 35;
 
 
     .search__toggle {
       display: block;
       width: 65px;
-      height: 68px;
+      height: 69px;
       position: relative;
       padding: 0;
       background-color: #f4f3ef;
@@ -42,7 +42,7 @@
 */
 
   /*стилизация поиска в открытом состоянии*/
-  .search.opened {
+  .opened.search {
     display: flex;
     width: 100%;
     position: absolute;
@@ -51,7 +51,7 @@
     width: 100%;
     padding: 0;
     height: 68px;
-    z-index: 100;
+
 
 
     .search__toggle {
@@ -101,7 +101,7 @@
       color: #424242;
       font-weight: 200;
       position:relative;
-      z-index: 100;
+
 
     }
 
@@ -113,7 +113,7 @@
       box-sizing: border-box;
       border: none;
       box-shadow: none;
-      height: 68px;
+      height: 69px;
       width: 171px;
       background-color: #ff851e;
       font-weight: 300;
