@@ -1488,10 +1488,7 @@ h1, h2, h3 {
     /*ссылка-иконка для поиска*/
     /*стилизация блоков ссылок на фабрики*/ }
     .fabrics-menu #fabrics-menu__popular-toggle:checked ~ .fabrics-menu__brand-lists .fabrics-menu__sublist--popular {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      -js-display: flex;
-      display: flex; }
+      display: block; }
     .fabrics-menu #fabrics-menu__popular-toggle:checked ~ .fabrics-menu__panel .fabrics-menu__sublist-label--popular {
       background-color: #ff8618; }
     .fabrics-menu #fabrics-menu__a-toggle:checked ~ .fabrics-menu__brand-lists .fabrics-menu__sublist--a {
@@ -1552,19 +1549,26 @@ h1, h2, h3 {
               column-count: calc(90vw/150px);
       /*разбиваем на столько колонок, сколько влезет*/ }
     .fabrics-menu .fabrics-menu__sublist--popular {
+      -webkit-column-count: 1;
+         -moz-column-count: 1;
+              column-count: 1;
       position: relative;
-      list-style-type: none;
-      margin-bottom: 15px;
+      margin-bottom: 15px; }
+    .fabrics-menu .fabrics-menu__popular-container {
       display: -webkit-box;
       display: -ms-flexbox;
       -js-display: flex;
       display: flex;
+      max-height: 650px;
+      height: 70vh;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column; }
+              flex-direction: column;
+      overflow-y: scroll;
+      width: 95vw; }
     .fabrics-menu .fabrics-menu__sublist-label {
       display: inline-block;
       position: relative;

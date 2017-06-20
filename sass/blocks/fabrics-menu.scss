@@ -1,195 +1,191 @@
 /*в мобильной версии подменю фабрик скрыто*/
-
 .sub-menu.fabrics-menu {
   display: none;
 }
-
-
 @media #{$tablet-width} {
   .fabrics-menu {
     box-sizing: border-box;
-
     display: block;
     width: 95vw;
-
     left: -230px;
     padding-left: 0;
     padding-top: 10px;
-    z-index: 100;
-
-
-/*--------------------механика работы подменю без js--------------------------------------*/
-/*построено на radiobutton и label c применением селектора ~*/
-
-  #fabrics-menu__popular-toggle:checked ~ .fabrics-menu__brand-lists .fabrics-menu__sublist--popular {
-    display: flex;
-  }
-
-  #fabrics-menu__popular-toggle:checked ~ .fabrics-menu__panel .fabrics-menu__sublist-label--popular {
-    background-color: $lightorange-color;
-  }
-
-  #fabrics-menu__a-toggle:checked ~ .fabrics-menu__brand-lists .fabrics-menu__sublist--a {
-    display: block;
-  }
-
-  #fabrics-menu__a-toggle:checked ~ .fabrics-menu__panel .fabrics-menu__sublist-label--a {
-    background-color: $lightorange-color;
-  }
-
-  #fabrics-menu__b-toggle:checked ~ .fabrics-menu__brand-lists .fabrics-menu__sublist--b {
-    display: block;
-  }
-
-  #fabrics-menu__b-toggle:checked ~ .fabrics-menu__panel .fabrics-menu__sublist-label--b {
-    background-color: $lightorange-color;
-  }
-
-  #fabrics-menu__c-toggle:checked ~ .fabrics-menu__brand-lists .fabrics-menu__sublist--c {
-    display: block;
-  }
-
-  #fabrics-menu__c-toggle:checked ~ .fabrics-menu__panel .fabrics-menu__sublist-label--c {
-    background-color: $lightorange-color;
-  }
-
-
-/*панелька с буквами-переключателями*/
-  .fabrics-menu__panel {
-    display: flex;
-    background-color: #f4f3ef;
-    height: 40px;
-    margin-bottom: 21px;
-  }
-/*ссылка на поиск по фабрикам*/
-  .fabrics-menu__search {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    width: 45px;
-    height: 38px;
-    background-color: #b2b2b2;
-    margin-right: 48px;
-    margin-left: auto;
-  }
-
-/*ссылка-иконка для поиска*/
-  .fabrics-menu__search-link {
-    background: none;
-    border-bottom:none;
-    background-image: svg-load('../icons/search.svg', fill=none, stroke=#ffffff);
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    width: 21px;
-    height: 21px;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: pointer;
-
-    &:hover{
-      background: none;
-    }
-  }
-
-/*стилизация блоков ссылок на фабрики*/
-  .fabrics-menu__sublist {
-    list-style-type: none;
-    column-width: 150px;
-    column-count: calc(90vw/150px); /*разбиваем на столько колонок, сколько влезет*/
-  }
-
-  .fabrics-menu__sublist--popular{
-    position: relative;
-    list-style-type: none;
-    margin-bottom: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-
-  .fabrics-menu__sublist-label {
-    display: inline-block;
-    position: relative;
-    width: 35px;
-    height: 40px;
-    color: #282828;
-    font-weight: 600;
-
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 16px;
-    line-height: 40px;
-    cursor: pointer;
-
-    &::after{
-      content: "";
+    z-index: 100; /*--------------------механика работы подменю без js--------------------------------------*/
+    /*построено на radiobutton и label c применением селектора ~*/
+    #fabrics-menu__popular-toggle:checked ~ .fabrics-menu__brand-lists .fabrics-menu__sublist--popular {
       display: block;
-      border-bottom: 2px dotted #282828;
+
+    }
+
+    #fabrics-menu__popular-toggle:checked ~ .fabrics-menu__panel .fabrics-menu__sublist-label--popular {
+      background-color: $lightorange-color;
+    }
+
+    #fabrics-menu__a-toggle:checked ~ .fabrics-menu__brand-lists .fabrics-menu__sublist--a {
+      display: block;
+    }
+
+    #fabrics-menu__a-toggle:checked ~ .fabrics-menu__panel .fabrics-menu__sublist-label--a {
+      background-color: $lightorange-color;
+    }
+
+    #fabrics-menu__b-toggle:checked ~ .fabrics-menu__brand-lists .fabrics-menu__sublist--b {
+      display: block;
+    }
+
+    #fabrics-menu__b-toggle:checked ~ .fabrics-menu__panel .fabrics-menu__sublist-label--b {
+      background-color: $lightorange-color;
+    }
+
+    #fabrics-menu__c-toggle:checked ~ .fabrics-menu__brand-lists .fabrics-menu__sublist--c {
+      display: block;
+    }
+
+    #fabrics-menu__c-toggle:checked ~ .fabrics-menu__panel .fabrics-menu__sublist-label--c {
+      background-color: $lightorange-color;
+    }
+    /*панелька с буквами-переключателями*/
+    .fabrics-menu__panel {
+      display: flex;
+      background-color: #f4f3ef;
+      height: 40px;
+      margin-bottom: 21px;
+    }
+    /*ссылка на поиск по фабрикам*/
+    .fabrics-menu__search {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      width: 45px;
+      height: 38px;
+      background-color: #b2b2b2;
+      margin-right: 48px;
+      margin-left: auto;
+    }
+    /*ссылка-иконка для поиска*/
+    .fabrics-menu__search-link {
+      background: none;
+      border-bottom: none;
+      background-image: svg-load('../icons/search.svg', fill=none, stroke=#ffffff);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 21px;
+      height: 21px;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+
+      &:hover {
+        background: none;
+      }
+    }
+    /*стилизация блоков ссылок на фабрики*/
+    .fabrics-menu__sublist {
+      list-style-type: none;
+      column-width: 150px;
+      column-count: calc(90vw/150px);
+      /*разбиваем на столько колонок, сколько влезет*/
+    }
+
+    .fabrics-menu__sublist--popular{
+      column-count: 1;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+  .fabrics-menu__popular-container {
+      display: flex;
+      max-height: 650px;
+      height: 70vh;
+      flex-wrap: wrap;
+      flex-direction: column;
+      overflow-y:scroll;
+      width: 95vw;
+    }
+
+
+    .fabrics-menu__sublist-label {
+      display: inline-block;
+      position: relative;
+      width: 35px;
+      height: 40px;
+      color: #282828;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 16px;
+      line-height: 40px;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        display: block;
+        border-bottom: 2px dotted #282828;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10px;
+      }
+    }
+
+    .fabrics-menu__sublist-label--popular {
+      width: auto;
+      padding: 0 45px;
+
+      &::after {
+        width: 110px;
+      }
+    }
+
+    .fabrics-menu__sublist-label:hover {
+      background-color: $lightorange-color;
+    }
+
+    .fabrics-menu__toggle {
+      display: none;
+    }
+
+    .fabrics-menu__sublist {
+      display: none;
+      position: relative;
+    }
+
+    .fabrics-menu__sublist-letter {
       position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 10px;
+      left: 7px;
+      top: -3px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 30px;
+      color: #ff851e;
     }
-  }
 
-  .fabrics-menu__sublist-label--popular {
-    width: auto;
-    padding: 0 45px;
-    &::after{
-      width: 110px;
+    .fabrics-menu__brand-lists {
+      padding-bottom: 35px;
+      padding-right: 40px;
+      padding-right: 40px;
     }
-  }
 
-  .fabrics-menu__sublist-label:hover {
-    background-color: $lightorange-color;
-  }
+    .fabrics-menu__brand-link {
+      display: inline;
+      padding: 0;
+      font-size: 16px;
+      line-height: 19px;
+      text-decoration: none;
+      color: #282828;
+      background: none;
+      border: none;
 
-  .fabrics-menu__toggle {
-    display: none;
-  }
-
-  .fabrics-menu__sublist {
-    display: none;
-    position: relative;
-  }
-
-  .fabrics-menu__sublist-letter {
-    position: absolute;
-    left: 7px;
-    top: -3px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 30px;
-    color: #ff851e;
-  }
-
-  .fabrics-menu__brand-lists {
-    padding-bottom: 35px;
-    padding-right: 40px;
-    padding-right: 40px;
-  }
-
-  .fabrics-menu__brand-link {
-    display: inline;
-    padding: 0;
-    font-size: 16px;
-    line-height: 19px;
-    text-decoration: none;
-    color: #282828;
-    background: none;
-    border: none;
-
-  &:hover {
-    text-decoration: underline;
-    color: #ff851e;
-    background: none;
-  }
-  /*убираем унаследованные от мобилки стрелочки*/
-  &:after{
-    display: none;
-  }
+      &:hover {
+        text-decoration: underline;
+        color: #ff851e;
+        background: none;
+      }
+      /*убираем унаследованные от мобилки стрелочки*/
+      &:after {
+        display: none;
+      }
+    }
   }
 }
-  }
