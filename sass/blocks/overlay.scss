@@ -1,11 +1,17 @@
 .overlay {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-
   width: 100%;
-  background-color: rgba(0,0,0,0.2);
+  background-color: #f4f3ef;
   z-index: 500;
+  display: none;
+}
+
+@media #{$tablet-width} {
+  .overlay {
+    background-color: rgba(0,0,0,0.2);
+  }
+
 }

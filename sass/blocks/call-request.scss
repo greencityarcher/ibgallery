@@ -8,6 +8,7 @@
     font-size: 0;
     background-repeat: no-repeat;
     background-image: svg-load('../icons/phone.svg', stroke=#404040);
+    cursor: pointer;
   }
 
 @media #{$desktop-width}{

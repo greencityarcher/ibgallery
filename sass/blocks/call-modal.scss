@@ -5,7 +5,8 @@
   bottom: 0;
   left:0;
   background-color: white;
-  outline: 2px solid yellow;
+  display: none;
+
 z-index: 1000;
 overflow: hidden;
 }
@@ -20,6 +21,7 @@ overflow: hidden;
   right: 23px;
   width: 21px;
   height: 21px;
+  cursor: pointer;
 
   &::before, &::after{
     content:"";
@@ -55,16 +57,31 @@ overflow: hidden;
   display: none;
 }
 
+.call-modal__input-label{
+position: relative;
+display: block;
+padding-bottom: 30px;
+}
+.call-modal__error-message{
+  font-size: 14px;
+  text-align: center;
+  color: #ff851e;
+  line-height: 16px;
+  position: absolute;
+  bottom: 5px;
+  padding: 3px 0;
+  width: 100%;
+  display: none;
+}
+
 .call-modal__text-input{
 
   width: 290px;
   height: 42px;
   box-sizing: border-box;
-  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
   display: block;
-
 
   outline: none;
   font-size: 16px;
@@ -74,6 +91,10 @@ overflow: hidden;
   border-radius: 3px;
   box-shadow: inset 0px 0px 20px 0px rgba(218,218,218,1);
 
+}
+
+.call-modal__text-input:invalid ~.call-modal__error-message{
+  display: block;
 }
 
 .call-modal__submit{
@@ -90,6 +111,8 @@ overflow: hidden;
     margin-top: 29px;
     margin-left: auto;
     margin-right: auto;
+
+    cursor: pointer;
 }
 
 .call-modal__user-id{
@@ -168,6 +191,10 @@ padding-bottom: 96px;
   }
   &::after{
     transform: rotate(-45deg);
+  }
+
+  &:hover{
+    background-color: #ff851e;
   }
 
 }
