@@ -48,16 +48,17 @@
 /*подменю информационной навигации (выпадает по наведению)*/
   .sub-menu {
     position: absolute;
-    left: -10px;
+    left: -12px;
     top: 69px;
     display: none;
     width: 206px;
-    padding-left: 22px;
-    padding-top: 23px;
+    padding-left: 24px;
+    padding-right: 14px;
+    padding-top: 21px;
     padding-bottom: 19px;
     background-color: white;
     box-shadow: 0 0 15px rgba(49, 54, 54, 0.25);
-  
+
 
     .sub-menu__item {
       border: none;
@@ -68,11 +69,14 @@
     }
 
     .sub-menu__link {
-      display: inline;
+      display: block;
+      height: 35px;
+      vertical-align: top;
+      line-height: 16px;
+
       background: none;
       border: none;
       color: #282828;
-      line-height: 35px;
       text-decoration: none;
       padding: 0;
 

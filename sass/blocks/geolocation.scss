@@ -7,17 +7,21 @@
 
 .geolocation__current{
   position: absolute;
-  right:55px;
   bottom: 0px;
+  left: 50px;
   font-size: 11px;
   color:#e6432f;
   text-decoration: none;
   letter-spacing: 1px;
+  display: block;
+  outline: 1px solid red;
+  display: block;
+  width: 100%;
+  text-align: center;
 
 }
 .geolocation__current-style{
   position: relative;
-
 
   &::after{
     content: "";
@@ -32,7 +36,7 @@
 .geolocation__picker{
   display: none;
   position: absolute;
-  
+
   top:0;
   left:0;
 

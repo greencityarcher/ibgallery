@@ -65,7 +65,8 @@
 
     left: 0;
     bottom: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+
     margin: 0;
     padding: 0;
     width: 65px;
@@ -77,8 +78,9 @@
 
     &:hover {
       width: 320px;
-      overflow: visible;
+      overflow-x: visible;
       border-right: 2px solid $catalog-menu-border-color;
+
     }
     /*
   поведение пунктов первого уровня меню по наведению мыши
@@ -155,6 +157,7 @@
       left: 320px;
       width: 320px;
 
+
       box-shadow: 3px 0 8px rgba(49, 54, 54, 0.2);
       background-color: white;
       padding-top: 20px;
@@ -180,6 +183,8 @@
     /*при наведении на категорию показывается выпадающее подменю этой категории*/
     .catalog-menu__item:hover .catalog-menu__category-list {
       display: block;
+      overflow-y: scroll;
+
     }
 
     .catalog-menu__category-name {

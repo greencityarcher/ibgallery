@@ -36,7 +36,7 @@
 }
 
 
-.page-header__logo-wrap {
+.page-header__logo{
   width: 132px;
   height: 33px;
   box-sizing: border-box;
@@ -106,8 +106,7 @@
   position: fixed;
   border-bottom: 1px solid $lightorange-color;
   z-index: $page-header-z-index;
-
-}
+  }
 
 
 //прилипающий блок больше не нужен, он выпадает из потока
@@ -123,15 +122,13 @@ position: relative;
 }
 
 
-.page-header__geo-logo-wrap{
 
-position: relative;
-}
 
-  .page-header__logo-wrap {
-    margin-left: 25px;
+  .page-header__logo{
     width: 189px;
     height: 48px;
+    margin-left: 33px;
+    display: block;
   }
   .page-header__geo {
     display: block;
@@ -199,7 +196,7 @@ position: relative;
     border-bottom-left-radius: 3px;
     color: white;
     z-index: 0;
-    
+
   }
 
 
