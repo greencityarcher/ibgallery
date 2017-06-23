@@ -6,7 +6,6 @@
   position: static;
 
   background-color:white;
-
 }
 
 
@@ -31,8 +30,6 @@
   width: 100%;
   box-sizing: border-box;
   border: none;
-
-
 }
 
 
@@ -50,44 +47,11 @@
   display: none;
 }
 
-.page-header__featured-wrap {
-  list-style-type: none;
-  padding: 0;
+.page-header__featured {
   margin-left: auto;
+  height: 68px;
 }
 
-
-.page-header__liked-link {
-  position: relative;
-  display: block;
-  width: 23px;
-  height: 23px;
-  background-repeat: no-repeat;
-  background-image: svg-load('../icons/heart.svg', fill=#4c4c4c);
-}
-
-.page-header__recent {
-  display: none;
-}
-
-.page-header__shoping-card {
-  display: none;
-}
-
-.page-header__counter {
-  position: absolute;
-  left: 15px;
-  top: -4px;
-  width: 24px;
-  height: 17px;
-  background-color: #ff851e;
-  border-radius: 8px;
-  color: white;
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 17px;
-  text-align: center;
-}
 
 .page-header__call {
   margin-left: 25px;
@@ -133,48 +97,10 @@ position: relative;
   .page-header__geo {
     display: block;
   }
-  .page-header__featured-wrap {
+  .page-header__featured{
     margin: 0 0 0 auto;
-    padding: 0;
-    background-color: #f4f3ef;
-    height: 68px;
-    display: flex;
-    width: 180px;
-    align-items: center;
-
   }
 
-  .page-header__liked,
-  .page-header__recent,
-  .page-header__shoping-card {
-    display: block;
-    padding: 0 18px;
-    position: relative;
-  }
-
-  .page-header__liked,
-  .page-header__shoping-card {
-    border-right: 1px solid #8e8e8c;
-  }
-
-  .page-header__shopping-card-link {
-    position: relative;
-    display: block;
-    width: 23px;
-    height: 25px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: svg-load('../icons/shopping.svg', fill=#4c4c4c);
-  }
-  .page-header__recent-link{
-    position: relative;
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: svg-load('../icons/recent.svg', fill=#4c4c4c);
-  }
 
   .page-header__call {
     margin-left: 25px;
@@ -183,20 +109,19 @@ position: relative;
   .page-header__user-id {
     display: block;
     box-sizing: border-box;
-    width: 159px;
-    height: 28px;
+
     background-color: $lightorange-color;
     position: absolute;
     top: 69px;
     right: 80px;
     font-size: 16px;
-    font-weight: 900;
-    padding: 4px 18px 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 4px 16px 7px 16px;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
     color: white;
     z-index: 0;
-
   }
 
 
@@ -210,7 +135,7 @@ position: relative;
     margin-left: 53px;
   }
   .page-header__user-id{
-    right: 72px;
+    right: 76px;
   }
 
 }
