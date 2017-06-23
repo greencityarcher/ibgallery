@@ -2,23 +2,18 @@
   box-sizing: border-box;
   width: 100%;
   min-width: 320px;
-
-  position: static;
-
   background-color:white;
 }
 
 
 .page-header__sticky-wrapper{
   position: fixed;
-
   top:0;
   background: white;
   width: 100%;
   height: 69px;
   border-bottom: 1px solid $lightorange-color;
   z-index: $sticky-wrapper-z-index;
-
 }
 
 /*обертка для позиционирования поиска в хедере*/
@@ -35,7 +30,9 @@
 
 .page-header__logo{
   width: 132px;
+  min-width: 132px;
   height: 33px;
+  display: block;
   box-sizing: border-box;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,7 +76,6 @@
   z-index: auto;
   border-bottom: none;
   box-sizing: border-box;
-
 }
 .page-header__wrapper{
 position: relative;
@@ -90,8 +86,10 @@ position: relative;
 
   .page-header__logo{
     width: 189px;
+    min-width: 189px;
     height: 48px;
     margin-left: 33px;
+    margin-bottom: 12px;
     display: block;
   }
   .page-header__geo {
@@ -127,10 +125,6 @@ position: relative;
 
 }
 @media #{$desktop-width} {
-  .page-header__wrapper {
-    padding-right: 38px;
-  }
-
   .page-header__call {
     margin-left: 53px;
   }

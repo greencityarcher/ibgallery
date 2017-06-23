@@ -42,40 +42,14 @@
 
 
 
-.page-footer__social-links{
+.page-footer__social-links-wrap{
   width: 100%;
   box-sizing: border-box;
-  padding: 8px 63px 8px 53px;
   background-color: #818181;
-  display: flex;
-  justify-content: space-between;
   order: -2;
 }
 
-.page-footer__social-link{
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  box-sizing: border-box;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.page-footer__social-link:hover{
-  background-color: #ff8618;
-}
 
-.page-footer__social-link--vk{
-  background-image: svg-load('../icons/vk-icon.svg' stroke=#ffffff);
-}
-.page-footer__social-link--in{
-  background-image: svg-load('../icons/in-icon.svg' stroke=#ffffff);
-
-}
-.page-footer__social-link--f{
-  background-image: svg-load('../icons/f-icon.svg' stroke=#ffffff);
-}
 
 .page-footer__phone{
   font-size: 22px;
@@ -84,6 +58,7 @@
   padding-top: 20px;
   color:#282828;
   order:2;
+  text-decoration: none;
 }
 
 .page-footer__work-hours{
@@ -99,7 +74,7 @@
 @media #{$tablet-width} {
   .page-footer {
     display: block;
-    padding: 15px 28px 26px 25px;
+    padding: 15px 71px 20px 32px;
     background: #818181;
     width: auto;
   }
@@ -140,21 +115,23 @@
     font-weight: 100;
   }
 
+  .page-footer__nav-section-header--link{
+    text-decoration: underline;
+    color: white;
+  }
+
   .page-footer__nav-section--contacts .page-footer__nav-section-header{
     display: block;
 
   }
-  .page-footer__nav-link--mail{
-    display: inline;
-  }
+
   .page-footer__nav-text{
     display: inline;
   }
 
-  .page-footer__social-links{
+  .page-footer__social-links-wrap{
     display:list-item;
-    padding: 25px 0 0 0;
-    text-align: left;
+    padding: 22px 0 0 0;
   }
   .page-footer__nav-link {
     text-decoration: underline;
@@ -167,12 +144,17 @@
   .page-footer__nav-link:hover {
     text-decoration: none;
   }
+  .page-footer__nav-link--mail{
+    display: inline;
+    text-decoration: none;
+  }
 
   .page-footer__phone {
     font-size: 18px;
     line-height: 30px;
     color: white;
     padding-top: 0;
+    text-decoration: none;
   }
 
   .page-footer__work-hours{
@@ -196,7 +178,11 @@
 
   .page-footer__disclaimer {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 14px;
+
   }
 
   .page-footer__dac-link {
@@ -221,7 +207,7 @@
 }
 @media #{$desktop-width} {
   .page-footer {
-    padding-left: 156px;
-    padding-right: 156px;
+    padding-left: 33px;
+    padding-right: 60px;
   }
 }

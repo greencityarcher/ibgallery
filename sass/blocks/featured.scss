@@ -1,4 +1,4 @@
-.featured{
+.featured {
   list-style: none;
   padding: 0;
   margin-top: 0;
@@ -6,25 +6,25 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
-.featured__item{
+.featured__item {
   position: relative;
-  width: 65px;
+  width: 62px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 }
 
-.featured__item--recent, .featured__item--shopping-card{
+.featured__item--recent,
+.featured__item--shopping-card {
   display: none;
 }
 
-.featured__link{
+.featured__link {
   position: relative;
   display: block;
   background-repeat: no-repeat;
@@ -35,7 +35,7 @@
   vertical-align: center;
   cursor: pointer;
 
-  &::after{
+  &::after {
     content: "+9";
     position: absolute;
     right: -15px;
@@ -54,34 +54,30 @@
   }
 }
 
-.featured__link--shopping-card{
-    width: 23px;
-    height: 25px;
-    background-image: svg-load('../icons/shopping.svg', fill=#4c4c4c);
-
+.featured__link--shopping-card {
+  width: 23px;
+  height: 25px;
+  background-image: svg-load('../icons/shopping.svg', fill=#4c4c4c);
 }
-  .featured__link--liked{
-      width: 23px;
-      height: 23px;
-      background-image: svg-load('../icons/heart.svg', fill=#4c4c4c);
-  }
 
-  .featured__link--recent{
-      width: 24px;
-      height: 23px;
-      background-image: svg-load('../icons/recent.svg', fill=#4c4c4c);
-  }
+.featured__link--liked {
+  width: 23px;
+  height: 23px;
+  background-image: svg-load('../icons/heart.svg', fill=#4c4c4c);
+}
 
-
-
-@media #{$tablet-width}{
-
-  .featured{
+.featured__link--recent {
+  width: 24px;
+  height: 23px;
+  background-image: svg-load('../icons/recent.svg', fill=#4c4c4c);
+}
+@media #{$tablet-width} {
+  .featured {
     background-color: #f4f3ef;
   }
 
-  .featured__item{
-    &:not(:last-of-type)::after{
+  .featured__item {
+    &:not(:last-of-type)::after {
       content: "";
       display: block;
       width: 1px;
@@ -93,7 +89,9 @@
       background-color: #939390;
     }
   }
-.featured__item--recent, .featured__item--shopping-card{
-  display: flex;
-}
+
+  .featured__item--recent,
+  .featured__item--shopping-card {
+    display: flex;
+  }
 }

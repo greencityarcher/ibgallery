@@ -1,10 +1,5 @@
 .main-menu {
   display: none;
-/*
-  position: absolute;
-  left: 0;
-  top: 69px;
-*/
   width: 100%;
   margin: 0;
   padding-left: 0;
@@ -13,15 +8,15 @@
   position: relative;
   width: 100vw;
   margin-top: 70px;
-
+}
 
   /*все ссылки мобильного меню одинаковы*/
-  a{
+  .main-menu__link{
     @extend .mobile-menu-link;
   }
 
   /*ссылки с подкатегориями имеют стрелку*/
-  a:not(:only-child) {
+  .main-menu__link:not(:only-child) {
     @extend .link-arrow;
   }
   .main-menu__link--no-sub-mobile{
@@ -48,7 +43,7 @@
     }
   }
 
-}
+
 
 .main-menu__link--user{
     @extend .link-arrow;

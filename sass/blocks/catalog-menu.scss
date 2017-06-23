@@ -1,28 +1,20 @@
-.catalog-menu {
+
   .catalog-menu__category-list {
     display: none;
     list-style: none;
     margin: 0;
     padding: 0;
   }
+
   /*стили для ссылок категорий в каталоге*/
   .catalog-menu__section-link {
     background-color: #f4f3ef;
     padding-left: 70px;
     width: 100%;
+    @extend .link-arrow;
   }
 
-  .catalog-menu__category-header,
-  .catalog-menu__subcategory-header.catalog-menu__subcategory-header {
-    background-color: #f4f3ef;
-
-    &:hover {
-      background-color: $lightgrey-color;
-    }
-  }
-}
 /*место под иконки*/
-
 .catalog-menu__section-link::before {
   content: "";
   display: block;
@@ -50,10 +42,34 @@
   }
 }
 
+
+.catalog-menu__category-header,
+.catalog-menu__subcategory-header  {
+  @extend .mobile-menu-link;
+  background-color: #f4f3ef;
+
+  &:hover {
+    background-color: $lightgrey-color;
+  }
+}
+
+.catalog-menu__category-name{
+  @extend .mobile-menu-link;
+
+}
+.catalog-menu__category-name:not(:only-child){
+  @extend .link-arrow;
+}
+
 .catalog-menu__subcategory-list {
   padding: 0;
   margin: 0;
   display: none;
+}
+
+.catalog-menu__subcategory-link{
+  @extend .mobile-menu-link;
+
 }
 /*стили для 980*/
 @media #{$tablet-width} {
