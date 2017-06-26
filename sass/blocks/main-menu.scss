@@ -114,6 +114,9 @@
       padding-right: 14px;
       background-color: white;
       border: none;
+      transition-property: color, background-color;
+      transition-duration: $duration;
+      transition-delay: $delay;
   }
   /*декоративные точки для разворачивающихся пунктов меню*/
     .main-menu__link:not(:only-child)::after {
@@ -128,6 +131,9 @@
       left: 50%;
       transform: translateX(-50%);
       background-color: #282828;
+      transition-property: background-color;
+      transition-duration: $duration;
+      transition-delay: $delay;
     }
 
 
@@ -150,20 +156,56 @@
     display: inline-block;
     width: auto;
     border-bottom: none;
+        /*псевдоэлемент для упрощения попадания мышью в подменю*/
+    &::after{
+      content:"";
+      width: 35px;
+      height: 30px;
+      position: absolute;
+      bottom: 0;
+      right: -35px;
+      z-index: 50;
+      
+      visibility: hidden;
+      transition-property: visibility;
+      transition-duration: $duration;
+      transition-delay: $delay;
+    }
+
+
   }
 /*подменю показывается при наведении*/
   .main-menu__item:hover  {
-    .sub-menu{
-      display: block;
-
+    &::after{
+      visibility: visible;
+      transition-property: visibility;
+      transition-duration: $duration;
+      transition-delay: $delay;
     }
+    .sub-menu{
+      visibility: visible;
+      transition-property: visibility;
+      transition-duration: $duration;
+      transition-delay: $delay;
+    }
+
+
+
+
     .main-menu__link{
         background-color: $lightorange-color;
         color: white;
+        transition-property: color, background-color;
+        transition-duration: $duration;
+        transition-delay: $delay;
         &::after{
           background-color: white;
           border-color: white;
+          transition-property: background-color;
+          transition-duration: $duration;
+          transition-delay: $delay;
         }
+
     }
 
   }

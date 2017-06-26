@@ -78,7 +78,7 @@
     box-sizing: border-box;
     position: fixed;
     top: 70px;
-
+    visibility: visible;
     left: 0;
     bottom: 0;
     overflow-x: hidden;
@@ -174,6 +174,7 @@
       width: 320px;
 
 
+
       box-shadow: 3px 0 8px rgba(49, 54, 54, 0.2);
       background-color: white;
       padding-top: 20px;
@@ -199,7 +200,7 @@
     /*при наведении на категорию показывается выпадающее подменю этой категории*/
     .catalog-menu__item:hover .catalog-menu__category-list {
       display: block;
-      overflow-y: scroll;
+      overflow-y: auto;
 
     }
 
