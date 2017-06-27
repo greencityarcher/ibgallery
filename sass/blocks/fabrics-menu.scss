@@ -84,18 +84,22 @@
 .fabrics-menu__scroll-container{
   overflow-y: auto;
   height: 60vw;
+  max-width: 95vw;
+
 }
 
   .fabrics-menu__brand-lists {
     padding-top: 21px;
     padding-bottom: 35px;
     padding-right: 40px;
-    max-width: 90vw;
+    max-width: inherit;
+    min-width: 910px;
     max-height: 730px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: stretch;
+
   }
 
   .fabrics-menu__sublist {

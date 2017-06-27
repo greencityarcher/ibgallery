@@ -21,9 +21,9 @@ $sidebar-width: 65px;
 $block-link-height:50px;
 
 
-$catalog-menu-categories: kitchens, tables, benches, softfurniture, beds, mirrors, storage, light, compositions;
+$catalog-menu-categories: kitchens, tables, benches, softfurniture, beds, mirrors, storage, light, accesorizes, compositions;
 $catalog-icon-links: extra, discount, instock;
-$catalog-icons: kitchens, tables, benches, softfurniture, beds, mirrors, storage, light, compositions, extra, discount, instock, personal;
+$catalog-icons: kitchens, tables, benches, softfurniture, beds, mirrors, storage, light, compositions, extra, accesorizes, discount, instock;
 
 
 $sticky-wrapper-z-index:50;
@@ -32,3 +32,9 @@ $page-header-z-index: 50;
 
 $duration: 100ms;
 $delay:100ms;
+
+$cat-duration: 100ms;
+$cat-delay: 100ms;
+
+$link-duration: $cat-duration/2;
+$link-delay: $cat-delay/2;

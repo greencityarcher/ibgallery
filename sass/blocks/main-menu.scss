@@ -165,7 +165,7 @@
       bottom: 0;
       right: -35px;
       z-index: 50;
-      
+
       visibility: hidden;
       transition-property: visibility;
       transition-duration: $duration;
@@ -214,14 +214,5 @@
     display: block;
   }
 
-
-
-/*для широких версий ссылка из главного меню скрывается*/
-
-
-  .main-menu__item--catalog:hover {
-    overflow: visible;
-  }
-  /*отображение разного текста на разных версиях*/
 
 }
