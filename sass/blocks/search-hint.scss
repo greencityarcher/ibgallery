@@ -1,77 +1,161 @@
 .search-hint {
-  width: 585px;
-  box-shadow: 0 0 15px rgba(49, 54, 54, 0.25);
-  background: white;
+  background-color: white;
+  display: block;
+}
+
+.search-hint__results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search-hint__results li{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  box-sizing: border-box;
+  height: 50px;
+  border-bottom: 2px solid $catalog-menu-border-color;
+  background-color: white;
+  padding-left: 20px;
+  font-size: 0;
+}
+
+.search-hint__results .search-hint__section-header {
+  background-color: #f4f3ef;
+  cursor: auto;
   font-size: 16px;
+}
 
-  .search-hint__section--categories {
-    color: #818181;
+.search-hint__result-link{
+  display: flex;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #282828;
+  padding-right: 35px;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  color: #282828;
+  @extend .link-arrow;
+  flex-grow: 1;
+  max-height: 40px;
+
+  line-height: 20px;
+}
+
+
+
+.search-hint__results .search-hint__load-more-item{
+  padding-left: 0;
+}
+
+.search-hint__load-more-btn {
+  display: block;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 5px;
+  width: 272px;
+  height: 38px;
+  border-radius: 3px;
+  border: 1px solid #b8b8b8;
+  line-height: 38px;
+  color: #282828;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  flex-grow: 0;
+
+  &:hover{
+    background-color: #ff851e;
+    color: white;
   }
+}
 
-  .search-hint__section-header {
-    background-color: #f4f3ef;
-    color: #282828;
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: 300;
-    padding-left: 27px;
-  }
+.search-hint__good-brand{
+  display: none;
+}
 
-  .search-hint__results {
-    margin: 0;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    padding-left: 27px;
-    list-style: none;
-  }
+.search-hint__good-photo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  background-color: #959595;
+  margin-right: 10px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
 
-  .search-hint__section--goods {
-  .search-hint__result-item {
-      display: flex;
-      flex-wrap: wrap;
+
+@media #{$tablet-width} {
+  .search-hint {
+    width: 585px;
+    box-shadow: 0 0 15px rgba(49, 54, 54, 0.25);
+    background: white;
+    padding-left: 1px;
+    padding-right: 1px;
+
+}
+    .search-hint__results {
+
+      padding-bottom: 10px;
     }
-  }
 
-  .search-hint__result-link {
-    color: #282828;
-    text-decoration: none;
+.search-hint__results li{
+  border-bottom: none;
+  height: auto;
+  padding-left: 27px;
+  font-size: 16px;
+  color: #818181;
+}
 
-    &:hover {
-      color: #ff851e;
-      text-decoration: underline;
+.search-hint__results .search-hint__section-header {
+  color: #282828;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  border-bottom: none;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+    .search-hint__result-link {
+      color: #282828;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        color: #ff851e;
+        text-decoration: underline;
+      }
+      &:after{
+        display: none;
+      }
     }
-  }
 
-  .search-hint__result-link--unimportant {
-    color: #818181;
-  }
+.search-hint__results--categories .search-hint__result-link{
+  display: inline;
+}
 
-  .search-hint__unimportant .search-hint__result-link {
-    color: #818181;
-  }
 
-  .search-hint__good-brand {
-    color: #818181;
-  }
+    .search-hint__good-brand {
+      display: inline-block;
+      margin-right: auto;
+      color: #818181;
+      text-transform: uppercase;
+        text-decoration: none;
 
-  .search-hint__photo-link {
-    font-size: 0;
-    text-decoration: none;
-  }
+    }
 
-  .search-hint__good-photo {
-    display: block;
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    background-color: #959595;
-    margin-right: 10px;
-    margin-bottom: 10px;
+.search-hint__results .search-hint__load-more-item{
+    display: none;
   }
+.search-hint__good-photo{
+  display: inline;
+  float: left;
+  margin-bottom: 10px;
+}
 
-  .search-hint__good-info {
-    display: flex;
-    flex-direction: column;
-    line-height: 18px;
-  }
 }

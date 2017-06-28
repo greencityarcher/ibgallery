@@ -1,6 +1,45 @@
 .search {
-  display: none;
+  display: block;
 }
+
+.search__form {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.search__submit-btn {
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 16px;
+  color: white;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  height: 48px;
+  width: 73px;
+  background-color: #ff851e;
+  font-weight: 300;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+.search__query-input{
+  font-size: 20px;
+  line-height: 48px;
+  padding-left: 21px;
+  padding-right: 5px;
+  padding-top: 0;
+  padding-bottom: 0;
+  outline: none;
+  border: none;
+}
+
+.search-hint__good-photo{
+display: inline-block; 
+}
+
 @media #{$tablet-width} {
   /*стили поиска для закрытого состояния*/
   .search {
@@ -14,7 +53,7 @@
     .search__toggle {
       display: block;
       width: 65px;
-      height: 69px;
+      height: 68px;
       position: relative;
       padding: 0;
       background-color: #f4f3ef;
@@ -51,7 +90,7 @@
     width: 100%;
     padding: 0;
     height: 68px;
-  
+
 
 
 
