@@ -1,3 +1,4 @@
 *.pdf
 *.pub
 gitkey
+node_modules/*
