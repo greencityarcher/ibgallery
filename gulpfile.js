@@ -8,6 +8,7 @@ var autoprefixer = require("autoprefixer");
 var inlinesvg = require("postcss-inline-svg");
 var flexibility = require ("postcss-flexibility");
 var mqpacker = require ("css-mqpacker");
+var rigger = require("gulp-rigger");
 
 /*
 var minify = require ("gulp-csso");
@@ -36,12 +37,22 @@ gulp.task('style', function(){
   .pipe(server.stream());
 });
 
-gulp.task("serve", ["style"], function(){
+
+gulp.task('js-concat', function(){
+  gulp.src("js/main.js")
+  .pipe(rigger())
+  .pipe(gulp.dest("scripts"));
+});
+
+
+
+
+gulp.task("serve", ["style", "js-concat"], function(){
   server.init({
     server:"."
   });
   gulp.watch("sass/**/*.scss", ["style"]);
   gulp.watch("*.html")
-  gulp.watch("js/**/*.js")
+  gulp.watch("js/**/*.js", ["js-concat"])
   .on("change", server.reload);
 });

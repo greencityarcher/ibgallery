@@ -2,7 +2,7 @@
 
 $(".main-menu__item").hover(
   function() {
-    if ($(window).width() >= 980) {
+    if ( ($(window).width() >MAXMOBILEWIDTH) && ( !($(this).hasClass("main-menu__item--no-sub"))))  {
       if (!($(this).hasClass("main-menu__item--catalog"))) {
         $(".catalog-menu").css({
           opacity: 0.65
@@ -14,7 +14,7 @@ $(".main-menu__item").hover(
     }
   },
   function() {
-    if ($(window).width() >= 980) {
+    if ($(window).width() >MAXMOBILEWIDTH) {
       if (!($(this).hasClass("main-menu__item--catalog"))) {
         $(".catalog-menu").css({
           opacity: 1

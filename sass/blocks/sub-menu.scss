@@ -20,20 +20,7 @@
 
 /*первая ссылка подменю всегда будет "назад" */
 .sub-menu__link--back{
-  padding-left: 35px;
-  box-sizing: border-box;
-
-  &::before{
-    content:"";
-    width: 8px;
-    height: 8px;
-    border-left: 1px solid #282828;
-    border-bottom: 1px solid #282828;
-    transform: rotate(45deg) translateY(-50%);
-    position: absolute;
-    top: 50%;
-    left: 20px;
-  }
+  
 }
 
 .sub-menu__link--header{

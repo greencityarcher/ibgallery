@@ -5,10 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/flexibility.js"></script>
-  <script src="js/jquery-3.2.1.js"></script>
-
-
   <title>IB Gallery тестовая верстка</title>
 </head>
 
@@ -22,57 +18,7 @@
             <button class="main-nav__mobile-menu-btn" id="mobile-menu-btn">
             </button>
           </div>
-          <div class="search" id="header-search">
-            <a class="search__toggle" id="header-search-toggle" href="/search.html"></a>
-            <form class="search__form" method="GET" action="#">
-              <input class="search__query-input" type="text" name="search-query" id="search-query-input" autocomplete="off">
-              <input class="search__submit-btn" type="submit" value="Найти">
-              <div class="search__result  search-hint" id="search-hint">
-                  <ul class="search-hint__results  search-hint__results--categories">
-                    <li class="search-hint__section-header">Категории</li>
-                    <li>Мягкая мебель / Кресла /&nbsp;<a class="search-hint__result-link" href="#">Кресла качалки</a></li>
-                    <li>Мягкая мебель /&nbsp;<a class="search-hint__result-link" href="#">Кресла</a></li>
-                    <li>Мягкая мебель / Кресла /&nbsp;<a class="search-hint__result-link" href="#">Дизайнерские кресла</a></li>
-                  </ul>
-                  <ul class="search-hint__results">
-                    <li class="search-hint__section-header">Фабрики</li>
-                    <li><a href="#" class="search-hint__result-link">Angelo Cappellini</a></li>
-                    <li><a href="#" class="search-hint__result-link">Domingo Salotti</a></li>
-                    <li><a href="#" class="search-hint__result-link">Mobilidea</a></li>
-                  </ul>
-                  <ul class="search-hint__results">
-                    <li class="search-hint__section-header">Дизайнеры мебели</li>
-                    <li><a href="#" class="search-hint__result-link">Reflex Design Studio</a></li>
-                    <li><a href="#" class="search-hint__result-link">Daniele Lago</a></li>
-                    <li><a href="#" class="search-hint__result-link">Sylcom Glass Design</a></li>
-                  </ul>
-                  <ul class="search-hint__results">
-                    <li class="search-hint__section-header">Товары</li>
-                    <li>
-                      <a class="search-hint__result-link" href="">
-                        <img class="search-hint__good-photo" src="img/good-1.png" alt="">
-                        <span class="search-hint__good-brand">Gervasoni</span><br>
-                        Дизайнерское кресло-качалка Gray 09
-                      </a>
-                    </li>
-                    <li>
-                      <a class="search-hint__result-link" href="">
-                        <img class="search-hint__good-photo" src="" alt="">
-                        <span class="search-hint__good-brand">Domingo Salotti</span><br>
-                        Кресло Gamma
-                      </a>
-                    </li>
-                    <li>
-                      <a class="search-hint__result-link" href="">
-                        <img class="search-hint__good-photo" src="" alt="">
-                        <span class="search-hint__good-brand">Stella Del Mobile</span><br>
-                        Офисное кресло Poltroncina giverole (Art. 01.40)Офисное кресло Poltroncina giverole (Art. 01.40)</a>
-                    </li>
-                    <li class="search-hint__load-more-item"><span class="search-hint__load-more-btn">Показать еще</span></li>
-                  </ul>
-              </div>
-            </form>
-          </div>
+
 
             <a href="#" class="page-header__logo"></a>
             <div class="page-header__geo geolocation">
@@ -110,22 +56,71 @@
             <a class="call-request__number" href="tel:+74956428360">+7 495 642-83-60</a>
             <a class="call-request__popup-link" href="#">Заказать консультацию</a>
           </div>
-          <div class="page-header__user-id">Ваш ID: 117-401</div>
+
         </div>
+      </div>
+      <div class="search" id="main-search">
+        <a class="main-menu__link  main-menu__link--search  main-menu__link--arrow  search__toggle" id="main-search-toggle" href="/search.html">Поиск</a>
+        <div class="search__container">
+
+        <form class="search__form" method="GET" action="#">
+          <input class="search__query-input" type="text" name="search-query" id="search-query-input" autocomplete="off">
+          <input class="search__submit-btn" type="submit" value="Найти">
+          <div class="search__result  search-hint" id="search-hint">
+              <ul class="search-hint__results  search-hint__results--categories">
+                <li class="search-hint__section-header">Категории</li>
+                <li>Мягкая мебель / Кресла /&nbsp;<a class="search-hint__result-link" href="#">Кресла качалки</a></li>
+                <li>Мягкая мебель /&nbsp;<a class="search-hint__result-link" href="#">Кресла</a></li>
+                <li>Мягкая мебель / Кресла /&nbsp;<a class="search-hint__result-link" href="#">Дизайнерские кресла</a></li>
+              </ul>
+              <ul class="search-hint__results">
+                <li class="search-hint__section-header">Фабрики</li>
+                <li><a href="#" class="search-hint__result-link">Angelo Cappellini</a></li>
+                <li><a href="#" class="search-hint__result-link">Domingo Salotti</a></li>
+                <li><a href="#" class="search-hint__result-link">Mobilidea</a></li>
+              </ul>
+              <ul class="search-hint__results">
+                <li class="search-hint__section-header">Дизайнеры мебели</li>
+                <li><a href="#" class="search-hint__result-link">Reflex Design Studio</a></li>
+                <li><a href="#" class="search-hint__result-link">Daniele Lago</a></li>
+                <li><a href="#" class="search-hint__result-link">Sylcom Glass Design</a></li>
+              </ul>
+              <ul class="search-hint__results">
+                <li class="search-hint__section-header">Товары</li>
+                <li>
+                  <a class="search-hint__result-link" href="">
+                    <img class="search-hint__good-photo" src="img/good-1.png" alt="">
+                    <span class="search-hint__good-brand">Gervasoni</span><br>
+                    Дизайнерское кресло-качалка Gray 09
+                  </a>
+                </li>
+                <li>
+                  <a class="search-hint__result-link" href="">
+                    <img class="search-hint__good-photo" src="" alt="">
+                    <span class="search-hint__good-brand">Domingo Salotti</span><br>
+                    Кресло Gamma
+                  </a>
+                </li>
+                <li>
+                  <a class="search-hint__result-link" href="">
+                    <img class="search-hint__good-photo" src="" alt="">
+                    <span class="search-hint__good-brand">Stella Del Mobile</span><br>
+                    Офисное кресло Poltroncina giverole (Art. 01.40)Офисное кресло Poltroncina giverole (Art. 01.40)</a>
+                </li>
+                <li class="search-hint__load-more-item"><span class="search-hint__load-more-btn">Показать еще</span></li>
+              </ul>
+          </div>
+        </form>
+      </div>
       </div>
         <nav class="main-nav" id="main-nav">
 
           <ul class="main-menu">
-            <li class="main-menu__item  main-menu__item--search  mobile-only">
-              <a class="main-menu__link  main-menu__link--search  main-menu__link--arrow">Поиск</a>
-            </li>
-
             <li class="main-menu__item  main-menu__item--catalog"><a class="main-menu__link  main-menu__link--catalog  mobile-menu-link" href="#">Каталог</a>
               <ul class="sub-menu  catalog-menu">
-                <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                 <li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--kitchens  mobile-menu-link" href="#">Кухни</a>
                   <ul class="catalog-menu__category-list">
-                    <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Кухни</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Угловые кухни</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Кухни-острова</a></li>
@@ -134,11 +129,11 @@
                 </li>
                 <li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--tables  mobile-menu-link" href="#">Столы и стулья</a>
                   <ul class="catalog-menu__category-list">
-                    <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Столы и стулья</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  mobile-menu-link" href="#">Столы</a>
                       <ul class="catalog-menu__subcategory-list">
-                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Столы</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Стеклянные столы</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Деревянные столы</a></li>
@@ -155,7 +150,7 @@
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Консоли</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  mobile-menu-link" href="#">Стулья</a>
                       <ul class="catalog-menu__subcategory-list">
-                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Стулья</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Обеденные стулья</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Барные стулья</a></li>
@@ -167,7 +162,7 @@
                 </li>
                 <li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--benches  mobile-menu-link" href="#">Банкетки и скамьи</a>
                   <ul class="catalog-menu__category-list">
-                    <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Банкетки и скамьи</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Банкетки</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Скамьи</a></li>
@@ -176,12 +171,12 @@
                 </li>
                 <li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--softfurniture  mobile-menu-link" href="#">Мягкая мебель</a>
                   <ul class="catalog-menu__category-list">
-                    <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Мягкая мебель</a></li>
                     <li class="catalog-menu__category-list-item">
                       <a class="catalog-menu__category-name  mobile-menu-link" href="#">Кресла</a>
                       <ul class="catalog-menu__subcategory-list">
-                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Кресла</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Кресла-качалки</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Дизайнерские кресла</a></li>
@@ -192,7 +187,7 @@
                     <li class="catalog-menu__category-list-item">
                       <a class="catalog-menu__category-name  mobile-menu-link" href="#">Диваны</a>
                       <ul class="catalog-menu__subcategory-list">
-                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Диваны</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Диваны-кровати</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Модульные диваны</a></li>
@@ -204,7 +199,7 @@
                     <li class="catalog-menu__category-list-item">
                       <a class="catalog-menu__category-name  mobile-menu-link" href="#">Пуфы</a>
                       <ul class="catalog-menu__subcategory-list">
-                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Пуфы</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Дизайнерские пуфы</a></li>
                       </ul>
@@ -215,7 +210,7 @@
                     <li class="catalog-menu__category-list-item">
                       <a class="catalog-menu__category-name  mobile-menu-link" href="#">Кровати</a>
                       <ul class="catalog-menu__subcategory-list">
-                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Кровати</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Кованые кровати</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Детские кровати</a></li>
@@ -235,7 +230,7 @@
                 </li>
                 <li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--beds  mobile-menu-link" href="#">Кровати</a>
                   <ul class="catalog-menu__category-list">
-                    <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Кровати</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Кованые кровати</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Детские кровати</a></li>
@@ -250,7 +245,7 @@
                 </li>
                 <li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--mirrors  mobile-menu-link" href="#">Зеркала</a>
                   <ul class="catalog-menu__category-list">
-                    <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Зеркала</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Настенные зеркала</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Напольные зеркала</a></li>
@@ -259,13 +254,13 @@
                 </li>
                 <li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--storage  mobile-menu-link" href="#">Системы хранения</a>
                   <ul class="catalog-menu__category-list">
-                    <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Системы хранения</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Модульные системы</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Стенки</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  mobile-menu-link" href="#">Шкафы</a>
                       <ul class="catalog-menu__subcategory-list">
-                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Шкафы</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Шкафы-купе</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Книжные шкафы</a></li>
@@ -280,7 +275,7 @@
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Витрины</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  mobile-menu-link" href="#">Бюро</a>
                       <ul class="catalog-menu__subcategory-list">
-                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Бюро</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Секретеры</a></li>
                       </ul>
@@ -288,7 +283,7 @@
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Комоды</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  mobile-menu-link" href="#">Тумбы</a>
                       <ul class="catalog-menu__subcategory-list">
-                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Тумбы</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Тумбы для ТВ</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Прикроватные тумбочки</a></li>
@@ -303,19 +298,19 @@
                 </li>
                 <li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--light  mobile-menu-link" href="#">Освещение</a>
                   <ul class="catalog-menu__category-list">
-                    <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
 
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Освещение</a></li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  mobile-menu-link" href="#">Люстры</a>
                       <ul class="catalog-menu__subcategory-list">
-                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Люстры</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Хрустальные люстры</a></li>
                       </ul>
                     </li>
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  mobile-menu-link" href="#">Светильники и лампы</a>
                       <ul class="catalog-menu__subcategory-list">
-                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Светильники и лампы</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Настенные светильники</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Настольные светильники</a></li>
@@ -330,7 +325,7 @@
                 </li>
                 <li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--accesorizes  mobile-menu-link" href="#">Аксессуары</a>
                   <ul class="catalog-menu__category-list">
-                    <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Аксессуары</a></li>
                     <li class="catalog-menu__category-list-item">
                       <a class="catalog-menu__category-name" href="#">Вешалки</a>
@@ -345,7 +340,7 @@
                 </li>
                 <li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--compositions  mobile-menu-link" href="#">Композиции</a>
                   <ul class="catalog-menu__category-list">
-                    <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                     <li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header">Композиции</a></li>
                     <li class="catalog-menu__category-list-item">
                       <a class="catalog-menu__category-name" href="#">Ванные</a>
@@ -384,12 +379,12 @@
                 </li>
                 <li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--extra  mobile-menu-link" href="#">Дополнительно</a>
                   <ul class="catalog-menu__category-list">
-                    <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                     <li class="catalog-menu__category-list-item  mobile-only"><a class="catalog-menu__category-header" href="#">Дополнительно</a></li>
                     <li class="catalog-menu__category-list-item">
                       <span class="catalog-menu__category-name  catalog-menu__category-name--header-style  mobile-menu-link">Назначение</span>
                       <ul class="catalog-menu__subcategory-list  catalog-menu__subcategory-list--no-margin">
-                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
+
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Назначение</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для кухни</a></li>
                         <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для столовой</a></li>
@@ -408,7 +403,6 @@
                     <li class="catalog-menu__category-list-item">
                       <span class="catalog-menu__category-name  catalog-menu__category-name--header-style  mobile-menu-link">Стили</span>
                       <ul class="catalog-menu__subcategory-list  catalog-menu__subcategory-list--no-margin">
-                        <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
                           <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header">Стили</a></li>
                           <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Классическая мебель</a></li>
                           <li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Современная мебель</a></li>
@@ -640,7 +634,6 @@
               </li>
               <li class="main-menu__item"><a class="main-menu__link  main-menu__link--info  mobile-menu-link" href="#">Условия</a>
                 <ul class="sub-menu">
-                  <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
                   <li class="sub-menu__item   mobile-only"><a class="sub-menu__link  sub-menu__link--header" href="#">Условия</a></li>
                   <li class="sub-menu__item"><a class="sub-menu__link" href="#">Условия работы</a></li>
                   <li class="sub-menu__item"><a class="sub-menu__link" href="#">Сроки поставки товара</a></li>
@@ -649,7 +642,6 @@
               </li>
               <li class="main-menu__item"><a class="main-menu__link main-menu__link--info  mobile-menu-link" href="#">О компании</a>
                 <ul class="sub-menu">
-                  <li class="sub-menu__item  sub-menu__item--back"><a class="sub-menu__link  sub-menu__link--back" href="#">Назад</a></li>
                   <li class="sub-menu__item   mobile-only"><a class="sub-menu__link  sub-menu__link--header" href="#">О компании</a></li>
                   <li class="sub-menu__item"><a class="sub-menu__link" href="#">О нас</a></li>
                   <li class="sub-menu__item"><a class="sub-menu__link" href="#">Новости</a></li>
@@ -659,14 +651,14 @@
                   <li class="sub-menu__item"><a class="sub-menu__link" href="#">Термины</a></li>
                 </ul>
               </li>
-              <li class="main-menu__item"><a class="main-menu__link  main-menu__link--info" href="#">Контакты</a>
+              <li class="main-menu__item  main-menu__item--no-sub"><a class="main-menu__link  main-menu__link--info" href="#">Контакты</a>
               </li>
               <li class="main-menu__item"><a class="main-menu__link  main-menu__link--user" href="#"><span class="mobile-only">Вход</span><span class="wide-only">Войти на сайт</span></a>
               </li>
           </ul>
 
         </nav>
-
+        <div class="page-header__user-id">Ваш ID: 117-401</div>
     </header>
     <div class="grid__main-wrapper">
       <div class="grid__sidebar" id="sidebar">
@@ -878,10 +870,7 @@
   </section>
   <div class="overlay"></div>
 
-  <script src="js/mobile-menu.js"></script>
-  <script src="js/main-search.js"></script>
-  <script src="js/fading-content.js"></script>
-  <script src="js/call-modal.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 .search-hint {
   background-color: white;
-  display: block;
+  display: none;
 }
 
 .search-hint__results {
@@ -87,7 +87,9 @@
   flex-grow: 0;
   flex-shrink: 0;
 }
-
+.search-hint__good-photo{
+display: inline-block;
+}
 
 @media #{$tablet-width} {
   .search-hint {

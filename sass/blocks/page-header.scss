@@ -3,6 +3,7 @@
   width: 100%;
   min-width: 320px;
   background-color:white;
+  padding-top: 69px;
 }
 
 
@@ -16,6 +17,7 @@
   z-index: $sticky-wrapper-z-index;
   display: flex;
   align-items: center;
+    margin-bottom: 69px;
 }
 
 /*обертка для позиционирования поиска в хедере*/
@@ -69,6 +71,7 @@
   position: fixed;
   border-bottom: 1px solid $lightorange-color;
   z-index: $page-header-z-index;
+  padding-top: 0;
   }
 
 
@@ -78,6 +81,7 @@
   z-index: auto;
   border-bottom: none;
   box-sizing: border-box;
+  margin-bottom: 0;
 }
 .page-header__wrapper{
 position: relative;
@@ -87,7 +91,7 @@ position: relative;
     width: 189px;
     min-width: 189px;
     height: 48px;
-    margin-left: 33px;
+    margin-left: 102px;
     display: block;
   }
   .page-header__geo {

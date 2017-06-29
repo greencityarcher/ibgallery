@@ -1,12 +1,15 @@
 .search {
-  display: block;
+  display: none;
+  width: 100%;
+  position: relative;
+
+  .link-back {
+    display: none;
+  }
 }
 
 .search__form {
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: nowrap;
-  position: relative;
+  display: none;
 }
 
 .search__submit-btn {
@@ -25,30 +28,47 @@
   outline: none;
   cursor: pointer;
 }
-.search__query-input{
+
+.search__query-input {
   font-size: 20px;
   line-height: 48px;
-  padding-left: 21px;
-  padding-right: 5px;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 5px 0 21px;
   outline: none;
   border: none;
+  flex-grow: 1;
 }
 
-.search-hint__good-photo{
-display: inline-block; 
-}
+.search.opened {
+  display: block;
 
+  .search__form {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    position: relative;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #e4e3e1;
+    width: 100%;
+  }
+
+  .search__toggle {
+    display: none;
+  }
+
+  .link-back {
+    display: block;
+  }
+}
 @media #{$tablet-width} {
   /*стили поиска для закрытого состояния*/
   .search {
     display: block;
     height: 68px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 65px;
     z-index: 35;
-
 
     .search__toggle {
       display: block;
@@ -58,27 +78,32 @@ display: inline-block;
       padding: 0;
       background-color: #f4f3ef;
       cursor: pointer;
+      font-size: 0;
+      border-bottom: none;
 
-        &::before {
-          content: "";
-          position: absolute;
-          width: 27px;
-          height: 26px;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          background-repeat: no-repeat;
-          background-position: center;
-          background-image: svg-load('../icons/search.svg', stroke=#404040, fill=none, stroke-width=2);
-        }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 27px;
+        height: 26px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: svg-load('../icons/search.svg', stroke=#404040, fill=none, stroke-width=2);
       }
+
+      &::after {
+        display: none;
+      }
+    }
+
     .search__form {
       display: none;
+      border-bottom: none;
     }
   }
-  /*
-стили поиска для закрытого состояния
-*/
 
   /*стилизация поиска в открытом состоянии*/
   .opened.search {
@@ -91,12 +116,14 @@ display: inline-block;
     padding: 0;
     height: 68px;
 
-
-
+    .search__container {
+      width: 100%;
+    }
 
     .search__toggle {
+      display: block;
       background-image: none;
-      background-color:white;
+      background-color: white;
 
       &::before {
         content: "";
@@ -111,6 +138,7 @@ display: inline-block;
 
       &::after {
         content: "";
+        display: block;
         width: 31px;
         height: 1px;
         transform: translate(-50%, -50%) rotate(-45deg);
@@ -121,11 +149,16 @@ display: inline-block;
       }
     }
 
+    .link-back {
+      display: none;
+    }
+
     .search__form {
       display: flex;
       flex-grow: 1;
       flex-wrap: nowrap;
       position: relative;
+      border-bottom: none;
     }
 
     .search__query-input {
@@ -140,13 +173,12 @@ display: inline-block;
       font-size: 40px;
       color: #424242;
       font-weight: 200;
-      position:relative;
-
-
+      position: relative;
     }
 
     .search__submit-btn {
       flex-grow: 0;
+      
       flex-shrink: 0;
       font-size: 30px;
       color: white;
@@ -169,7 +201,7 @@ display: inline-block;
       display: none;
     }
     /*при открытом поиске скрывается user-id*/
-    ~.page-header__user-id{
+    ~.page-header__user-id {
       display: none;
     }
   }
