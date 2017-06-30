@@ -1718,9 +1718,9 @@ h1, h2, h3 {
     -webkit-transition-property: width;
     -o-transition-property: width;
     transition-property: width;
-    -webkit-transition-delay: 200ms;
-         -o-transition-delay: 200ms;
-            transition-delay: 200ms;
+    -webkit-transition-delay: 100ms;
+         -o-transition-delay: 100ms;
+            transition-delay: 100ms;
     -webkit-transition-duration: 200ms;
          -o-transition-duration: 200ms;
             transition-duration: 200ms; }
@@ -1745,9 +1745,6 @@ h1, h2, h3 {
     -webkit-transition-property: all;
     -o-transition-property: all;
     transition-property: all;
-    -webkit-transition-delay: 200ms;
-         -o-transition-delay: 200ms;
-            transition-delay: 200ms;
     -webkit-transition-duration: 200ms;
          -o-transition-duration: 200ms;
             transition-duration: 200ms; }
@@ -1769,9 +1766,9 @@ h1, h2, h3 {
     -webkit-transition-property: all;
     -o-transition-property: all;
     transition-property: all;
-    -webkit-transition-delay: 200ms;
-         -o-transition-delay: 200ms;
-            transition-delay: 200ms;
+    -webkit-transition-delay: 100ms;
+         -o-transition-delay: 100ms;
+            transition-delay: 100ms;
     -webkit-transition-duration: 100ms;
          -o-transition-duration: 100ms;
             transition-duration: 100ms; }
@@ -1882,9 +1879,9 @@ h1, h2, h3 {
     -webkit-transition-duration: 100ms;
          -o-transition-duration: 100ms;
             transition-duration: 100ms;
-    -webkit-transition-delay: 300ms;
-         -o-transition-delay: 300ms;
-            transition-delay: 300ms;
+    -webkit-transition-delay: 100ms;
+         -o-transition-delay: 100ms;
+            transition-delay: 100ms;
     -webkit-transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
          -o-transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
             transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
@@ -1898,9 +1895,9 @@ h1, h2, h3 {
     -webkit-transition-duration: 100ms;
          -o-transition-duration: 100ms;
             transition-duration: 100ms;
-    -webkit-transition-delay: 100ms;
-         -o-transition-delay: 100ms;
-            transition-delay: 100ms; }
+    -webkit-transition-delay: 20ms;
+         -o-transition-delay: 20ms;
+            transition-delay: 20ms; }
   /*ссылки без выпадающего меню*/
   .catalog-menu__item--discount:hover::before, .catalog-menu__item--instock:hover::before {
     visibility: hidden; }

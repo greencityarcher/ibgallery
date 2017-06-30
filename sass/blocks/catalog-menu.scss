@@ -100,7 +100,7 @@
     font-size: 0;
     z-index: 100;
     transition-property: width;
-    transition-delay: $cat-delay*2;
+    transition-delay: $cat-delay;
     transition-duration: $cat-delay*2;
 
     &:hover {
@@ -129,7 +129,7 @@
     width: 65px;
     overflow: hidden;
     transition-property: all;
-    transition-delay: $cat-delay*2;
+
     transition-duration: $cat-delay*2;
   }
   .catalog-menu__item--collapsing-right{
@@ -157,7 +157,7 @@
     border-color: #ff851e;
     color: white;
     transition-property: all;
-    transition-delay: $cat-delay*2;
+    transition-delay: $cat-delay;
     transition-duration: $cat-duration;
   }
     @each $icon in $catalog-icons {
@@ -253,7 +253,7 @@
     background-color: white;
     transition-property: visibility,opacity;
     transition-duration: $cat-duration;
-    transition-delay: $cat-delay*3;
+    transition-delay: $cat-delay;
     transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
     box-shadow: 3px 0 8px rgba(49, 54, 54, 0.2);
   }
@@ -262,7 +262,7 @@
     visibility: visible;
     transition-property: visibility;
     transition-duration: $cat-duration;
-    transition-delay: $cat-delay;
+    transition-delay: 20ms;
   }
 /*ссылки без выпадающего меню*/
   .catalog-menu__item--discount:hover::before,.catalog-menu__item--instock:hover::before {

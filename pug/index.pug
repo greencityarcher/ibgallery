@@ -1,0 +1,102 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    link(rel='stylesheet', href='css/style.css')
+    title IB Gallery тестовая верстка
+  body#all-page.all-page
+    .grid
+      header.page-header
+        .page-header__sticky-wrapper
+          .page-header__wrapper
+            .main-nav__btn-wrap
+              button#mobile-menu-btn.main-nav__mobile-menu-btn
+            a.page-header__logo(href='#')
+            .page-header__geo.geolocation
+              include partials/geolocation.pug
+            ul.page-header__featured.featured
+              li.featured__item.featured__item--shopping-card
+                a.featured__link.featured__link--shopping-card(href='/cart/')
+                  | Корзина
+              li.featured__item.featured__item--liked
+                a.featured__link.featured__link--liked(href='#')
+                  | Мне понравилось
+              li.featured__item.featured__item--recent
+                a.featured__link.featured__link--recent(href='#')
+                  | История просмотров
+            .page-header__call.call-request
+              a.call-request__number(href='tel:+74956428360') +7 495 642-83-60
+              a.call-request__popup-link(href='#') Заказать консультацию
+        include partials/main-search.pug
+        include partials/navigation.pug
+        .page-header__user-id Ваш ID: 117-401
+      .grid__main-wrapper
+        #sidebar.grid__sidebar
+        .grid__main-info-wrap
+          section.grid__page-content
+            #content.page-content__wrap
+              h1 Итальянская мебель
+              p
+                | Дом для человека не только место, где он ест или спит в свободное от деловой суеты время, но также пространство для самовыражения и поле для творческих экспериментов, цель которых — отыскать идеальное воплощение мечты. Ведь в голове у каждого
+                | из нас есть собственный образ совершенного жилища. В той же мере это утверждение относится и к рабочему месту.
+              .accent
+                dl
+                  dt Миссия компании:
+                  dd
+                    | помогать создавать элегантные интерьеры, отвечающие предпочтениям самых взыскательных клиентов.
+              h2 Sormani - новый бренд в каталоге
+              p
+                | Уютная итальянская мебель Sormani теперь в IB Gallery! Выбирайте в каталоге нашего сайта:
+              ul.list
+                li
+                  | Комфортные
+                  a(href='#') диваны
+                  |  и
+                  a(href='#') кресла
+                  | ;
+                li
+                  | Элегантные
+                  a(href='#') столы
+                  |  и
+                  a(href='#') стулья
+                  |  для гостиной;
+                li
+                  | Удобные
+                  a(href='#') буфеты
+                  |  и
+                  a(href='#') комоды
+                  | ;
+                li
+                  a(href='#') Светильники и лампы
+                  |  для мягкого приглушенного света .
+              h3 Диваны Sormani
+              section.catalog
+                include partials/good.pug 
+                include partials/good.pug
+                include partials/good.pug
+                include partials/good.pug
+                include partials/good.pug
+                
+                
+              h3 В основе работы IB Gallery лежит пять основных принципов :
+              ol.order-list
+                li
+                  strong Внимание к каждому клиенту
+                  br
+                  | 							Мы формируем ассортимент, ориентируясь на потребности разных покупателей. В IB Gallery есть как эксклюзивные предметы интерьера класса «люкс», так и качественная итальянская мебель по умеренной цене.
+                li
+                  strong Удобство
+                  br
+                  | 							Покупка мебели, аксессуаров и освещения — лишь малая часть работы по созданию интерьера вашей мечты. Для удобства наших клиентов мы оказываем целый комплекс дополнительных услуг.
+                li
+                  strong Подготовку интерьерных дизайн-проектов
+                li
+                  strong Честность
+                  br
+                  | 							Мы заинтересованы в том, чтобы Вы получили лучшее. Команда IB Gallery регулярно выезжает на фабрики своих партнеров в Италии, детально вникая в специфику их работы. Мы всегда рассказываем нашим покупателям о неявных особенностях мебели той или иной фабрики.
+          include partials/footer.pug
+    include partials/call-modal.pug      
+    
+    .overlay
+    script(src='scripts/main.js')

@@ -9,6 +9,7 @@ var inlinesvg = require("postcss-inline-svg");
 var flexibility = require ("postcss-flexibility");
 var mqpacker = require ("css-mqpacker");
 var rigger = require("gulp-rigger");
+var pug = require('gulp-pug');
 
 /*
 var minify = require ("gulp-csso");
@@ -45,6 +46,12 @@ gulp.task('js-concat', function(){
 });
 
 
+gulp.task('html', function() {
+    return gulp.src('pug/*.pug')
+        .pipe(pug({pretty: true}))
+        .pipe(gulp.dest(''));
+});
+
 
 
 gulp.task("serve", ["style", "js-concat"], function(){
@@ -54,5 +61,6 @@ gulp.task("serve", ["style", "js-concat"], function(){
   gulp.watch("sass/**/*.scss", ["style"]);
   gulp.watch("*.html")
   gulp.watch("js/**/*.js", ["js-concat"])
+  gulp.watch("pug/**/*.pug", ["html"])
   .on("change", server.reload);
 });

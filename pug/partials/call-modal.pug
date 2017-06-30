@@ -1,0 +1,20 @@
+section.call-modal
+  .call-modal__wrap
+    .call-modal__close
+    h2.call-modal__header Заказать звонок
+    p.call-modal__description
+      | Введите свое имя и контактный телефон, и наш менеджер свяжется с вами в ближайшее время.
+    form.call-modal__user-data(action='#', method='get')
+      label.call-modal__input-label
+        input.call-modal__text-input(type='text', placeholder='Введите имя', name='username', required='')
+        span.call-modal__error-message Пожалуйста, введите ваше имя
+      label.call-modal__input-label
+        input.call-modal__text-input(type='tel', placeholder='Введите контактный телефон', name='phone', required='', pattern='[9]{1}[0-9]{10}')
+        span.call-modal__error-message Введите ваш номер в формате 81234567890
+      input.call-modal__submit(type='submit')
+    .call-modal__user-id Ваш ID 117-401
+    .call-modal__phone +7 495 642 83 60
+    .call-modal__work-hours
+      | Пн-пт — с 10:00 до 21:00
+      br
+      | 				Cб-вс — с 11:00 до 19:00

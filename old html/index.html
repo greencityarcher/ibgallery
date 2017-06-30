@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<title>IB Gallery тестовая верстка</title>
+</head>
+<body class="all-page" id="all-page">
+	<div class="grid">
+		<header class="page-header">
+			<div class="page-header__sticky-wrapper">
+				<div class="page-header__wrapper">
+					<div class="main-nav__btn-wrap">
+						<button class="main-nav__mobile-menu-btn" id="mobile-menu-btn">
+						</button>
+					</div>
+					<a href="#" class="page-header__logo"></a>
+					<div class="page-header__geo geolocation">
+						<a href="#" class="geolocation__current"><span class="geolocation__current-style">Москва</span></a>
+						<div class="geolocation__picker">
+							<div class="geolocation__header">Выберите ваш регион</div>
+								<ul class="geolocation__region-list">
+									<li class="geolocation__region-item"><a class="geolocation__region-link">Санкт-Петербург и область</a></li>
+									<li class="geolocation__region-item"><a class="geolocation__region-link">Тверская область</a></li>
+									<li class="geolocation__region-item"><a class="geolocation__region-link">Тульская область</a></li>
+									<li class="geolocation__region-item"><a class="geolocation__region-link">Калужская область</a></li>
+									<li class="geolocation__region-item"><a class="geolocation__region-link">Ярославская область</a></li>
+								</ul>
+							</div>
+						</div>
+						<ul class="page-header__featured  featured">
+							<li class="featured__item  featured__item--shopping-card">
+								<a href="/cart/" class="featured__link  featured__link--shopping-card">
+									Корзина
+								</a>
+							</li>
+							<li class="featured__item  featured__item--liked">
+								<a href="#" class="featured__link  featured__link--liked">
+									Мне понравилось
+								</a>
+							</li>
+							<li class="featured__item  featured__item--recent">
+								<a href="#" class="featured__link  featured__link--recent">
+									История просмотров
+								</a>
+							</li>
+					</ul>
+					<div class="page-header__call  call-request">
+						<a class="call-request__number" href="tel:+74956428360">+7 495 642-83-60</a>
+						<a class="call-request__popup-link" href="#">Заказать консультацию</a>
+					</div>
+				</div>
+			</div>
+			<div class="search" id="main-search">
+				<a class="main-menu__link  main-menu__link--search  main-menu__link--arrow  search__toggle" id="main-search-toggle" href="/search.html">Поиск</a>
+				<div class="search__container">
+					<form class="search__form" method="GET" action="#">
+						<input class="search__query-input" type="text" name="search-query" id="search-query-input" autocomplete="off">
+						<input class="search__submit-btn" type="submit" value="Найти">
+						<div class="search__result  search-hint" id="search-hint">
+							<ul class="search-hint__results  search-hint__results--categories">
+								<li class="search-hint__section-header">Категории</li>
+								<li>Мягкая мебель / Кресла /&nbsp;<a class="search-hint__result-link" href="#">Кресла качалки</a></li>
+								<li>Мягкая мебель /&nbsp;<a class="search-hint__result-link" href="#">Кресла</a></li>
+								<li>Мягкая мебель / Кресла /&nbsp;<a class="search-hint__result-link" href="#">Дизайнерские кресла</a></li>
+							</ul>
+							<ul class="search-hint__results">
+								<li class="search-hint__section-header">Фабрики</li>
+								<li><a href="#" class="search-hint__result-link">Angelo Cappellini</a></li>
+								<li><a href="#" class="search-hint__result-link">Domingo Salotti</a></li>
+								<li><a href="#" class="search-hint__result-link">Mobilidea</a></li>
+							</ul>
+							<ul class="search-hint__results">
+								<li class="search-hint__section-header">Дизайнеры мебели</li>
+								<li><a href="#" class="search-hint__result-link">Reflex Design Studio</a></li>
+								<li><a href="#" class="search-hint__result-link">Daniele Lago</a></li>
+								<li><a href="#" class="search-hint__result-link">Sylcom Glass Design</a></li>
+							</ul>
+							<ul class="search-hint__results">
+								<li class="search-hint__section-header">Товары</li>
+								<li>
+									<a class="search-hint__result-link" href="">
+										<img class="search-hint__good-photo" src="img/good-1.png" alt="">
+										<span class="search-hint__good-brand">Gervasoni</span><br>
+										Дизайнерское кресло-качалка Gray 09
+									</a>
+								</li>
+								<li>
+									<a class="search-hint__result-link" href="">
+										<img class="search-hint__good-photo" src="" alt="">
+										<span class="search-hint__good-brand">Domingo Salotti</span><br>
+										Кресло Gamma
+									</a>
+								</li>
+								<li>
+									<a class="search-hint__result-link" href="">
+										<img class="search-hint__good-photo" src="" alt="">
+										<span class="search-hint__good-brand">Stella Del Mobile</span><br>
+										Офисное кресло Poltroncina giverole (Art. 01.40)Офисное кресло Poltroncina giverole (Art. 01.40)</a>
+								</li>
+								<li class="search-hint__load-more-item"><span class="search-hint__load-more-btn">Показать еще</span></li>
+							</ul>
+						</div>
+					</form>
+				</div>
+			</div>
+			<nav class="main-nav" id="main-nav">
+				<ul class="main-menu">
+					<li class="main-menu__item  main-menu__item--catalog"><a class="main-menu__link  main-menu__link--catalog  mobile-menu-link" href="#">Каталог</a>
+						<ul class="sub-menu  catalog-menu">
+							<li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--kitchens  mobile-menu-link" href="#">Кухни</a>
+								<ul class="catalog-menu__category-list">
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Кухни</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Угловые кухни</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Кухни-острова</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Кухни из массива дерева</a></li>
+								</ul>
+							</li>
+							<li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--tables  mobile-menu-link" href="#">Столы и стулья</a>
+								<ul class="catalog-menu__category-list">
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Столы и стулья</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  mobile-menu-link" href="#">Столы</a>
+										<ul class="catalog-menu__subcategory-list">
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Столы</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Стеклянные столы</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Деревянные столы</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Круглые (овальные) столы</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Письменные столы</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Обеденные столы</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Журнальные столики</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Туалетные столики</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Столы-трансформеры</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Компьютерные столы</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Дизайнерские столы</a></li>
+										</ul>
+									</li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Консоли</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  mobile-menu-link" href="#">Стулья</a>
+										<ul class="catalog-menu__subcategory-list">
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Стулья</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Обеденные стулья</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Барные стулья</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Складные стулья</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Дизайнерские стулья</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--benches  mobile-menu-link" href="#">Банкетки и скамьи</a>
+								<ul class="catalog-menu__category-list">
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Банкетки и скамьи</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Банкетки</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Скамьи</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Шезлонги</a></li>
+								</ul>
+							</li>
+							<li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--softfurniture  mobile-menu-link" href="#">Мягкая мебель</a>
+								<ul class="catalog-menu__category-list">
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Мягкая мебель</a></li>
+									<li class="catalog-menu__category-list-item">
+										<a class="catalog-menu__category-name  mobile-menu-link" href="#">Кресла</a>
+										<ul class="catalog-menu__subcategory-list">
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Кресла</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Кресла-качалки</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Дизайнерские кресла</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Кресла-кровати</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Кожаные кресла</a></li>
+										</ul>
+									</li>
+									<li class="catalog-menu__category-list-item">
+										<a class="catalog-menu__category-name  mobile-menu-link" href="#">Диваны</a>
+										<ul class="catalog-menu__subcategory-list">
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Диваны</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Диваны-кровати</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Модульные диваны</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Угловые диваны</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Дизайнерские диваны</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Кожаные диваны</a></li>
+										</ul>
+									</li>
+									<li class="catalog-menu__category-list-item">
+										<a class="catalog-menu__category-name  mobile-menu-link" href="#">Пуфы</a>
+										<ul class="catalog-menu__subcategory-list">
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Пуфы</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Дизайнерские пуфы</a></li>
+										</ul>
+									</li>
+									<li class="catalog-menu__category-list-item">
+											<a class="catalog-menu__category-name" href="#">Шезлонги</a>
+									</li>
+									<li class="catalog-menu__category-list-item">
+										<a class="catalog-menu__category-name  mobile-menu-link" href="#">Кровати</a>
+										<ul class="catalog-menu__subcategory-list">
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Кровати</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Кованые кровати</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Детские кровати</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Круглые кровати</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Односпальные кровати</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Кровати с мягким изголовьем</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Кровати из массива дерева</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Кожаные кровати</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Кровати с пневмоподъемом</a></li>
+										</ul>
+									</li>
+									<li class="catalog-menu__category-list-item">
+										<a class="catalog-menu__category-name" href="#">Кушетки</a>
+									</li>
+								</ul>
+							</li>
+							<li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--beds  mobile-menu-link" href="#">Кровати</a>
+								<ul class="catalog-menu__category-list">
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Кровати</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Кованые кровати</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Детские кровати</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Круглые кровати</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Односпальные кровати</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Кровати с мягким изголовьем</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Кровати из массива дерева</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Кожаные кровати</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Кровати с пневмоподъемом</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Дизайнерские кровати</a></li>
+								</ul>
+							</li>
+							<li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--mirrors  mobile-menu-link" href="#">Зеркала</a>
+								<ul class="catalog-menu__category-list">
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Зеркала</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Настенные зеркала</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Напольные зеркала</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Дизайнерские зеркала</a></li>
+								</ul>
+							</li>
+							<li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--storage  mobile-menu-link" href="#">Системы хранения</a>
+								<ul class="catalog-menu__category-list">
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Системы хранения</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Модульные системы</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Стенки</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  mobile-menu-link" href="#">Шкафы</a>
+										<ul class="catalog-menu__subcategory-list">
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Шкафы</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Шкафы-купе</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Книжные шкафы</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Встроенные шкафы</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Угловые шкафы</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Шкафы для посуды</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Дизайнерские шкафы</a></li>
+										</ul>
+									</li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Буфеты</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Серванты</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Витрины</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  mobile-menu-link" href="#">Бюро</a>
+										<ul class="catalog-menu__subcategory-list">
+												<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Бюро</a></li>
+												<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Секретеры</a></li>
+										</ul>
+									</li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Комоды</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  mobile-menu-link" href="#">Тумбы</a>
+										<ul class="catalog-menu__subcategory-list">
+												<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Тумбы</a></li>
+												<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Тумбы для ТВ</a></li>
+												<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Прикроватные тумбочки</a></li>
+										</ul>
+									</li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Стеллажи</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Полки</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Бары</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Стойки для ТВ</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Сейфы</a></li>
+								</ul>
+							</li>
+							<li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--light  mobile-menu-link" href="#">Освещение</a>
+								<ul class="catalog-menu__category-list">
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Освещение</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  mobile-menu-link" href="#">Люстры</a>
+										<ul class="catalog-menu__subcategory-list">
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Люстры</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Хрустальные люстры</a></li>
+										</ul>
+									</li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name  mobile-menu-link" href="#">Светильники и лампы</a>
+										<ul class="catalog-menu__subcategory-list">
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Светильники и лампы</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Настенные светильники</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Настольные светильники</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Потолочные светильники</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Напольные светильники</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Точечные светильники</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Дизайнерские светильники</a></li>
+										</ul>
+									</li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Уличное освещение</a></li>
+								</ul>
+							</li>
+							<li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--accesorizes  mobile-menu-link" href="#">Аксессуары</a>
+								<ul class="catalog-menu__category-list">
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Аксессуары</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Вешалки</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Настенные часы</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Шкатулки</a></li>
+								</ul>
+							</li>
+							<li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--compositions  mobile-menu-link" href="#">Композиции</a>
+								<ul class="catalog-menu__category-list">
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header">Композиции</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Ванные</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Спальни</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Столовые</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Гостиные</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Кабинеты</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Библиотеки</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Детские</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Прихожие</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Гардеробные комнаты</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Стеновые композиции</a></li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-name" href="#">Уличные композиции</a></li>
+								</ul>
+							</li>
+							<li class="sub-menu__item  catalog-menu__item"><a class="catalog-menu__section-link  catalog-menu__section-link--extra  mobile-menu-link" href="#">Дополнительно</a>
+								<ul class="catalog-menu__category-list">
+									<li class="catalog-menu__category-list-item  mobile-only"><a class="catalog-menu__category-header" href="#">Дополнительно</a></li>
+									<li class="catalog-menu__category-list-item"><span class="catalog-menu__category-name  catalog-menu__category-name--header-style  mobile-menu-link">Назначение</span>
+										<ul class="catalog-menu__subcategory-list  catalog-menu__subcategory-list--no-margin">
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header" href="#">Назначение</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для кухни</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для столовой</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для гостиной</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для спальни</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Рабочее место</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для детской</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для прихожей</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для гардеробной комнаты</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для ванной комнаты</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Садовая мебель</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Мебель для ТВ</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Дизайнерская мебель</a></li>
+										</ul>
+									</li>
+									<li class="catalog-menu__category-list-item">
+										<span class="catalog-menu__category-name  catalog-menu__category-name--header-style  mobile-menu-link">Стили</span>
+										<ul class="catalog-menu__subcategory-list  catalog-menu__subcategory-list--no-margin">
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-header">Стили</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Классическая мебель</a></li>
+											<li class="catalog-menu__subcategory-list-item"><a class="catalog-menu__subcategory-link" href="#">Современная мебель</a></li>
+										</ul>
+									</li>
+									<li class="catalog-menu__category-list-item"><a class="catalog-menu__category-header" href="#">Дизайнеры мебели</a></li>
+								</ul>
+							</li>
+							<li class="sub-menu__item  catalog-menu__item  catalog-menu__item--collapsing  catalog-menu__item--collapsing-right  catalog-menu__item--discount wide-only"><a class="catalog-menu__section-link  catalog-menu__section-link--discount" id="discount" href="/catalog/with_discount/">Со скидкой</a></li>
+							<li class="sub-menu__item  catalog-menu__item  catalog-menu__item--collapsing  catalog-menu__item--instock  wide-only"><a class="catalog-menu__section-link  catalog-menu__section-link--instock" href="/catalog/in_stock/">В наличии</a></li>
+							<li class="sub-menu__item  catalog-menu__item  catalog-menu__item--personal  wide-only"><a class="catalog-menu__section-link   catalog-menu__section-link--personal" href="#">Войти на сайт</a></li>
+							<!--End of catalog menu-->
+						</ul>
+					</li>
+					<li class="main-menu__item  mobile-only"><a class="main-menu__link" href="/catalog/with_discount/">Со скидкой</a></li>
+					<li class="main-menu__item  mobile-only"><a class="main-menu__link" href="/catalog/in_stock/">В наличии</a></li>
+					<li class="main-menu__item  main-menu__item--fabrics"><a class="main-menu__link  main-menu__link--info  main-menu__link--no-sub-mobile" href="#">Фабрики</a>
+						<div class="sub-menu  fabrics-menu">
+							<div class="fabrics-menu__main-container">
+								<div class="fabrics-menu__panel">
+									<a class="fabrics-menu__letter-link  fabrics-menu__letter-link--popular">Популярные</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=A">A</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=B">B</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=C">C</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=D">D</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=E">E</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=F">F</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=G">G</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=H">H</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=I">I</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=J">J</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=K">K</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=L">L</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=M">M</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=N">N</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=O">O</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=P">P</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=Q">Q</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=R">R</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=S">S</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=T">T</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=U">U</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=V">V</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=W">W</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=X">X</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=Y">Y</a>
+									<a class="fabrics-menu__letter-link" href="/catalogs_and_prices/?query=&letter=Z">Z</a>
+								</div>
+								<div class="fabrics-menu__scroll-container">
+									<div class="fabrics-menu__brand-lists">
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">A</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/agresti/">Agresti</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/alberta-salotti/">Alberta</a></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/alex-turco/">Alex Turco</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/alf/">ALF</a> <div class="official_dealer"></div> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/alivar/">Alivar</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/altrenotti/">Altrenotti</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/amclassic/">Amclassic</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/andtradition/">andTradition</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/angelo-cappellini/">Angelo Cappellini</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/arketipo/">Arketipo</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/arredo3/">Arredo3</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/asnaghi/">Asnaghi</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/asnaghi_interiors/">Asnaghi Interiors</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/aster-cucine/">Aster Cucine</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/axolight/">Axo Light </a> <div class="official_dealer"></div> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">B</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/bakokko/">Bakokko</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/baxter/">Baxter</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/bedding/">Bedding</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/besana/">Besana</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/bianchini-capponi/">Bianchini &amp; Capponi</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/bizzotto/">Bizzotto</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/boca-do-lobo/">Boca Do Lobo</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/bolzan/">Bolzan</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/bonaldo/">Bonaldo</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/bruno_zampa/">Bruno Zampa</a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">C</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/calligaris/">Calligaris</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/casamilano/">Casamilano</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/cattelan-italia/">Cattelan Italia</a> <div class="official_dealer"></div> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/ceccotti-collezioni/">Ceccotti Collezioni</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/cesar/">Cesar</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/chelini/">Chelini</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/christopher-guy/">Christopher Guy</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/connubia/">Connubia</a> <div class="official_dealer"></div> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/costantini-pietro/">Costantini Pietro </a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">D</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/dale/">Dale</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/de-majo/">De Majo</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/desiree/">Desiree</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/ditre-italia/">Ditre Italia</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/domingo_salotti/">Domingo Salotti</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/domitalia/">Domitalia</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/dvhome/">DV Home</a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">E</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/edone/">Edone</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/eichholtz/">Eichholtz</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/elledue/">Elledue</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/epoque/">Epoque</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/estel/">Estel</a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">F</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/fabbian/">Fabbian</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/falma/">Falma</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/flexform/">FlexForm </a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/flou/">Flou</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/fm-bottega-darte/">FM Bottega D’Arte</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/foscarini/">Foscarini</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/francescomolon/">Francesco Molon</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/fratelli-boffi/">Fratelli Boffi</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/friul_sedie/">Friulsedie</a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">G</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/galimberti/">Galimberti Nino</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/gervasoni/">Gervasoni</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/giorgetti/">Giorgetti</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/giorgio/">Giorgio Collection</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/gurian/">Gurian</a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">I</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/ivano-redaelli/">Ivano Redaelli</a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">L</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/lottocento/">L'Ottocento</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/la-murrina/">La Murrina </a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/lago/">Lago</a> <div class="official_dealer"></div> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/longhi/">Longhi</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/luciano-zonta/">Luciano Zonta</a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">M</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/mantellassi/">Mantellassi</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/marac/">Marac</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/masiero/">Masiero</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/mechini/">Mechini</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/meridiani/">Meridiani</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/midj/">Midj</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/milano-bedding/">Milano Bedding</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/minotti/">Minotti</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/mobilidea/">Mobilidea</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/moda/">Moda</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/modulnova/">Modulnova</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/molteni-and-c/">Molteni&amp;C</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/morelato/">Morelato</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/moroso/">Moroso</a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">O</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/oldline/">Old Line</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/ozzio/">Ozzio</a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">P</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/patina/">Patina</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/baga/">Patrizia Garganti (BAGA)</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/pedini/">Pedini</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/penta/">Penta</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/poltronafrau/">Poltrona Frau </a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/porada/">Porada</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/potocco/">Potocco</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/pregno/">Pregno</a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">R</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/reflex-and-angelo/">Reflex &amp; Angelo</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/riva-1920/">Riva 1920</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/rivolta/">Rivolta</a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">S</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/salda/">Salda</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/sangiacomo/">Sangiacomo</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/saviofirmino/">Savio Firmino</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/selva/">Selva</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/sigmal2/">SigmaL2</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/silik/">Silik</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/silvano-grifoni/">Silvano Grifoni</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/smania/">Smania</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/sormani/">Sormani</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/stella-del-mobili/">Stella del Mobile</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/stilema/">Stilema</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/swan/">Swan</a> <div class="official_dealer"></div> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/sylcom/">Sylcom</a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">T</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/tiferno/">Tiferno</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/tonincasa/">Tonin Casa</a> <div class="official_dealer"></div> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/tonon/">Tonon</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/tribu/">Tribu</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/tumidei/">Tumidei</a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">V</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/valdichienti/">Valdichienti</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/valmori/">Valmori</a> <div class="official_dealer"></div> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/veneran/">Veneran</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/vibia/">Vibia</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/vita/">Vita</a> <div class="official_dealer"></div> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/volpi/">Volpi</a> </li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/vondom/">Vondom</a> </li>
+										</ul>
+										<ul class="fabrics-menu__sublist">
+											<li class="fabrics-menu__brand-item"><span class="fabrics-menu__sublist-letter">Z</span></li>
+											<li class="fabrics-menu__brand-item"><a class="fabrics-menu__brand-link" href="/brand/zanette/">Zanette</a> </li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="main-menu__item"><a class="main-menu__link  main-menu__link--info  mobile-menu-link" href="#">Условия</a>
+						<ul class="sub-menu">
+							<li class="sub-menu__item   mobile-only"><a class="sub-menu__link  sub-menu__link--header" href="#">Условия</a></li>
+							<li class="sub-menu__item"><a class="sub-menu__link" href="#">Условия работы</a></li>
+							<li class="sub-menu__item"><a class="sub-menu__link" href="#">Сроки поставки товара</a></li>
+							<li class="sub-menu__item"><a class="sub-menu__link" href="#">Доставка</a></li>
+						</ul>
+					</li>
+					<li class="main-menu__item"><a class="main-menu__link main-menu__link--info  mobile-menu-link" href="#">О компании</a>
+						<ul class="sub-menu">
+							<li class="sub-menu__item   mobile-only"><a class="sub-menu__link  sub-menu__link--header" href="#">О компании</a></li>
+							<li class="sub-menu__item"><a class="sub-menu__link" href="#">О нас</a></li>
+							<li class="sub-menu__item"><a class="sub-menu__link" href="#">Новости</a></li>
+							<li class="sub-menu__item"><a class="sub-menu__link" href="#">Проекты</a></li>
+							<li class="sub-menu__item"><a class="sub-menu__link" href="#">Отзывы</a></li>
+							<li class="sub-menu__item"><a class="sub-menu__link" href="#">Блог</a></li>
+							<li class="sub-menu__item"><a class="sub-menu__link" href="#">Термины</a></li>
+						</ul>
+					</li>
+					<li class="main-menu__item  main-menu__item--no-sub"><a class="main-menu__link  main-menu__link--info" href="#">Контакты</a></li>
+					<li class="main-menu__item"><a class="main-menu__link  main-menu__link--user" href="#"><span class="mobile-only">Вход</span><span class="wide-only">Войти на сайт</span></a></li>
+				</ul>
+			</nav>
+			<div class="page-header__user-id">Ваш ID: 117-401</div>
+		</header>
+		<div class="grid__main-wrapper">
+			<div class="grid__sidebar" id="sidebar">
+			</div>
+			<div class="grid__main-info-wrap">
+				<section class="grid__page-content">
+					<div class="page-content__wrap" id="content">
+						<h1>Итальянская мебель</h1>
+						<p>Дом для человека не только место, где он ест или спит в свободное от деловой суеты время, но также пространство для самовыражения и поле для творческих экспериментов, цель которых — отыскать идеальное воплощение мечты. Ведь в голове у каждого
+							из нас есть собственный образ совершенного жилища. В той же мере это утверждение относится и к рабочему месту.
+						</p>
+						<div class="accent">
+							<dl>
+								<dt>Миссия компании:</dt>
+								<dd>помогать создавать элегантные интерьеры, отвечающие предпочтениям самых взыскательных клиентов.</dd>
+							</dl>
+						</div>
+						<h2>Sormani - новый бренд в каталоге</h2>
+						<p>Уютная итальянская мебель Sormani теперь в IB Gallery! Выбирайте в каталоге нашего сайта:</p>
+						<ul class="list">
+							<li>Комфортные <a href="#">диваны</a> и <a href="#">кресла</a>;</li>
+							<li>Элегантные <a href="#">столы</a> и <a href="#">стулья</a> для гостиной;</li>
+							<li>Удобные <a href="#">буфеты</a> и <a href="#">комоды</a>;</li>
+							<li><a href="#">Светильники и лампы</a> для мягкого приглушенного света.</li>
+						</ul>
+						<h3>Диваны Sormani</h3>
+						<section class="catalog">
+							<div class="catalog__item  good">
+								<div class="good__back">
+									<div class="good__base-info">
+										<a class="good__link" href="#"><img class="good_photo" src="img/good-1.png" alt="">
+										<span class="good__id"># 292941</span>
+										</a>
+										<span class="good__brand">Sormani</span>
+										<h4 class="good__name"><a class="good__name-link" href="#">Модульный диван Charm Hertyu</a></h4>
+										<span class="good__price">от <span class="good__price-value">283'670</span> руб</span>
+									</div>
+									<div class="good__info">
+										<p class="good__description">Кожаный диван с деревяной основой и алюминиевыми ножками.</p>
+										<a class="good__to-liked" href="#">Добавить в избранное</a>
+									</div>
+								</div>
+							</div>
+							<div class="catalog__item  good">
+								<div class="good__back">
+									<div class="good__base-info">
+										<a class="good__link" href="#"><img class="good_photo" src="img/good-2.png" alt="">
+											<span class="good__id"># 292941</span>
+										</a>
+										<span class="good__brand">Sormani</span>
+										<h4 class="good__name"><a class="good__name-link" href="#">Современный диван Infinityr</a></h4>
+										<span class="good__price">от <span class="good__price-value">141'760</span> руб</span>
+									</div>
+									<div class="good__info">
+										<p class="good__description">Кожаный диван с деревяной основой и алюминиевыми ножками.Кожаный диван с деревяной основой и алюминиевыми ножками.Кожаный диван с деревяной основой и алюминиевыми ножками</p>
+										<a class="good__to-liked" href="#">Добавить в избранное</a>
+									</div>
+								</div>
+							</div>
+							<div class="catalog__item  good">
+								<div class="good__back">
+									<div class="good__base-info">
+										<a class="good__link" href="#"><img class="good_photo" src="img/good-3.png" alt="">
+											<span class="good__id"># 292941</span>
+										</a>
+										<span class="good__brand">Sormani</span>
+										<h4 class="good__name"><a class="good__name-link" href="#">Модульный диван Charm</a></h4>
+										<span class="good__price">от <span class="good__price-value">141'760</span> руб</span>
+									</div>
+									<div class="good__info">
+										<p class="good__description">Кожаный диван с деревяной основой и алюминиевыми ножками.</p>
+										<a class="good__to-liked" href="#">Добавить в избранное</a>
+									</div>
+								</div>
+							</div>
+							<div class="catalog__item  good">
+								<div class="good__back">
+									<div class="good__base-info">
+										<a class="good__link" href="#"><img class="good_photo" src="img/good-4.png" alt="">
+											<span class="good__id"># 292941</span>
+										</a>
+										<span class="good__brand">Sormani</span>
+										<h4 class="good__name"><a class="good__name-link" href="#">Современный диван Katiryk</a></h4>
+										<span class="good__price">от <span class="good__price-value">141'760</span> руб</span>
+									</div>
+									<div class="good__info">
+										<p class="good__description">Кожаный диван с деревяной основой и алюминиевыми ножками.Кожаный диван с деревяной основой и алюминиевыми ножками.Кожаный диван с деревяной основой и алюминиевыми ножками</p>
+										<a class="good__to-liked" href="#">Добавить в избранное</a>
+									</div>
+								</div>
+							</div>
+							<div class="catalog__item  good">
+								<div class="good__back">
+									<div class="good__base-info">
+										<a class="good__link" href="#"><img class="good_photo" src="img/good-1.png" alt="">
+											<span class="good__id"># 292941</span>
+										</a>
+										<span class="good__brand">Sormani</span>
+										<h4 class="good__name"><a class="good__name-link" href="#">Современный диван Katiryk</a></h4>
+										<span class="good__price">от <span class="good__price-value">141'760</span> руб</span>
+									</div>
+									<div class="good__info">
+										<p class="good__description">Кожаный диван с деревяной основой и алюминиевыми ножками.Кожаный диван с деревяной основой и алюминиевыми ножками.Кожаный диван с деревяной основой и алюминиевыми ножками</p>
+										<a class="good__to-liked" href="#">Добавить в избранное</a>
+									</div>
+								</div>
+							</div>
+						</section>
+						<h3>В основе работы IB Gallery лежит пять основных принципов:</h3>
+						<ol class="order-list">
+							<li><strong>Внимание к каждому клиенту</strong><br>
+							Мы формируем ассортимент, ориентируясь на потребности разных покупателей. В IB Gallery есть как эксклюзивные предметы интерьера класса «люкс», так и качественная итальянская мебель по умеренной цене.</li>
+							<li><strong>Удобство</strong><br>
+							Покупка мебели, аксессуаров и освещения — лишь малая часть работы по созданию интерьера вашей мечты. Для удобства наших клиентов мы оказываем целый комплекс дополнительных услуг.</li>
+							<li><strong>Подготовку интерьерных дизайн-проектов</strong></li>
+							<li><strong>Честность</strong><br>
+							Мы заинтересованы в том, чтобы Вы получили лучшее. Команда IB Gallery регулярно выезжает на фабрики своих партнеров в Италии, детально вникая в специфику их работы. Мы всегда рассказываем нашим покупателям о неявных особенностях мебели той или иной фабрики.</li>
+						</ol>
+					</div>
+				</section>
+				<footer class="page-footer">
+					<div class="page-footer__nav">
+						<ul class="page-footer__nav-section">
+							<li><h3 class="page-footer__nav-section-header">Информация</h3></li>
+							<li><a class="page-footer__nav-link" href="#">О компании</a></li>
+							<li><a class="page-footer__nav-link" href="#">Новости</a></li>
+							<li><a class="page-footer__nav-link" href="#">Проекты</a></li>
+							<li><a class="page-footer__nav-link" href="#">Отзывы</a></li>
+							<li><a class="page-footer__nav-link" href="#">Блог</a></li>
+							<li><a class="page-footer__nav-link" href="#">Термины</a></li>
+						</ul>
+						<ul class="page-footer__nav-section">
+							<li><h3 class="page-footer__nav-section-header">Условия</h3></li>
+							<li><a class="page-footer__nav-link" href="#">Условия работы</a></li>
+							<li><a class="page-footer__nav-link" href="#">Сроки</a></li>
+							<li><a class="page-footer__nav-link" href="#">Доставка</a></li>
+						</ul>
+						<ul class="page-footer__nav-section">
+							<li><h3 class="page-footer__nav-section-header">Сотрудничество</h3></li>
+							<li><a class="page-footer__nav-link" href="#">Для дизайн-студий и частных компаний</a></li>
+						</ul>
+						<ul class="page-footer__nav-section page-footer__nav-section--contacts">
+							<li><a href="/contacts" class="page-footer__nav-section-header  page-footer__nav-section-header--link">Контакты</a></li>
+							<li><a href="tel:+74956428360" class="page-footer__phone">+7 495 642-83-60</a></li>
+							<li><a class="page-footer__nav-link  page-footer__nav-link--mail" href="mailto:info@ib-gallery.ru">info@ib-gallery.ru</a></li>
+							<li><span class="page-footer__nav-text">125284, г. Москва, ул. Беговая аллея, дом 3</span></li>
+							<li class="page-footer__social-links-wrap" id="footer-social-links">
+								<div class="social-links">
+									<a class="social-links__social-link  social-links__social-link--vk" href="http://vk.com/ibgallery">http://vk.com/ibgallery</a>
+									<a class="social-links__social-link  social-links__social-link--in" href="http://instagram.com/ib_gallery.moscow">http://instagram.com/ib_gallery.moscow</a>
+									<a class="social-links__social-link  social-links__social-link--f" href="http://facebook.com/ibmoscow/">http://facebook.com/ibmoscow/</a>
+								</div>
+							</li>
+							<li>
+								<span class="page-footer__work-hours">
+									Пн-пт — с 10:00 до 21:00<br>
+									Cб-вс — с 11:00 до 19:00
+								</span>
+							</li>
+							<li class="page-footer__user-id">Ваш ID: 117-401</li>
+						</ul>
+					</div>
+					<div class="page-footer__copy-info">
+						<span class="page-footer__protected">© 1998—2017 IB Gallery. Все права защищены.</span>
+						<div class="page-footer__developed">Разработка сайта <a class="page-footer__dac-link" href="http://www.d-a-c.ru/">Digital Art Company</a>
+						</div>
+						<p class="page-footer__disclaimer">Обращаем ваше внимание на&nbsp;то, что данный контент-сайт носит исключительно информационный характер и&nbsp;ни&nbsp;при&nbsp;каких условиях информационные материалы и&nbsp;цены, размещенные на&nbsp;сайте, не&nbsp;является публичной офертой,
+							определяемой положениями Статьи&nbsp;437 Гражданского&nbsp;кодекса&nbsp;РФ.</p>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<section class="call-modal">
+		<div class="call-modal__wrap">
+			<div class="call-modal__close"></div>
+		<h2 class="call-modal__header">Заказать звонок</h2>
+		<p class="call-modal__description">Введите свое имя и контактный телефон, и наш менеджер свяжется с вами в ближайшее время.</p>
+		<form class="call-modal__user-data" action="#" method="get">
+			<label class="call-modal__input-label">
+			<input class="call-modal__text-input" type="text" placeholder="Введите имя" name="username" required>
+			<span class="call-modal__error-message">Пожалуйста, введите ваше имя</span>
+			</label>
+
+			<label class="call-modal__input-label">
+			<input class="call-modal__text-input" type="tel" placeholder="Введите контактный телефон" name="phone" required pattern="[9]{1}[0-9]{10}">
+			<span class="call-modal__error-message">Введите ваш номер в формате 81234567890</span>
+			</label>
+			<input class="call-modal__submit" type="submit">
+		</form>
+			<div class="call-modal__user-id">Ваш ID 117-401</div>
+				<div class="call-modal__phone">+7 495 642 83 60</div>
+				<div class="call-modal__work-hours">
+				Пн-пт — с 10:00 до 21:00<br>
+				Cб-вс — с 11:00 до 19:00
+			</div>
+		</div>
+	</section>
+	<div class="overlay"></div>
+	<script src="scripts/main.js"></script>
+</body>
+
+</html>

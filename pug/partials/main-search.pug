@@ -1,0 +1,56 @@
+#main-search.search
+  a#main-search-toggle.main-menu__link.main-menu__link--search.main-menu__link--arrow.search__toggle(href='/search.html') Поиск
+  .search__container
+    form.search__form(method='GET', action='#')
+      input#search-query-input.search__query-input(type='text', name='search-query', autocomplete='off')
+      input.search__submit-btn(type='submit', value='Найти')
+      #search-hint.search__result.search-hint
+        ul.search-hint__results.search-hint__results--categories
+          li.search-hint__section-header Категории
+          li
+            | Мягкая мебель / Кресла / 
+            a.search-hint__result-link(href='#') Кресла качалки
+          li
+            | Мягкая мебель / 
+            a.search-hint__result-link(href='#') Кресла
+          li
+            | Мягкая мебель / Кресла / 
+            a.search-hint__result-link(href='#') Дизайнерские кресла
+        ul.search-hint__results
+          li.search-hint__section-header Фабрики
+          li
+            a.search-hint__result-link(href='#') Angelo Cappellini
+          li
+            a.search-hint__result-link(href='#') Domingo Salotti
+          li
+            a.search-hint__result-link(href='#') Mobilidea
+        ul.search-hint__results
+          li.search-hint__section-header Дизайнеры мебели
+          li
+            a.search-hint__result-link(href='#') Reflex Design Studio
+          li
+            a.search-hint__result-link(href='#') Daniele Lago
+          li
+            a.search-hint__result-link(href='#') Sylcom Glass Design
+        ul.search-hint__results
+          li.search-hint__section-header Товары
+          li
+            a.search-hint__result-link(href='')
+              img.search-hint__good-photo(src='img/good-1.png', alt='')
+              span.search-hint__good-brand Gervasoni
+              br
+              | 										Дизайнерское кресло-качалка Gray 09
+          li
+            a.search-hint__result-link(href='')
+              img.search-hint__good-photo(src='', alt='')
+              span.search-hint__good-brand Domingo Salotti
+              br
+              | 										Кресло Gamma
+          li
+            a.search-hint__result-link(href='')
+              img.search-hint__good-photo(src='', alt='')
+              span.search-hint__good-brand Stella Del Mobile
+              br
+              | 										Офисное кресло Poltroncina giverole (Art. 01.40)Офисное кресло Poltroncina giverole (Art. 01.40)
+          li.search-hint__load-more-item
+            span.search-hint__load-more-btn Показать еще
