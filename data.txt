@@ -1,0 +1,3 @@
+{"shopping-count": "12",
+   "liked-count": "3",
+   "user-id": "12-345"}
