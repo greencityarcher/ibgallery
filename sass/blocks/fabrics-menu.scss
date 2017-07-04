@@ -6,29 +6,26 @@
   .fabrics-menu {
     box-sizing: border-box;
     display: block;
-    width: 90vw;
+    width: calc(100vw - 82px);
 
-    left: -230px;
-    padding-left: 0;
-    padding-right: 0;
+    left: -260px;
+    padding: 0;
     padding-top: 10px;
     z-index: 100;
-
   }
+
 .fabrics-menu__main-container{
+  box-sizing: border-box;
   position: relative;
-  width: inherit;
+  padding-bottom: 10px;
 }
   .fabrics-menu__panel {
     display: flex;
+    justify-content: space-between;
     box-sizing: border-box;
-
-    width: inherit;
+    width: auto;
     background-color: #f4f3ef;
     height: 40px;
-    max-width: 90vw;
-
-
     padding-left: 19px;
     padding-right: 26px;
   }
@@ -47,6 +44,8 @@
     font-size: 16px;
     line-height: 40px;
     cursor: pointer;
+    flex-grow: 0;
+
 
     &::after {
       content: "";
@@ -71,7 +70,6 @@
 
  .fabrics-menu__letter-link--popular {
     width: 167px;
-    text-align: center;
     margin-right: 25px;
     background-color: $lightorange-color;
     color: white;
@@ -81,33 +79,46 @@
       border-color: white;
     }
   }
+
 .fabrics-menu__scroll-container{
+  box-sizing: border-box;
   overflow-y: auto;
-  height: 60vw;
-  max-width: 95vw;
+  width: auto;
+  height: calc(100vh - 190px);
 
 }
 
+.fabrics-menu__scroll-container::-webkit-scrollbar {
+  width: 8px;
+  background-color: #fae7cf;
+}
+
+.fabrics-menu__scroll-container::-webkit-scrollbar-thumb {
+  background-color: #ff851e;
+}
+
   .fabrics-menu__brand-lists {
+    box-sizing: border-box;
     padding-top: 21px;
     padding-bottom: 35px;
     padding-right: 40px;
-    max-width: inherit;
-    min-width: 910px;
-    max-height: 730px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: flex-start;
     align-content: stretch;
-
+    height: 780px;
   }
 
   .fabrics-menu__sublist {
     display: block;
     position: relative;
     width: 190px;
+    flex-grow: 0;
+    flex-shrink: 0;
     padding-bottom: 20px;
 
+    box-sizing: border-box;
   }
 
   .fabrics-menu__sublist-letter {
@@ -135,4 +146,14 @@
       background: none;
     }
   }
+}
+
+@media #{$desktop-width}{
+  .fabrics-menu__letter-link--popular{
+    margin-right: 60px;
+  }
+  .fabrics-menu__panel{
+    padding-right: 55px;
+  }
+  
 }

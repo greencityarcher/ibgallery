@@ -166,12 +166,11 @@ h1, h2, h3 {
 
 .main-menu {
   display: none;
-  width: 100%;
+  width: auto;
   margin: 0;
   padding-left: 0;
   list-style-type: none;
-  position: relative;
-  width: 100vw; }
+  position: relative; }
 
 /*все ссылки мобильного меню одинаковы*/
 /*ссылки с подкатегориями имеют стрелку*/
@@ -1953,26 +1952,29 @@ h1, h2, h3 {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     display: block;
-    width: 90vw;
-    left: -230px;
-    padding-left: 0;
-    padding-right: 0;
+    width: calc(100vw - 82px);
+    left: -260px;
+    padding: 0;
     padding-top: 10px;
     z-index: 100; }
   .fabrics-menu__main-container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     position: relative;
-    width: inherit; }
+    padding-bottom: 10px; }
   .fabrics-menu__panel {
     display: -webkit-box;
     display: -ms-flexbox;
     -js-display: flex;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: inherit;
+    width: auto;
     background-color: #f4f3ef;
     height: 40px;
-    max-width: 90vw;
     padding-left: 19px;
     padding-right: 26px; }
   .fabrics-menu__letter-link {
@@ -1988,7 +1990,10 @@ h1, h2, h3 {
     text-decoration: none;
     font-size: 16px;
     line-height: 40px;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0; }
     .fabrics-menu__letter-link::after {
       content: "";
       display: block;
@@ -2007,7 +2012,6 @@ h1, h2, h3 {
       border-bottom-color: white; }
   .fabrics-menu__letter-link--popular {
     width: 167px;
-    text-align: center;
     margin-right: 25px;
     background-color: #ff8618;
     color: white; }
@@ -2015,16 +2019,22 @@ h1, h2, h3 {
       width: 110px;
       border-color: white; }
   .fabrics-menu__scroll-container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     overflow-y: auto;
-    height: 60vw;
-    max-width: 95vw; }
+    width: auto;
+    height: calc(100vh - 190px); }
+  .fabrics-menu__scroll-container::-webkit-scrollbar {
+    width: 8px;
+    background-color: #fae7cf; }
+  .fabrics-menu__scroll-container::-webkit-scrollbar-thumb {
+    background-color: #ff851e; }
   .fabrics-menu__brand-lists {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding-top: 21px;
     padding-bottom: 35px;
     padding-right: 40px;
-    max-width: inherit;
-    min-width: 910px;
-    max-height: 730px;
     display: -webkit-box;
     display: -ms-flexbox;
     -js-display: flex;
@@ -2035,13 +2045,24 @@ h1, h2, h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -ms-flex-line-pack: stretch;
-        align-content: stretch; }
+        align-content: stretch;
+    height: 780px; }
   .fabrics-menu__sublist {
     display: block;
     position: relative;
     width: 190px;
-    padding-bottom: 20px; }
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    padding-bottom: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
   .fabrics-menu__sublist-letter {
     position: absolute;
     left: 7px;
@@ -2302,6 +2323,10 @@ h1, h2, h3 {
       left: 0;
       border-bottom: 2px dotted #e6432f;
       width: 100%; }
+  .fabrics-menu__letter-link--popular {
+    margin-right: 60px; }
+  .fabrics-menu__panel {
+    padding-right: 55px; }
   .page-footer {
     padding-left: 33px;
     padding-right: 60px; } }
