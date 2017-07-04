@@ -7,3 +7,4 @@ var MAXMOBILEWIDTH=980;
 //= partials/fading-content.js
 //= partials/call-modal.js
 //= partials/counters.js
+//= partials/user-id.js
