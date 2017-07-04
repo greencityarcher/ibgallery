@@ -36,6 +36,18 @@
   z-index: 10;
 }
 
+.good:hover .good__zoom{
+  display: block;
+  position: absolute;
+  @extend .absolute-center-positioned;
+  width: 46px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../icons/zoom.png");
+
+}
+
 
 
 
@@ -76,23 +88,24 @@
   height: 175px;
 }
 .good__brand{
+  display: block;
   font-size: 16px;
   line-height: 20px;
   color: #6e6e6e;
 
 }
-.good__name{
-  margin: 0;
+.good__name-link{
+  text-decoration: underline;
+  display: block;
+  color: #282828;
   font-size: 20px;
   line-height: 26px;
   font-weight: 900;
   letter-spacing: 1.4px;
   margin-bottom: 10px;
-}
-
-.good__name-link{
-  text-decoration: underline;
-  color: #282828;
+  height: 52px;
+  max-height: 78px;/*запас на 3 строки*/
+  overflow: hidden;
 }
 
 
@@ -101,7 +114,6 @@
 }
 .good__price{
   display: block;
-  position: absolute;
   bottom: 0;
   font-size: 20px;
   line-height: 22px;
@@ -130,7 +142,7 @@ line-height: 18px;
   border-style: solid;
   border-width: 1px;
   border-color: #d4d4d4;
-  background-image:linear-gradient(to top, #dcdcdc, #f4f3f4);
+  background-image:linear-gradient(0,#ddd,transparent);
   color:#807f76;
   line-height: 35px;
   text-decoration: none;
