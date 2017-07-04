@@ -1,9 +1,8 @@
-.mobile-menu-link{
+.mobile-menu-link {
   display: block;
   position: relative;
   box-sizing: border-box;
   height: $block-link-height;
-
   font-size: 16px;
   line-height: 48px;
   font-weight: 300;
@@ -14,33 +13,32 @@
   border-bottom: 2px solid $catalog-menu-border-color;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     background-color: $lightgrey-color;
   }
 }
-
 /*выравнивание абсолютно спозиционированных элементов*/
-.absolute-center-positioned{
+.absolute-center-positioned {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.absolute-vertical-middle-positioned{
+.absolute-vertical-middle-positioned {
   top: 50%;
   transform: translateY(-50%);
 }
 
-.link-arrow{
-  &::after{
-  content:"";
-  width: 8px;
-  height: 8px;
-  border-right: 1px solid #282828;
-  border-bottom: 1px solid #282828;
-  transform: rotate(-45deg) translateY(-50%);
-  position: absolute;
-  top: 50%;
-  right: 16px;
-}
+.link-arrow {
+  &::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #282828;
+    border-bottom: 1px solid #282828;
+    transform: rotate(-45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 16px;
+  }
 }

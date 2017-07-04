@@ -1,28 +1,32 @@
 
 .geolocation{
-
   position: relative;
 }
 
 
 .geolocation__current{
   position: absolute;
-  bottom: 0px;
-  left: 50px;
+  left: -68px;
+  width: 260px;
+  top:13px;
   font-size: 11px;
   color:#e6432f;
   text-decoration: none;
+  text-align:center;
   letter-spacing: 1px;
   display: block;
-  outline: 1px solid red;
-  display: block;
-  width: 100%;
   text-align: center;
+  z-index: 20;
+  transform: translateX(-50%);
+  &:hover{
+    color:#ff832e;
+  }
+  }
 
-}
+
+
 .geolocation__current-style{
   position: relative;
-
   &::after{
     content: "";
     position: absolute;
@@ -30,6 +34,9 @@
     left:0;
     border-bottom: 2px dotted #e6432f;
     width: 100%;
+  }
+  &:hover::after{
+    border-bottom: 2px dotted #ff832e;
   }
 }
 
