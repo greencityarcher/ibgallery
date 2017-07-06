@@ -1,14 +1,14 @@
 
 .geolocation{
-  position: relative;
+  position: absolute;
+  top: 51px;
+  left: 75px;
+  width: 230px;
 }
 
 
+
 .geolocation__current{
-  position: absolute;
-  left: -68px;
-  width: 260px;
-  top:13px;
   font-size: 11px;
   color:#e6432f;
   text-decoration: none;
@@ -17,13 +17,14 @@
   display: block;
   text-align: center;
   z-index: 20;
-  transform: translateX(-50%);
   &:hover{
     color:#ff832e;
   }
   }
 
-
+  .geolocation__picker-wrap{
+    position: relative;
+  }
 
 .geolocation__current-style{
   position: relative;
@@ -43,21 +44,20 @@
 .geolocation__picker{
   display: none;
   position: absolute;
-
-  top:0;
+  top:0px;
   left:0;
-
   background-color: white;
   padding: 20px 10px;
   border: 1px solid #bcbebd;
-  width: 220px;
-  height: 250px;
-  overflow-y: scroll;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /*Геолокация скрыта, так как от нее отказались*/
 .geolocation:hover .geolocation__picker{
-  display: none;
+  display: block;
+  height: 250px;
+  overflow-y: auto;
 }
 
 .geolocation__header{

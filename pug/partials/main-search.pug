@@ -2,8 +2,9 @@
   a#main-search-toggle.main-menu__link.main-menu__link--search.main-menu__link--arrow.search__toggle(href='/search.html') Поиск
   .search__container
     form.search__form(method='GET', action='#')
-      input#search-query-input.search__query-input(type='text', name='search-query', autocomplete='off')
-      input.search__submit-btn(type='submit', value='Найти')
+      .search__query-input-wrap  
+        input#search-query-input.search__query-input(type='text', name='search-query', autocomplete='off')
+        input.search__submit-btn(type='submit', value='Найти')
       #search-hint.search__result.search-hint
         ul.search-hint__results.search-hint__results--categories
           li.search-hint__section-header Категории

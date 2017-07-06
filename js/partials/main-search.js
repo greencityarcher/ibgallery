@@ -1,9 +1,11 @@
 var searchActive = false;
-$("#main-search-toggle").removeAttr("href");
-$("#main-search").prepend('<a id="back-from-search">Назад</a>');
+$(document).ready(function(){
+  $("#main-search-toggle").removeAttr("href");
+  $("#main-search").prepend('<a id="back-from-search">Назад</a>');
+})
+
 
 $("#main-search-toggle").click(function() {
-
       if (searchActive) {
         $("#main-search").removeClass("opened");
         searchActive = false;

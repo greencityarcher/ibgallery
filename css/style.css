@@ -269,9 +269,12 @@ h3 {
   font-weight: 300;
   padding: 0;
   outline: none;
-  cursor: pointer; }
+  cursor: pointer;
+  margin: 0; }
 
 .search__query-input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 20px;
   line-height: 48px;
   padding: 0 5px 0 21px;
@@ -284,19 +287,17 @@ h3 {
 .search.opened {
   display: block; }
   .search.opened .search__form {
+    display: block;
+    position: relative;
+    border-bottom: 2px solid #e4e3e1;
+    width: auto; }
+  .search.opened .search__query-input-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
     -js-display: flex;
     display: flex;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-    position: relative;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    border-bottom: 2px solid #e4e3e1;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     width: 100%; }
   .search.opened .search__toggle {
     display: none; }
@@ -482,7 +483,7 @@ h3 {
 
 .featured__item {
   position: relative;
-  width: 58px;
+  width: 63px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -896,13 +897,12 @@ h3 {
   padding-right: 12px; }
 
 .geolocation {
-  position: relative; }
+  position: absolute;
+  top: 51px;
+  left: 75px;
+  width: 230px; }
 
 .geolocation__current {
-  position: absolute;
-  left: -68px;
-  width: 260px;
-  top: 13px;
   font-size: 11px;
   color: #e6432f;
   text-decoration: none;
@@ -910,12 +910,12 @@ h3 {
   letter-spacing: 1px;
   display: block;
   text-align: center;
-  z-index: 20;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%); }
+  z-index: 20; }
   .geolocation__current:hover {
     color: #ff832e; }
+
+.geolocation__picker-wrap {
+  position: relative; }
 
 .geolocation__current-style {
   position: relative; }
@@ -932,18 +932,20 @@ h3 {
 .geolocation__picker {
   display: none;
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
   background-color: white;
   padding: 20px 10px;
   border: 1px solid #bcbebd;
-  width: 220px;
-  height: 250px;
-  overflow-y: scroll; }
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 /*Геолокация скрыта, так как от нее отказались*/
 .geolocation:hover .geolocation__picker {
-  display: none; }
+  display: block;
+  height: 250px;
+  overflow-y: auto; }
 
 .geolocation__header {
   font-size: 16px;
@@ -2327,7 +2329,7 @@ h3 {
 
 @media (min-width: 1200px) {
   .page-header__call {
-    margin-left: 53px; }
+    margin-left: calc(1vw * 8); }
   .page-header__user-id {
     right: 76px; }
   /*возвращаем узким ссылкам нормальное поведение*/

@@ -128,7 +128,7 @@ position: relative;
 }
 @media #{$desktop-width} {
   .page-header__call {
-    margin-left: 53px;
+    margin-left: calc(1vw * 8);
   }
   .page-header__user-id{
     right: 76px;

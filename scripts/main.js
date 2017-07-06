@@ -10255,11 +10255,13 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 var searchActive = false;
-$("#main-search-toggle").removeAttr("href");
-$("#main-search").prepend('<a id="back-from-search">Назад</a>');
+$(document).ready(function(){
+  $("#main-search-toggle").removeAttr("href");
+  $("#main-search").prepend('<a id="back-from-search">Назад</a>');
+})
+
 
 $("#main-search-toggle").click(function() {
-
       if (searchActive) {
         $("#main-search").removeClass("opened");
         searchActive = false;
@@ -10319,27 +10321,33 @@ function openMenu() {
   $("#sidebar").hide();
   $('#footer-social-links').hide();
   $("#content").hide();
-  menuOpened=true;
+  menuOpened = true;
 }
 
 function closeMenu() {
   $("#main-nav").removeClass("opened");
   $("#mobile-menu-btn").removeClass("main-nav__mobile-menu-btn--close");
-  $("#main-search").hide();
+  $("#main-search").removeClass("opened");
   $("#sidebar").show();
   $("#content").show();
   $('#footer-social-links').show();
   clearInlineStyles();
-  menuOpened=false;
+  menuOpened = false;
 }
 
 
 //очистка инлайновых стилей, оставшихся после работы мобильного меню
 function clearInlineStyles() {
-  var  elements=$(".main-menu [style]");
-  elements.each(function(){
-  $(this).removeAttr("style");
+  var mElements = $(".main-menu [style]");
+  var sElements = $(".search [style]");
+  mElements.each(function() {
+    $(this).removeAttr("style");
   });
+  sElements.each(function() {
+    $(this).removeAttr("style");
+  });
+  $(".search").removeAttr("style");
+  $(".main-nav").removeAttr("style");
 }
 
 
@@ -10381,7 +10389,7 @@ $(".link-back--to-first-lvl").click(function() {
 
 //отслеживание ширины окна для предотвращения пропадания контента
 $(window).resize(function() {
-  if (($(window).width() >= MAXMOBILEWIDTH)&&menuOpened) {
+  if (($(window).width() >= MAXMOBILEWIDTH) && menuOpened) {
     console.log(menuOpened);
     closeMenu();
     clearInlineStyles();

@@ -15,15 +15,17 @@
               <button class="main-nav__mobile-menu-btn" id="mobile-menu-btn"></button>
             </div><a class="page-header__logo" href="#"></a>
             <div class="page-header__geo geolocation"><a class="geolocation__current" href="#"><span class="geolocation__current-style">Ханты-Мансийский автономный округ</span></a>
-              <div class="geolocation__picker">
-                <div class="geolocation__header">Выберите ваш регион</div>
-                <ul class="geolocation__region-list">
-                  <li class="geolocation__region-item"><a class="geolocation__region-link">Санкт-Петербург и область</a></li>
-                  <li class="geolocation__region-item"><a class="geolocation__region-link">Тверская область</a></li>
-                  <li class="geolocation__region-item"><a class="geolocation__region-link">Тульская область</a></li>
-                  <li class="geolocation__region-item"><a class="geolocation__region-link">Калужская область</a></li>
-                  <li class="geolocation__region-item"><a class="geolocation__region-link">Ярославская область</a></li>
-                </ul>
+              <div class="geolocation__picker-wrap">
+                <div class="geolocation__picker">
+                  <div class="geolocation__header">Выберите ваш регион</div>
+                  <ul class="geolocation__region-list">
+                    <li class="geolocation__region-item"><a class="geolocation__region-link">Санкт-Петербург и область</a></li>
+                    <li class="geolocation__region-item"><a class="geolocation__region-link">Тверская область</a></li>
+                    <li class="geolocation__region-item"><a class="geolocation__region-link">Тульская область</a></li>
+                    <li class="geolocation__region-item"><a class="geolocation__region-link">Калужская область</a></li>
+                    <li class="geolocation__region-item"><a class="geolocation__region-link">Ярославская область</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
             <ul class="page-header__featured featured">
@@ -37,8 +39,10 @@
         <div class="search" id="main-search"><a class="main-menu__link main-menu__link--search main-menu__link--arrow search__toggle" id="main-search-toggle" href="/search.html">Поиск</a>
           <div class="search__container">
             <form class="search__form" method="GET" action="#">
-              <input class="search__query-input" id="search-query-input" type="text" name="search-query" autocomplete="off">
-              <input class="search__submit-btn" type="submit" value="Найти">
+              <div class="search__query-input-wrap"> 
+                <input class="search__query-input" id="search-query-input" type="text" name="search-query" autocomplete="off">
+                <input class="search__submit-btn" type="submit" value="Найти">
+              </div>
               <div class="search__result search-hint" id="search-hint">
                 <ul class="search-hint__results search-hint__results--categories">
                   <li class="search-hint__section-header">Категории</li>
@@ -651,7 +655,7 @@
               </ul>
             </div>
             <div class="page-footer__copy-info"><span class="page-footer__protected">© 1998—2017 IB Gallery. Все права защищены.</span>
-              <div class="page-footer__developed">Разработка сайта<a class="page-footer__dac-link" href="http://www.d-a-c.ru/">Digital Art Company</a></div>
+              <div class="page-footer__developed">Разработка сайта <a class="page-footer__dac-link" href="http://www.d-a-c.ru/"> Digital Art Company</a></div>
               <p class="page-footer__disclaimer">
                 Обращаем ваше внимание на то, что данный контент-сайт носит исключительно информационный характер и ни при каких условиях информационные материалы и цены, размещенные на сайте, не является публичной офертой,
                 определяемой положениями Статьи 437 Гражданского кодекса РФ.
