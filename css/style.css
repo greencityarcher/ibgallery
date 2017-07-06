@@ -1720,14 +1720,27 @@ h3 {
              -o-transition-delay: 100ms;
                 transition-delay: 100ms; }
   .catalog-menu {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    max-height: calc(100vh - 70px);
+    max-width: 65px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     position: fixed;
     top: 70px;
+    bottom: 0;
     visibility: visible;
     left: 0;
-    bottom: 0;
     margin: 0;
     padding: 0;
     width: 65px;
@@ -1759,6 +1772,7 @@ h3 {
       background-color: #ff851e; }
     .catalog-menu:hover {
       width: 320px;
+      max-width: 320px;
       border-right: 2px solid #e4e3e1; }
       .catalog-menu:hover .catalog-menu__item {
         width: 318px; }
@@ -1775,6 +1789,11 @@ h3 {
   .catalog-menu__item, .catalog-menu__item--collapsing {
     width: 65px;
     overflow: hidden;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     -webkit-transition-property: all;
     -o-transition-property: all;
     transition-property: all;
@@ -1788,7 +1807,8 @@ h3 {
   .catalog-menu__item--discount {
     display: block; }
   .catalog-menu__item--instock {
-    display: block; }
+    display: block;
+    margin-bottom: auto; }
   /*
   поведение пунктов первого уровня меню по наведению мыши
   */
@@ -1936,7 +1956,7 @@ h3 {
     visibility: hidden; }
   /*ссылка на личный кабинет прилипает к низу*/
   .catalog-menu__item--personal {
-    margin-top: calc(100vh - 719px); }
+    /*  margin-top: calc(100vh - 719px);*/ }
   /*списки ссылок на подкатегории*/
   .catalog-menu__subcategory-list {
     list-style: none;
@@ -2377,7 +2397,7 @@ h3 {
     margin-left: 0; }
   /*ссылка на личный кабинет прилипает к низу*/
   .catalog-menu__item--personal {
-    margin-top: calc(100vh - 769px); }
+    /*  margin-top: calc(100vh - 769px);*/ }
   .call-request {
     display: -webkit-box;
     display: -ms-flexbox;

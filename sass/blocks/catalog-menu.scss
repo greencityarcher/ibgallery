@@ -85,14 +85,19 @@
 /*------------------стили для 980-----------------------------*/
 @media #{$tablet-width} {
   .catalog-menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    align-content: flex-start;
+    max-height: calc(100vh - 70px);
+    max-width: 65px;
 
     box-sizing: border-box;
     position: fixed;
     top: 70px;
+    bottom: 0;
     visibility: visible;
     left: 0;
-    bottom: 0;
     margin: 0;
     padding: 0;
     width: 65px;
@@ -122,6 +127,7 @@
 
     &:hover {
       width: 320px;
+      max-width: 320px;
       border-right: 2px solid $catalog-menu-border-color;
       .catalog-menu__item {
         width: 318px;
@@ -146,8 +152,9 @@
   .catalog-menu__item, .catalog-menu__item--collapsing {
     width: 65px;
     overflow: hidden;
+    flex-grow: 0;
+    flex-shrink: 0;
     transition-property: all;
-
     transition-duration: $cat-delay*2;
   }
   .catalog-menu__item--collapsing-right{
@@ -162,6 +169,8 @@
 
   .catalog-menu__item--instock {
     display: block;
+
+    margin-bottom: auto;
   }
 
 
@@ -293,7 +302,8 @@
 
 /*ссылка на личный кабинет прилипает к низу*/
 .catalog-menu__item--personal{
-  margin-top: calc(100vh - 719px);
+/*  margin-top: calc(100vh - 719px);*/
+
 }
 
   /*списки ссылок на подкатегории*/
@@ -378,7 +388,7 @@
   }
   /*ссылка на личный кабинет прилипает к низу*/
   .catalog-menu__item--personal{
-    margin-top: calc(100vh - 769px);
+  /*  margin-top: calc(100vh - 769px);*/
   }
 
 
