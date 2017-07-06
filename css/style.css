@@ -46,6 +46,20 @@
   top: 50%;
   right: 16px; }
 
+.orange-scroll::-webkit-scrollbar {
+  width: 8px;
+  background-color: #fae7cf; }
+
+.orange-scroll::-moz-scrollbar {
+  width: 8px;
+  background-color: #fae7cf; }
+
+.orange-scroll::-webkit-scrollbar-thumb {
+  background-color: #ff851e; }
+
+.orange-scroll::-moz-scrollbar-thumb {
+  background-color: #ff851e; }
+
 @font-face {
   font-family: "Helvetica Neue";
   font-style: normal;
@@ -91,7 +105,14 @@
   min-width: 320px;
   max-width: 100%;
   min-height: 100vh;
-  background-color: #f4f3ef; }
+  background-color: #f4f3ef;
+  scrollbar-base-color: #fae7cf;
+  scrollbar-3dlight-color: #fae7cf;
+  scrollbar-highlight-color: #fae7cf;
+  scrollbar-track-color: #ff851e;
+  scrollbar-arrow-color: #ff851e;
+  scrollbar-shadow-color: #fae7cf;
+  scrollbar-dark-shadow-color: #fae7cf; }
 
 h1,
 h2,
@@ -1721,9 +1742,21 @@ h3 {
     -webkit-transition-delay: 100ms;
          -o-transition-delay: 100ms;
             transition-delay: 100ms;
-    -webkit-transition-duration: 200ms;
-         -o-transition-duration: 200ms;
-            transition-duration: 200ms; }
+    -webkit-transition-duration: 100ms;
+         -o-transition-duration: 100ms;
+            transition-duration: 100ms;
+    overflow-y: auto;
+    overflow-x: hidden; }
+    .catalog-menu::-webkit-scrollbar {
+      width: 8px;
+      background-color: #fae7cf; }
+    .catalog-menu::-moz-scrollbar {
+      width: 8px;
+      background-color: #fae7cf; }
+    .catalog-menu::-webkit-scrollbar-thumb {
+      background-color: #ff851e; }
+    .catalog-menu::-moz-scrollbar-thumb {
+      background-color: #ff851e; }
     .catalog-menu:hover {
       width: 320px;
       border-right: 2px solid #e4e3e1; }
@@ -1828,9 +1861,9 @@ h3 {
     display: block;
     visibility: hidden;
     opacity: 0;
-    position: absolute;
+    position: fixed;
     list-style-type: none;
-    top: 0;
+    top: 70px;
     bottom: 0;
     left: 320px;
     width: 320px;
@@ -1851,24 +1884,24 @@ h3 {
   /*при наведении на категорию показывается выпадающее подменю этой категории*/
   .catalog-menu__item:hover .catalog-menu__category-list {
     visibility: visible;
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 320px;
-    width: 320px; }
-  .catalog-menu__item:hover .catalog-menu__category-list::-webkit-scrollbar {
-    width: 8px;
-    background-color: #fae7cf; }
-  .catalog-menu__item:hover .catalog-menu__category-list::-webkit-scrollbar-thumb {
-    background-color: #ff851e; }
+    opacity: 1; }
+    .catalog-menu__item:hover .catalog-menu__category-list::-webkit-scrollbar {
+      width: 8px;
+      background-color: #fae7cf; }
+    .catalog-menu__item:hover .catalog-menu__category-list::-moz-scrollbar {
+      width: 8px;
+      background-color: #fae7cf; }
+    .catalog-menu__item:hover .catalog-menu__category-list::-webkit-scrollbar-thumb {
+      background-color: #ff851e; }
+    .catalog-menu__item:hover .catalog-menu__category-list::-moz-scrollbar-thumb {
+      background-color: #ff851e; }
   /*подложка*/
   .catalog-menu__item::before {
     content: "";
     display: block;
     visibility: hidden;
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 70px;
     bottom: 0;
     left: 320px;
     width: 320px;

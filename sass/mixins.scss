@@ -42,3 +42,20 @@
     right: 16px;
   }
 }
+
+.orange-scroll{
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: #fae7cf;
+  }
+  &::-moz-scrollbar {
+    width: 8px;
+    background-color: #fae7cf;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ff851e;
+  }
+  &::-moz-scrollbar-thumb {
+    background-color: #ff851e;
+  }
+}
