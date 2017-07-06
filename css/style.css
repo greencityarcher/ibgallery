@@ -2329,7 +2329,8 @@ h3 {
 
 @media (min-width: 1200px) {
   .page-header__call {
-    margin-left: calc(1vw * 8); }
+    margin-left: calc(1vw * 5);
+    margin-right: 60px; }
   .page-header__user-id {
     right: 76px; }
   /*возвращаем узким ссылкам нормальное поведение*/
