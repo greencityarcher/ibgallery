@@ -14,9 +14,11 @@
   transition-duration: $cat-duration;
 }
 
+/*стрелки имеют только ссылки на раскрывающиеся категории*/
 .catalog-menu__section-link:not(:only-child) {
   @extend .link-arrow;
 }
+
 /*место под иконки*/
 .catalog-menu__section-link::before {
   content: "";
@@ -33,6 +35,7 @@
   transition-delay: $cat-delay;
   transition-duration: $cat-duration;
 }
+
 /*вставка иконок
   иконка и модификатор элемента имеют одинаковое название*/
 /*серые иконки*/
@@ -47,28 +50,31 @@
     background-image: svg-load('../icons/#{$link}.svg', stroke=#ff8618, fill=none, stroke-width=2);
   }
 }
-.catalog-menu__section-link--personal{
+
+/*стилизация ссылки для входа*/
+.catalog-menu__section-link--personal {
   border-top: 2px solid $catalog-menu-border-color;
 }
-
-.catalog-menu__section-link--personal::before{
+.catalog-menu__section-link--personal::before {
   background-image: svg-load('../icons/enter.svg', stroke=#ed4032, fill=none, stroke-width=2);
 }
 
+/*мобильные ссылки на категории*/
 .catalog-menu__category-header,
 .catalog-menu__subcategory-header {
   @extend .mobile-menu-link;
   background-color: #f4f3ef;
-
   &:hover {
     background-color: $lightgrey-color;
   }
 }
 
+
 .catalog-menu__category-name {
   @extend .mobile-menu-link;
 }
 
+/*категории с подкатегориями помечаются ссылками*/
 .catalog-menu__category-name:not(:only-child) {
   @extend .link-arrow;
 }
@@ -82,6 +88,9 @@
 .catalog-menu__subcategory-link {
   @extend .mobile-menu-link;
 }
+
+
+
 /*------------------стили для 980-----------------------------*/
 @media #{$tablet-width} {
   .catalog-menu {
@@ -89,67 +98,83 @@
     flex-direction: column;
     flex-wrap: no-wrap;
     align-content: flex-start;
+
     max-height: calc(100vh - 70px);
     max-width: 65px;
-
     box-sizing: border-box;
+
     position: fixed;
     top: 70px;
     bottom: 0;
-    visibility: visible;
     left: 0;
     margin: 0;
     padding: 0;
     width: 65px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    visibility: visible;
     background-color: #f4f3ef;
     box-shadow: none;
-    font-size: 0;
     z-index: 100;
     transition-property: width;
     transition-delay: $cat-delay;
     transition-duration: $cat-delay;
-    overflow-y:auto;
-    overflow-x: hidden;
+
+  /*стилизация скролла*/
+  /*хром*/
     &::-webkit-scrollbar {
-      width: 8px;
-      background-color: #fae7cf;
-    }
-    &::-moz-scrollbar {
       width: 8px;
       background-color: #fae7cf;
     }
     &::-webkit-scrollbar-thumb {
       background-color: #ff851e;
     }
+    /*мозилла*/
+    &::-moz-scrollbar {
+      width: 8px;
+      background-color: #fae7cf;
+    }
     &::-moz-scrollbar-thumb {
       background-color: #ff851e;
     }
+    /*ie*/
+    scrollbar-base-color: #ff851e;
+    scrollbar-3dlight-color: #ff851e;
+    scrollbar-highlight-color: #fae7cf;
+    scrollbar-track-color: #fae7cf;
+    scrollbar-arrow-color: #fae7cf;
+    scrollbar-shadow-color: #fae7cf;
+    scrollbar-dark-shadow-color: #fae7cf;
 
+    /*стили для открытого сайдбара*/
     &:hover {
       width: 320px;
       max-width: 320px;
       border-right: 2px solid $catalog-menu-border-color;
+
       .catalog-menu__item {
         width: 318px;
       }
-      .catalog-menu__item--collapsing{
+
+      .catalog-menu__item--collapsing {
         width: 158px;
         border-right: 2px solid $catalog-menu-border-color;
         margin-top: -50px;
       }
-      .catalog-menu__item--collapsing-right{
+
+      .catalog-menu__item--collapsing-right {
         visibility: visible;
         height: 50px;
         margin-top: 0;
         margin-left: 160px;
         border-right: none;
-
       }
     }
   }
 
-
-  .catalog-menu__item, .catalog-menu__item--collapsing {
+  .catalog-menu__item,
+  .catalog-menu__item--collapsing {
     width: 65px;
     overflow: hidden;
     flex-grow: 0;
@@ -157,28 +182,83 @@
     transition-property: all;
     transition-duration: $cat-delay*2;
   }
-  .catalog-menu__item--collapsing-right{
-  visibility: hidden;
-  height: 0;
-  }
 
+  .catalog-menu__item--collapsing-right {
+    visibility: hidden;
+    height: 0;
+  }
   /*показываем скрытые в мобильной версии ссылки-дубликаты*/
   .catalog-menu__item--discount {
     display: block;
   }
-
   .catalog-menu__item--instock {
     display: block;
-
     margin-bottom: auto;
   }
+  /*при наведении на категорию показывается выпадающее подменю этой категории*/
+  .catalog-menu__item:hover .catalog-menu__category-list {
+    visibility: visible;
+    opacity: 1;
+  /*стилизуем скролл у меню подкатегории*/
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: #fae7cf;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #ff851e;
+    }
+    &::-moz-scrollbar {
+      width: 8px;
+      background-color: #fae7cf;
+    }
+    &::-moz-scrollbar-thumb {
+      background-color: #ff851e;
+    }
+    scrollbar-base-color: #ff851e;
+    scrollbar-3dlight-color: #ff851e;
+    scrollbar-highlight-color: #fae7cf;
+    scrollbar-track-color: #fae7cf;
+    scrollbar-arrow-color: #fae7cf;
+    scrollbar-shadow-color: #fae7cf;
+    scrollbar-dark-shadow-color: #fae7cf;
+  }
 
+  /*белая подложка стилизуется отдельно для плавной анимации*/
+  .catalog-menu__item::before {
+    content: "";
+    display: block;
+    visibility: hidden;
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    left: 320px;
+    width: 320px;
+    background-color: white;
+    transition-property: visibility,opacity;
+    transition-duration: $cat-duration;
+    transition-delay: $cat-delay;
+    transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    box-shadow: 3px 0 8px rgba(49, 54, 54, 0.2);
+  }
 
+  .catalog-menu__item:hover::before {
+    visibility: visible;
+    transition-property: visibility;
+    transition-duration: $cat-duration;
+    transition-delay: 20ms;
+  }
 
+  /*ссылки без выпадающего меню*/
+  .catalog-menu__item--discount:hover::before,
+  .catalog-menu__item--instock:hover::before {
+    visibility: hidden;
+  }
+  /*ссылка на личный кабинет прилипает к низу*/
+  .catalog-menu__item--personal {
+      margin-top: -2px;
+  }
 
-  /*
-  поведение пунктов первого уровня меню по наведению мыши
-  */
+  /*поведение пунктов первого уровня меню по наведению мыши*/
   .catalog-menu__item:hover .catalog-menu__section-link {
     background-color: #ff851e;
     border-color: #ff851e;
@@ -187,18 +267,19 @@
     transition-delay: $cat-delay;
     transition-duration: $cat-duration;
   }
-    @each $icon in $catalog-icons {
-    .catalog-menu__item:hover  .catalog-menu__section-link--#{$icon}::before {
-        background-image: svg-load('../icons/#{$icon}.svg', stroke=#ffffff, fill=none, stroke-width=2);
-      }
+  @each $icon in $catalog-icons {
+    .catalog-menu__item:hover .catalog-menu__section-link--#{$icon}::before {
+      background-image: svg-load('../icons/#{$icon}.svg', stroke=#ffffff, fill=none, stroke-width=2);
     }
-    /*ссылка для входа стилизуется отдельно*/
-  .catalog-menu__item:hover  .catalog-menu__section-link--personal {
-      &::before {
-        background-image: svg-load('../icons/enter.svg', stroke=#ffffff, fill=none, stroke-width=2);
+  }
 
-      }
+  /*ссылка для входа стилизуется отдельно*/
+  .catalog-menu__item:hover .catalog-menu__section-link--personal {
+    &::before {
+      background-image: svg-load('../icons/enter.svg', stroke=#ffffff, fill=none, stroke-width=2);
     }
+  }
+
 
   /*убираем автоматические стрелочки для ссылок на подменю*/
   .catalog-menu__section-link::after {
@@ -209,6 +290,7 @@
     visibility: visible;
     border-color: white;
   }
+
   /*стилизуем выпадающее меню подкатегорий*/
   /*Заголовок категории*/
   .catalog-menu__category-header {
@@ -221,7 +303,6 @@
     color: $lightorange-color;
     text-decoration: none;
     margin-bottom: 14px;
-
     &:hover {
       background: none;
       text-decoration: underline;
@@ -247,64 +328,7 @@
     font-weight: 200;
     overflow-y: auto;
   }
-  /*при наведении на категорию показывается выпадающее подменю этой категории*/
-  .catalog-menu__item:hover .catalog-menu__category-list {
-    visibility: visible;
-    opacity: 1;
 
-    &::-webkit-scrollbar {
-      width: 8px;
-      background-color: #fae7cf;
-    }
-    &::-moz-scrollbar {
-      width: 8px;
-      background-color: #fae7cf;
-    }
-    &::-webkit-scrollbar-thumb {
-      background-color: #ff851e;
-    }
-    &::-moz-scrollbar-thumb {
-      background-color: #ff851e;
-    }
-
-  }
-
-
-
-  /*подложка*/
-  .catalog-menu__item::before {
-    content: "";
-    display: block;
-    visibility: hidden;
-    position: fixed;
-    top: 70px;
-    bottom: 0;
-    left: 320px;
-    width: 320px;
-    background-color: white;
-    transition-property: visibility,opacity;
-    transition-duration: $cat-duration;
-    transition-delay: $cat-delay;
-    transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-    box-shadow: 3px 0 8px rgba(49, 54, 54, 0.2);
-  }
-
-  .catalog-menu__item:hover::before {
-    visibility: visible;
-    transition-property: visibility;
-    transition-duration: $cat-duration;
-    transition-delay: 20ms;
-  }
-/*ссылки без выпадающего меню*/
-  .catalog-menu__item--discount:hover::before,.catalog-menu__item--instock:hover::before {
-   visibility: hidden;
- }
-
-/*ссылка на личный кабинет прилипает к низу*/
-.catalog-menu__item--personal{
-/*  margin-top: calc(100vh - 719px);*/
-
-}
 
   /*списки ссылок на подкатегории*/
   .catalog-menu__subcategory-list {
@@ -322,7 +346,8 @@
   }
 
   .catalog-menu__category-name {
-    display: inline;
+    display: block;
+    height: auto;
     background: none;
     border-bottom: none;
     line-height: 25px;
@@ -348,15 +373,14 @@
     text-decoration: none;
     margin-bottom: 14px;
     cursor: auto;
-
     &:hover {
       text-decoration: none;
     }
   }
   /*стилизуем ссылки последнего уровня*/
   .catalog-menu__subcategory-link {
-    display: inline;
-    background: none;
+    display: block;
+    height: auto;
     border-bottom: none;
     text-decoration: none;
     color: $blackgrey-color;
@@ -369,27 +393,19 @@
     }
   }
 }
-
-
-@media #{$desktop-width}{
+@media #{$desktop-width} {
   /*возвращаем узким ссылкам нормальное поведение*/
-
-  .catalog-menu__item--collapsing-right{
+  .catalog-menu__item--collapsing-right {
     visibility: visible;
     height: 50px;
   }
-  .catalog-menu:hover{
-    .catalog-menu__item--collapsing{
+
+  .catalog-menu:hover {
+    .catalog-menu__item--collapsing {
       width: 318px;
       border-right: none;
       margin-top: 0;
       margin-left: 0;
     }
   }
-  /*ссылка на личный кабинет прилипает к низу*/
-  .catalog-menu__item--personal{
-  /*  margin-top: calc(100vh - 769px);*/
-  }
-
-
 }
