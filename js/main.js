@@ -8,7 +8,7 @@ var MAXMOBILEWIDTH=980;
 //= partials/counters.js
 //= partials/user-id.js
 //= partials/geo-drop.js
-
+//= partials/tablet-desktop-menu.js
 
 
 var menuOpened = false;

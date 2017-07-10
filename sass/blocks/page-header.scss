@@ -17,7 +17,7 @@
   z-index: $sticky-wrapper-z-index;
   display: flex;
   align-items: center;
-    margin-bottom: 69px;
+  margin-bottom: 69px;
 }
 
 /*обертка для позиционирования поиска в хедере*/
@@ -130,7 +130,7 @@ position: relative;
   .page-header__call {
     margin-left: calc(1vw * 5);
     margin-right: 60px;
-    
+
   }
   .page-header__user-id{
     right: 76px;

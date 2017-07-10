@@ -4,15 +4,13 @@ $(".geolocation__current").click(function(e) {
   e.stopPropagation();
   if (!geoOpened) {
     showDrop(".geolocation__picker-wrap");
-    $(".overlay").addClass("overlay--soft");
-    $(".overlay").show();
+    $("#header-overlay").show();
     geoOpened = true;
   }
   else{
     hideDrop(".geolocation__picker-wrap");
     geoOpened = false;
-    $(".overlay").hide();
-    $(".overlay").removeClass("overlay--soft");
+    $("#header-overlay").hide();
 
   }
 });
@@ -27,8 +25,7 @@ $(document).click(function(e) {
   if (geoOpened) {
     hideDrop(".geolocation__picker-wrap");
     geoOpened = false;
-    $(".overlay").hide();
-    $(".overlay").removeClass("overlay--soft");
+    $("#header-overlay").hide();
   }
 });
 
