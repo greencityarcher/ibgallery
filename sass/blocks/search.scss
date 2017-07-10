@@ -49,7 +49,7 @@
     position: relative;
     border-bottom: 2px solid #e4e3e1;
     width: auto;
-  
+
   }
 
 .search__query-input-wrap{
@@ -136,7 +136,7 @@
       &::before {
         content: "";
         width: 31px;
-        height: 1px;
+        height: 2px;
         transform: translate(-50%, -50%) rotate(45deg);
         background-color: #424242;
         position: absolute;

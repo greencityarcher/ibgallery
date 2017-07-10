@@ -1,6 +1,5 @@
 var MAXMOBILEWIDTH=980;
 
-
 /*!
  * jQuery JavaScript Library v3.2.1
  * https://jquery.com/
@@ -10254,64 +10253,42 @@ if ( !noGlobal ) {
 
 return jQuery;
 } );
-var searchActive = false;
-$(document).ready(function(){
-  $("#main-search-toggle").removeAttr("href");
-  $("#main-search").prepend('<a id="back-from-search">Назад</a>');
-})
-
-
 $("#main-search-toggle").click(function() {
-      if (searchActive) {
-        $("#main-search").removeClass("opened");
-        searchActive = false;
-        if ($(window).width() <= MAXMOBILEWIDTH) {
-            $("#main-nav").show();
-          }
-        }
-        else {
-          $("#main-search").addClass("opened");
-          searchActive = true;
-          if ($(window).width() <= MAXMOBILEWIDTH) {
-              $("#main-nav").hide();
-            }
-        }
-      });
-
-
-    //возврат по кнопке Назад
-    $("#back-from-search").click(function() {
-      $("#main-search").removeClass("opened");
-      searchActive = false;
-      $("#main-search").show();
-      console.log("search closed and visible");
+  if ($("#main-search").hasClass("opened")) {
+    $("#main-search").removeClass("opened");
+    console.log("search closed");
+    if ($(window).width() <= MAXMOBILEWIDTH) {
       $("#main-nav").show();
-    });
+    }
+  } else {
+    $("#main-search").addClass("opened");
+
+    console.log("search active");
+    if ($(window).width() <= MAXMOBILEWIDTH) {
+      $("#main-nav").hide();
+    }
+  }
+});
 
 
-
-    //поисковые подсказки показываются, когда фокус переходит в строку поиска
-
-    $("#search-query-input").focusin(function() {
-      $("#search-hint").show();
-    });
-
-    $("#search-query-input").focusout(function() {
-      $("#search-hint").hide();
-    })
+//возврат по кнопке Назад
+$(document).on('click', "#back-from-search", function() {
+  console.log("search closed and visible");
+  $("#main-search").removeClass("opened");
+  $("#main-nav").show();
+});
 
 
-    //в десктопной версии поиск всегда показывается
-    $(window).resize(function() {
-      if ($(window).width() > MAXMOBILEWIDTH) {
-        $("#main-search").removeAttr("style");
-      }
-    });
-var menuOpened = false;
+//поисковые подсказки показываются, когда фокус переходит в строку поиска
 
-//ко всем спискам добавляется кнопка назад
-$(".main-menu ul").prepend('<li class="link-back">Назад</li>');
-$(".main-menu>li>ul>li:first-child").addClass("link-back--to-first-lvl");
+$("#search-query-input").focusin(function() {
+  $("#search-hint").show();
+});
+
+$("#search-query-input").focusout(function() {
+  $("#search-hint").hide();
+});
+
 
 
 function openMenu() {
@@ -10352,7 +10329,7 @@ function clearInlineStyles() {
 
 
 //открывание-закрывание меню по клику на бургер
-$("#mobile-menu-btn").click(function() {
+$(document).on('click', "#mobile-menu-btn", function() {
   if ((menuOpened) && ($(window).width() < MAXMOBILEWIDTH)) {
     closeMenu();
   } else {
@@ -10363,7 +10340,7 @@ $("#mobile-menu-btn").click(function() {
 
 //открывание разделов подменю
 $(".mobile-menu-link").click(function() {
-  if ($(window).width() < MAXMOBILEWIDTH) {
+  if ($(window).width() <= MAXMOBILEWIDTH) {
     $(this).hide();
     $(this).siblings().show();
     $(this).parent().siblings().hide();
@@ -10373,8 +10350,7 @@ $(".mobile-menu-link").click(function() {
 });
 
 //возврат по кнопке "назад"
-$(".link-back").click(function() {
-
+$(document).on('click', ".link-back", function() {
   $(this).parent().hide(); //скрываем подменю
   $(this).parent().parent().children().first().show(); //показываем ссылку на родительский раздел
   $(this).parent().parent().siblings(":not(.wide-only)").show(); //и остальные разделы этого уровня, если они не помечены как только для широкой версии
@@ -10382,25 +10358,29 @@ $(".link-back").click(function() {
 
 //показываем поиск на первом уровне
 
-$(".link-back--to-first-lvl").click(function() {
+$(document).on('click', ".link-back--to-first-lvl", function() {
   $("#main-search").show();
-});
-
-
-//отслеживание ширины окна для предотвращения пропадания контента
-$(window).resize(function() {
-  if (($(window).width() >= MAXMOBILEWIDTH) && menuOpened) {
-    console.log(menuOpened);
-    closeMenu();
-    clearInlineStyles();
-    console.log(menuOpened);
-  }
 });
 //осветление страницы при выпадающем меню
 
+function fadeContent() {
+  if (($(window).width() > MAXMOBILEWIDTH)) {
+
+    $(".catalog-menu").css({
+      opacity: 0.65
+    });
+
+    $(".grid__main-wrapper").css({
+      opacity: 0.65
+    });
+  }
+}
+
+
+
 $(".main-menu__item").hover(
   function() {
-    if ( ($(window).width() >MAXMOBILEWIDTH) && ( !($(this).hasClass("main-menu__item--no-sub"))))  {
+    if (($(window).width() > MAXMOBILEWIDTH) && (!($(this).hasClass("main-menu__item--no-sub")))) {
       if (!($(this).hasClass("main-menu__item--catalog"))) {
         $(".catalog-menu").css({
           opacity: 0.65
@@ -10412,7 +10392,7 @@ $(".main-menu__item").hover(
     }
   },
   function() {
-    if ($(window).width() >MAXMOBILEWIDTH) {
+    if ($(window).width() > MAXMOBILEWIDTH) {
       if (!($(this).hasClass("main-menu__item--catalog"))) {
         $(".catalog-menu").css({
           opacity: 1
@@ -10487,3 +10467,74 @@ function hideIdBlocks() {
     $(this).hide();
   });
 }
+var geoOpened = false;
+
+$(".geolocation__current").click(function(e) {
+  e.stopPropagation();
+  if (!geoOpened) {
+    showDrop(".geolocation__picker-wrap");
+    $(".overlay").addClass("overlay--soft");
+    $(".overlay").show();
+    geoOpened = true;
+  }
+  else{
+    hideDrop(".geolocation__picker-wrap");
+    geoOpened = false;
+    $(".overlay").hide();
+    $(".overlay").removeClass("overlay--soft");
+
+  }
+});
+
+
+$(".geolocation__picker-wrap").click(function(e){
+  e.stopPropagation();
+
+});
+
+$(document).click(function(e) {
+  if (geoOpened) {
+    hideDrop(".geolocation__picker-wrap");
+    geoOpened = false;
+    $(".overlay").hide();
+    $(".overlay").removeClass("overlay--soft");
+  }
+});
+
+
+
+function showDrop(id) {
+  $(id).slideDown();
+}
+
+function hideDrop(id) {
+  $(id).slideUp();
+}
+
+
+
+var menuOpened = false;
+$("#main-search").prepend('<a id="back-from-search">Назад</a>');
+//ко всем спискам добавляется кнопка назад
+$(".main-menu ul").prepend('<li class="link-back">Назад</li>');
+$(".main-menu>li>ul>li:first-child").addClass("link-back--to-first-lvl");
+
+$(document).ready(function(){
+  $("#main-search-toggle").removeAttr("href");
+});
+
+
+
+
+//отслеживание ширины окна для предотвращения пропадания контента
+$(window).resize(function() {
+  if (($(window).width() > MAXMOBILEWIDTH) && menuOpened) {
+    console.log(menuOpened);
+    closeMenu();
+    clearInlineStyles();
+    console.log(menuOpened);
+    if ($(window).width() > MAXMOBILEWIDTH) {
+      $("#main-search").removeAttr("style");
+    }
+  }
+});

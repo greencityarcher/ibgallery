@@ -105,14 +105,7 @@
   min-width: 320px;
   max-width: 100%;
   min-height: 100vh;
-  background-color: #f4f3ef;
-  scrollbar-base-color: #fae7cf;
-  scrollbar-3dlight-color: #fae7cf;
-  scrollbar-highlight-color: #fae7cf;
-  scrollbar-track-color: #ff851e;
-  scrollbar-arrow-color: #ff851e;
-  scrollbar-shadow-color: #fae7cf;
-  scrollbar-dark-shadow-color: #fae7cf; }
+  background-color: #f4f3ef; }
 
 h1,
 h2,
@@ -530,6 +523,7 @@ h3 {
   margin: auto;
   line-height: 68px;
   vertical-align: center;
+  text-decoration: none;
   cursor: pointer; }
 
 .featured__link--counting::after {
@@ -547,7 +541,8 @@ h3 {
   font-size: 11px;
   font-weight: 500;
   line-height: 17px;
-  text-align: center; }
+  text-align: center;
+  text-decoration: none; }
 
 .featured__link--shopping-card {
   width: 23px;
@@ -601,6 +596,7 @@ h3 {
        -o-transition-duration: 100ms;
           transition-duration: 100ms; }
 
+/*стрелки имеют только ссылки на раскрывающиеся категории*/
 /*место под иконки*/
 .catalog-menu__section-link::before {
   content: "";
@@ -668,12 +664,14 @@ h3 {
 .catalog-menu__section-link--instock::before {
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 37 29.3' style='enable-background:new 0 0 37 29.3;' xml:space='preserve' stroke='%23ff8618' fill='none' stroke-width='2'%3E %3Cg%3E %3Cpolygon points='5,28.3 1,28.3 1,8.6 18.5,1.2 36,8.6 36,28.3 32,28.3 32,12.3 5,12.3 '/%3E %3Cg%3E %3Crect x='10' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='16' y='22.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='13' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='19' y='16.3' width='6' height='6'/%3E %3C/g%3E %3Cg%3E %3Crect x='22' y='22.3' width='6' height='6'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E"); }
 
+/*стилизация ссылки для входа*/
 .catalog-menu__section-link--personal {
   border-top: 2px solid #e4e3e1; }
 
 .catalog-menu__section-link--personal::before {
   background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 25.8 25.9' style='enable-background:new 0 0 25.8 25.9;' xml:space='preserve' stroke='%23ed4032' fill='none' stroke-width='2'%3E %3Cg%3E %3Cellipse transform='matrix(0.7071 0.7071 -0.7071 0.7071 14.5344 -1.555)' cx='9.1' cy='16.8' rx='8' ry='8'/%3E %3Cellipse transform='matrix(0.7071 0.7071 -0.7071 0.7071 15.1202 -0.1408)' cx='7.7' cy='18.2' rx='2.4' ry='2.4'/%3E %3Cpolyline points='13,9.4 20.8,1.6 24.7,1.2 24.3,5.1 23.3,6.2 21.4,5.9 21.6,7.9 20.1,9.4 18.1,9.2 18.4,11.1 16.5,13 '/%3E %3C/g%3E %3C/svg%3E"); }
 
+/*мобильные ссылки на категории*/
 .catalog-menu__category-header,
 .catalog-menu__subcategory-header {
   background-color: #f4f3ef; }
@@ -681,6 +679,7 @@ h3 {
   .catalog-menu__subcategory-header:hover {
     background-color: #b9b9b9; }
 
+/*категории с подкатегориями помечаются ссылками*/
 .catalog-menu__subcategory-list {
   padding: 0;
   margin: 0;
@@ -776,23 +775,25 @@ h3 {
   -js-display: flex;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
 
 .catalog__item {
   margin-right: 26px;
-  margin-bottom: 26px;
-  float: left; }
+  margin-bottom: 26px; }
 
 .good {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   position: relative;
-  width: 265px;
-  min-height: 300px; }
-
-.good__base-info {
-  position: relative;
-  min-height: 300px; }
+  -ms-flex-preferred-size: 265px;
+      flex-basis: 265px;
+  max-width: 460px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
 
 .good__link {
   position: relative;
@@ -804,58 +805,8 @@ h3 {
 .good__id {
   display: none; }
 
-.good:hover .good__id {
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  font-size: 14px;
-  color: white;
-  line-height: 32px;
-  background-color: #282828;
-  padding-left: 7px;
-  padding-right: 7px;
-  z-index: 10; }
-
-.good:hover .good__zoom {
-  display: block;
-  position: absolute;
-  width: 46px;
-  height: 48px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../icons/zoom.png"); }
-
-.good__names {
-  max-width: 265px; }
-
-.good:hover .good__back {
-  position: absolute;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 13px;
-  top: -13px;
-  left: -13px;
-  display: block;
-  width: 292px;
-  z-index: 15;
-  background-color: white;
-  border-radius: 1px;
-  -webkit-box-shadow: 0 0 15px rgba(49, 54, 54, 0.25);
-          box-shadow: 0 0 15px rgba(49, 54, 54, 0.25); }
-
-.good:hover .good__link {
-  position: relative; }
-
-.good__names {
-  position: relative; }
-
-.good:hover .good__info {
-  display: block; }
-
 .good__photo {
-  width: 265px;
-  height: 175px; }
+  width: 100%; }
 
 .good__brand {
   display: block;
@@ -872,17 +823,13 @@ h3 {
   font-weight: 900;
   letter-spacing: 1.4px;
   margin-bottom: 10px;
-  height: 52px;
   max-height: 78px;
-  /*запас на 3 строки*/
   overflow: hidden; }
-
-.good__name-link:hover {
-  color: #ff851e; }
+  .good__name-link:hover {
+    color: #ff851e; }
 
 .good__price {
   display: block;
-  bottom: 0;
   font-size: 20px;
   line-height: 22px;
   color: #282828; }
@@ -917,6 +864,49 @@ h3 {
   padding-left: 12px;
   padding-right: 12px; }
 
+.good:hover .good__back {
+  position: absolute;
+  padding: 13px;
+  top: -13px;
+  left: -13px;
+  width: 100%;
+  display: block;
+  z-index: 15;
+  background-color: white;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 0 15px rgba(49, 54, 54, 0.25);
+          box-shadow: 0 0 15px rgba(49, 54, 54, 0.25); }
+
+.good:hover .good__id {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 14px;
+  color: white;
+  line-height: 32px;
+  background-color: #282828;
+  padding-left: 7px;
+  padding-right: 7px;
+  z-index: 10; }
+
+.good:hover .good__zoom {
+  display: block;
+  position: absolute;
+  width: 46px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../icons/zoom.png"); }
+
+.good:hover .good__link {
+  position: relative; }
+
+.good:hover .good__info {
+  display: block;
+  width: 100%;
+  z-index: 15; }
+
 .geolocation {
   position: absolute;
   top: 51px;
@@ -936,7 +926,19 @@ h3 {
     color: #ff832e; }
 
 .geolocation__picker-wrap {
-  position: relative; }
+  position: absolute;
+  top: 15px;
+  left: 0;
+  height: 300px;
+  padding: 10px;
+  background-color: white;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0 15px rgba(49, 54, 54, 0.25);
+          box-shadow: 0 0 15px rgba(49, 54, 54, 0.25);
+  z-index: 35;
+  display: none; }
 
 .geolocation__current-style {
   position: relative; }
@@ -951,22 +953,21 @@ h3 {
     border-bottom: 2px dotted #ff832e; }
 
 .geolocation__picker {
-  display: none;
-  position: absolute;
-  top: 0px;
-  left: 0;
-  background-color: white;
-  padding: 20px 10px;
-  border: 1px solid #bcbebd;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  overflow-y: auto;
+  height: 250px; }
+  .geolocation__picker::-webkit-scrollbar {
+    width: 8px;
+    background-color: #fae7cf; }
+  .geolocation__picker::-moz-scrollbar {
+    width: 8px;
+    background-color: #fae7cf; }
+  .geolocation__picker::-webkit-scrollbar-thumb {
+    background-color: #ff851e; }
+  .geolocation__picker::-moz-scrollbar-thumb {
+    background-color: #ff851e; }
 
-/*Геолокация скрыта, так как от нее отказались*/
 .geolocation:hover .geolocation__picker {
-  display: block;
-  height: 250px;
-  overflow-y: auto; }
+  display: block; }
 
 .geolocation__header {
   font-size: 16px;
@@ -1272,6 +1273,12 @@ h3 {
     padding-top: 70px; }
   .overlay {
     background-color: rgba(0, 0, 0, 0.2); }
+  .overlay--soft {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.35);
+    z-index: 35; }
   .page-header {
     height: 70px;
     width: 100%;
@@ -1510,7 +1517,7 @@ h3 {
       .opened.search .search__toggle::before {
         content: "";
         width: 31px;
-        height: 1px;
+        height: 2px;
         -webkit-transform: translate(-50%, -50%) rotate(45deg);
             -ms-transform: translate(-50%, -50%) rotate(45deg);
                 transform: translate(-50%, -50%) rotate(45deg);
@@ -1739,16 +1746,17 @@ h3 {
     position: fixed;
     top: 70px;
     bottom: 0;
-    visibility: visible;
     left: 0;
     margin: 0;
     padding: 0;
     width: 65px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: visible;
     background-color: #f4f3ef;
     -webkit-box-shadow: none;
             box-shadow: none;
-    font-size: 0;
-    z-index: 100;
+    z-index: 30;
     -webkit-transition-property: width;
     -o-transition-property: width;
     transition-property: width;
@@ -1758,16 +1766,26 @@ h3 {
     -webkit-transition-duration: 100ms;
          -o-transition-duration: 100ms;
             transition-duration: 100ms;
-    overflow-y: auto;
-    overflow-x: hidden; }
+    /*стилизация скролла*/
+    /*хром*/
+    /*мозилла*/
+    /*ie*/
+    scrollbar-base-color: #ff851e;
+    scrollbar-3dlight-color: #ff851e;
+    scrollbar-highlight-color: #fae7cf;
+    scrollbar-track-color: #fae7cf;
+    scrollbar-arrow-color: #fae7cf;
+    scrollbar-shadow-color: #fae7cf;
+    scrollbar-dark-shadow-color: #fae7cf;
+    /*стили для открытого сайдбара*/ }
     .catalog-menu::-webkit-scrollbar {
-      width: 8px;
-      background-color: #fae7cf; }
-    .catalog-menu::-moz-scrollbar {
       width: 8px;
       background-color: #fae7cf; }
     .catalog-menu::-webkit-scrollbar-thumb {
       background-color: #ff851e; }
+    .catalog-menu::-moz-scrollbar {
+      width: 8px;
+      background-color: #fae7cf; }
     .catalog-menu::-moz-scrollbar-thumb {
       background-color: #ff851e; }
     .catalog-menu:hover {
@@ -1786,7 +1804,8 @@ h3 {
         margin-top: 0;
         margin-left: 160px;
         border-right: none; }
-  .catalog-menu__item, .catalog-menu__item--collapsing {
+  .catalog-menu__item,
+  .catalog-menu__item--collapsing {
     width: 65px;
     overflow: hidden;
     -webkit-box-flex: 0;
@@ -1809,9 +1828,72 @@ h3 {
   .catalog-menu__item--instock {
     display: block;
     margin-bottom: auto; }
-  /*
-  поведение пунктов первого уровня меню по наведению мыши
-  */
+  /*при наведении на категорию показывается выпадающее подменю этой категории*/
+  .catalog-menu__item:hover .catalog-menu__category-list {
+    visibility: visible;
+    opacity: 1;
+    /*стилизуем скролл у меню подкатегории*/
+    scrollbar-base-color: #ff851e;
+    scrollbar-3dlight-color: #ff851e;
+    scrollbar-highlight-color: #fae7cf;
+    scrollbar-track-color: #fae7cf;
+    scrollbar-arrow-color: #fae7cf;
+    scrollbar-shadow-color: #fae7cf;
+    scrollbar-dark-shadow-color: #fae7cf; }
+    .catalog-menu__item:hover .catalog-menu__category-list::-webkit-scrollbar {
+      width: 8px;
+      background-color: #fae7cf; }
+    .catalog-menu__item:hover .catalog-menu__category-list::-webkit-scrollbar-thumb {
+      background-color: #ff851e; }
+    .catalog-menu__item:hover .catalog-menu__category-list::-moz-scrollbar {
+      width: 8px;
+      background-color: #fae7cf; }
+    .catalog-menu__item:hover .catalog-menu__category-list::-moz-scrollbar-thumb {
+      background-color: #ff851e; }
+  /*белая подложка стилизуется отдельно для плавной анимации*/
+  .catalog-menu__item::before {
+    content: "";
+    display: block;
+    visibility: hidden;
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    left: 320px;
+    width: 320px;
+    background-color: white;
+    -webkit-transition-property: visibility,opacity;
+    -o-transition-property: visibility,opacity;
+    transition-property: visibility,opacity;
+    -webkit-transition-duration: 100ms;
+         -o-transition-duration: 100ms;
+            transition-duration: 100ms;
+    -webkit-transition-delay: 100ms;
+         -o-transition-delay: 100ms;
+            transition-delay: 100ms;
+    -webkit-transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+         -o-transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+            transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    -webkit-box-shadow: 3px 0 8px rgba(49, 54, 54, 0.2);
+            box-shadow: 3px 0 8px rgba(49, 54, 54, 0.2); }
+  .catalog-menu__item:hover::before {
+    visibility: visible;
+    -webkit-transition-property: visibility;
+    -o-transition-property: visibility;
+    transition-property: visibility;
+    -webkit-transition-duration: 100ms;
+         -o-transition-duration: 100ms;
+            transition-duration: 100ms;
+    -webkit-transition-delay: 20ms;
+         -o-transition-delay: 20ms;
+            transition-delay: 20ms; }
+  /*ссылки без выпадающего меню*/
+  .catalog-menu__item--discount:hover::before,
+  .catalog-menu__item--instock:hover::before {
+    visibility: hidden; }
+  /*ссылка на личный кабинет прилипает к низу*/
+  .catalog-menu__item--personal {
+    margin-top: -2px; }
+  /*поведение пунктов первого уровня меню по наведению мыши*/
   .catalog-menu__item:hover .catalog-menu__section-link {
     background-color: #ff851e;
     border-color: #ff851e;
@@ -1901,62 +1983,6 @@ h3 {
     line-height: 23px;
     font-weight: 200;
     overflow-y: auto; }
-  /*при наведении на категорию показывается выпадающее подменю этой категории*/
-  .catalog-menu__item:hover .catalog-menu__category-list {
-    visibility: visible;
-    opacity: 1; }
-    .catalog-menu__item:hover .catalog-menu__category-list::-webkit-scrollbar {
-      width: 8px;
-      background-color: #fae7cf; }
-    .catalog-menu__item:hover .catalog-menu__category-list::-moz-scrollbar {
-      width: 8px;
-      background-color: #fae7cf; }
-    .catalog-menu__item:hover .catalog-menu__category-list::-webkit-scrollbar-thumb {
-      background-color: #ff851e; }
-    .catalog-menu__item:hover .catalog-menu__category-list::-moz-scrollbar-thumb {
-      background-color: #ff851e; }
-  /*подложка*/
-  .catalog-menu__item::before {
-    content: "";
-    display: block;
-    visibility: hidden;
-    position: fixed;
-    top: 70px;
-    bottom: 0;
-    left: 320px;
-    width: 320px;
-    background-color: white;
-    -webkit-transition-property: visibility,opacity;
-    -o-transition-property: visibility,opacity;
-    transition-property: visibility,opacity;
-    -webkit-transition-duration: 100ms;
-         -o-transition-duration: 100ms;
-            transition-duration: 100ms;
-    -webkit-transition-delay: 100ms;
-         -o-transition-delay: 100ms;
-            transition-delay: 100ms;
-    -webkit-transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-         -o-transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-            transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-    -webkit-box-shadow: 3px 0 8px rgba(49, 54, 54, 0.2);
-            box-shadow: 3px 0 8px rgba(49, 54, 54, 0.2); }
-  .catalog-menu__item:hover::before {
-    visibility: visible;
-    -webkit-transition-property: visibility;
-    -o-transition-property: visibility;
-    transition-property: visibility;
-    -webkit-transition-duration: 100ms;
-         -o-transition-duration: 100ms;
-            transition-duration: 100ms;
-    -webkit-transition-delay: 20ms;
-         -o-transition-delay: 20ms;
-            transition-delay: 20ms; }
-  /*ссылки без выпадающего меню*/
-  .catalog-menu__item--discount:hover::before, .catalog-menu__item--instock:hover::before {
-    visibility: hidden; }
-  /*ссылка на личный кабинет прилипает к низу*/
-  .catalog-menu__item--personal {
-    /*  margin-top: calc(100vh - 719px);*/ }
   /*списки ссылок на подкатегории*/
   .catalog-menu__subcategory-list {
     list-style: none;
@@ -1967,7 +1993,8 @@ h3 {
   .catalog-menu__subcategory-header {
     display: none; }
   .catalog-menu__category-name {
-    display: inline;
+    display: block;
+    height: auto;
     background: none;
     border-bottom: none;
     line-height: 25px;
@@ -1992,8 +2019,8 @@ h3 {
       text-decoration: none; }
   /*стилизуем ссылки последнего уровня*/
   .catalog-menu__subcategory-link {
-    display: inline;
-    background: none;
+    display: block;
+    height: auto;
     border-bottom: none;
     text-decoration: none;
     color: #242424;
@@ -2395,9 +2422,6 @@ h3 {
     border-right: none;
     margin-top: 0;
     margin-left: 0; }
-  /*ссылка на личный кабинет прилипает к низу*/
-  .catalog-menu__item--personal {
-    /*  margin-top: calc(100vh - 769px);*/ }
   .call-request {
     display: -webkit-box;
     display: -ms-flexbox;

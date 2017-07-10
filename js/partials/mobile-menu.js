@@ -1,8 +1,4 @@
-var menuOpened = false;
 
-//ко всем спискам добавляется кнопка назад
-$(".main-menu ul").prepend('<li class="link-back">Назад</li>');
-$(".main-menu>li>ul>li:first-child").addClass("link-back--to-first-lvl");
 
 
 function openMenu() {
@@ -43,7 +39,7 @@ function clearInlineStyles() {
 
 
 //открывание-закрывание меню по клику на бургер
-$("#mobile-menu-btn").click(function() {
+$(document).on('click', "#mobile-menu-btn", function() {
   if ((menuOpened) && ($(window).width() < MAXMOBILEWIDTH)) {
     closeMenu();
   } else {
@@ -54,7 +50,7 @@ $("#mobile-menu-btn").click(function() {
 
 //открывание разделов подменю
 $(".mobile-menu-link").click(function() {
-  if ($(window).width() < MAXMOBILEWIDTH) {
+  if ($(window).width() <= MAXMOBILEWIDTH) {
     $(this).hide();
     $(this).siblings().show();
     $(this).parent().siblings().hide();
@@ -64,8 +60,7 @@ $(".mobile-menu-link").click(function() {
 });
 
 //возврат по кнопке "назад"
-$(".link-back").click(function() {
-
+$(document).on('click', ".link-back", function() {
   $(this).parent().hide(); //скрываем подменю
   $(this).parent().parent().children().first().show(); //показываем ссылку на родительский раздел
   $(this).parent().parent().siblings(":not(.wide-only)").show(); //и остальные разделы этого уровня, если они не помечены как только для широкой версии
@@ -73,17 +68,6 @@ $(".link-back").click(function() {
 
 //показываем поиск на первом уровне
 
-$(".link-back--to-first-lvl").click(function() {
+$(document).on('click', ".link-back--to-first-lvl", function() {
   $("#main-search").show();
-});
-
-
-//отслеживание ширины окна для предотвращения пропадания контента
-$(window).resize(function() {
-  if (($(window).width() >= MAXMOBILEWIDTH) && menuOpened) {
-    console.log(menuOpened);
-    closeMenu();
-    clearInlineStyles();
-    console.log(menuOpened);
-  }
 });

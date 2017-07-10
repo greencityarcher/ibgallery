@@ -1,53 +1,35 @@
-var searchActive = false;
-$(document).ready(function(){
-  $("#main-search-toggle").removeAttr("href");
-  $("#main-search").prepend('<a id="back-from-search">Назад</a>');
-})
-
-
 $("#main-search-toggle").click(function() {
-      if (searchActive) {
-        $("#main-search").removeClass("opened");
-        searchActive = false;
-        if ($(window).width() <= MAXMOBILEWIDTH) {
-            $("#main-nav").show();
-          }
-        }
-        else {
-          $("#main-search").addClass("opened");
-          searchActive = true;
-          if ($(window).width() <= MAXMOBILEWIDTH) {
-              $("#main-nav").hide();
-            }
-        }
-      });
-
-
-    //возврат по кнопке Назад
-    $("#back-from-search").click(function() {
-      $("#main-search").removeClass("opened");
-      searchActive = false;
-      $("#main-search").show();
-      console.log("search closed and visible");
+  if ($("#main-search").hasClass("opened")) {
+    $("#main-search").removeClass("opened");
+    console.log("search closed");
+    if ($(window).width() <= MAXMOBILEWIDTH) {
       $("#main-nav").show();
-    });
+    }
+  } else {
+    $("#main-search").addClass("opened");
+
+    console.log("search active");
+    if ($(window).width() <= MAXMOBILEWIDTH) {
+      $("#main-nav").hide();
+    }
+  }
+});
 
 
-
-    //поисковые подсказки показываются, когда фокус переходит в строку поиска
-
-    $("#search-query-input").focusin(function() {
-      $("#search-hint").show();
-    });
-
-    $("#search-query-input").focusout(function() {
-      $("#search-hint").hide();
-    })
+//возврат по кнопке Назад
+$(document).on('click', "#back-from-search", function() {
+  console.log("search closed and visible");
+  $("#main-search").removeClass("opened");
+  $("#main-nav").show();
+});
 
 
-    //в десктопной версии поиск всегда показывается
-    $(window).resize(function() {
-      if ($(window).width() > MAXMOBILEWIDTH) {
-        $("#main-search").removeAttr("style");
-      }
-    });
+//поисковые подсказки показываются, когда фокус переходит в строку поиска
+
+$("#search-query-input").focusin(function() {
+  $("#search-hint").show();
+});
+
+$("#search-query-input").focusout(function() {
+  $("#search-hint").hide();
+});
