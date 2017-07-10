@@ -6,8 +6,7 @@ $(".geolocation__current").click(function(e) {
     showDrop(".geolocation__picker-wrap");
     $("#header-overlay").show();
     geoOpened = true;
-  }
-  else{
+  } else {
     hideDrop(".geolocation__picker-wrap");
     geoOpened = false;
     $("#header-overlay").hide();
@@ -16,7 +15,7 @@ $(".geolocation__current").click(function(e) {
 });
 
 
-$(".geolocation__picker-wrap").click(function(e){
+$(".geolocation__picker-wrap").click(function(e) {
   e.stopPropagation();
 
 });
@@ -28,7 +27,6 @@ $(document).click(function(e) {
     $("#header-overlay").hide();
   }
 });
-
 
 
 function showDrop(id) {

@@ -2,10 +2,9 @@
 
 
 function openMenu() {
-  $("#main-nav").slideDown();
   $("#main-nav").addClass("opened");
   $("#mobile-menu-btn").addClass("main-nav__mobile-menu-btn--close");
-  $("#main-search").slideDown();
+  $("#main-search").show();
   $("#sidebar").hide();
   $('#footer-social-links').hide();
   $("#content").hide();
@@ -13,7 +12,6 @@ function openMenu() {
 }
 
 function closeMenu() {
-  $("#main-nav").slideUp();
   $("#main-nav").removeClass("opened");
   $("#mobile-menu-btn").removeClass("main-nav__mobile-menu-btn--close");
   $("#main-search").removeClass("opened");

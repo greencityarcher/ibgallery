@@ -152,6 +152,7 @@
       width: 320px;
       max-width: 320px;
       border-right: 2px solid $catalog-menu-border-color;
+      z-index: 100;
 
       .catalog-menu__item {
         width: 318px;

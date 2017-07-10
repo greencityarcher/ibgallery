@@ -10292,10 +10292,9 @@ $("#search-query-input").focusout(function() {
 
 
 function openMenu() {
-  $("#main-nav").slideDown();
   $("#main-nav").addClass("opened");
   $("#mobile-menu-btn").addClass("main-nav__mobile-menu-btn--close");
-  $("#main-search").slideDown();
+  $("#main-search").show();
   $("#sidebar").hide();
   $('#footer-social-links').hide();
   $("#content").hide();
@@ -10303,7 +10302,6 @@ function openMenu() {
 }
 
 function closeMenu() {
-  $("#main-nav").slideUp();
   $("#main-nav").removeClass("opened");
   $("#mobile-menu-btn").removeClass("main-nav__mobile-menu-btn--close");
   $("#main-search").removeClass("opened");
@@ -10367,43 +10365,26 @@ $(document).on('click', ".link-back--to-first-lvl", function() {
 
 function fadeContent() {
   if (($(window).width() > MAXMOBILEWIDTH)) {
-
-    $(".catalog-menu").css({
-      opacity: 0.65
-    });
-
-    $(".grid__main-wrapper").css({
-      opacity: 0.65
-    });
+    $("#header-overlay").show();
   }
 }
 
+function unFadeContent(){
+  if (($(window).width() > MAXMOBILEWIDTH)) {
+    $("#header-overlay").hide();
+  }
+}
 
 
 $(".main-menu__item").hover(
   function() {
     if (($(window).width() > MAXMOBILEWIDTH) && (!($(this).hasClass("main-menu__item--no-sub")))) {
-      if (!($(this).hasClass("main-menu__item--catalog"))) {
-        $(".catalog-menu").css({
-          opacity: 0.65
-        });
-      }
-      $(".grid__main-wrapper").css({
-        opacity: 0.65
-      });
+      fadeContent();
     }
   },
   function() {
     if ($(window).width() > MAXMOBILEWIDTH) {
-      if (!($(this).hasClass("main-menu__item--catalog"))) {
-        $(".catalog-menu").css({
-          opacity: 1
-        });
-      }
-
-      $(".grid__main-wrapper").css({
-        opacity: 1
-      });
+      unFadeContent();
     }
   }
 );
@@ -10477,8 +10458,7 @@ $(".geolocation__current").click(function(e) {
     showDrop(".geolocation__picker-wrap");
     $("#header-overlay").show();
     geoOpened = true;
-  }
-  else{
+  } else {
     hideDrop(".geolocation__picker-wrap");
     geoOpened = false;
     $("#header-overlay").hide();
@@ -10487,7 +10467,7 @@ $(".geolocation__current").click(function(e) {
 });
 
 
-$(".geolocation__picker-wrap").click(function(e){
+$(".geolocation__picker-wrap").click(function(e) {
   e.stopPropagation();
 
 });
@@ -10499,7 +10479,6 @@ $(document).click(function(e) {
     $("#header-overlay").hide();
   }
 });
-
 
 
 function showDrop(id) {

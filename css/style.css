@@ -127,7 +127,7 @@ h3 {
   width: 100%;
   height: 69px;
   border-bottom: 1px solid #ff8618;
-  z-index: 1;
+  z-index: 30;
   display: -webkit-box;
   display: -ms-flexbox;
   -js-display: flex;
@@ -1284,7 +1284,7 @@ h3 {
     width: 100%;
     position: fixed;
     border-bottom: 1px solid #ff8618;
-    z-index: 1;
+    z-index: 30;
     padding-top: 0; }
   .page-header__sticky-wrapper {
     position: relative;
@@ -1690,6 +1690,7 @@ h3 {
     -webkit-transition-delay: 100ms;
          -o-transition-delay: 100ms;
             transition-delay: 100ms;
+    z-index: 100;
     /*псевдоэлемент для плавного перехода*/ }
     .sub-menu::before {
       content: "";
@@ -1791,7 +1792,8 @@ h3 {
     .catalog-menu:hover {
       width: 320px;
       max-width: 320px;
-      border-right: 2px solid #e4e3e1; }
+      border-right: 2px solid #e4e3e1;
+      z-index: 100; }
       .catalog-menu:hover .catalog-menu__item {
         width: 318px; }
       .catalog-menu:hover .catalog-menu__item--collapsing {
