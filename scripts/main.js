@@ -10258,14 +10258,14 @@ $("#main-search-toggle").click(function() {
     $("#main-search").removeClass("opened");
     console.log("search closed");
     if ($(window).width() <= MAXMOBILEWIDTH) {
-      $("#main-nav").show();
+      $("#main-nav").slideDown();
     }
   } else {
     $("#main-search").addClass("opened");
 
     console.log("search active");
     if ($(window).width() <= MAXMOBILEWIDTH) {
-      $("#main-nav").hide();
+      $("#main-nav").slideUp();
     }
   }
 });
@@ -10275,26 +10275,27 @@ $("#main-search-toggle").click(function() {
 $(document).on('click', "#back-from-search", function() {
   console.log("search closed and visible");
   $("#main-search").removeClass("opened");
-  $("#main-nav").show();
+  $("#main-nav").slideDown();
 });
 
 
 //поисковые подсказки показываются, когда фокус переходит в строку поиска
 
 $("#search-query-input").focusin(function() {
-  $("#search-hint").show();
+  $("#search-hint").slideDown();
 });
 
 $("#search-query-input").focusout(function() {
-  $("#search-hint").hide();
+  $("#search-hint").slideUp();
 });
 
 
 
 function openMenu() {
+  $("#main-nav").slideDown();
   $("#main-nav").addClass("opened");
   $("#mobile-menu-btn").addClass("main-nav__mobile-menu-btn--close");
-  $("#main-search").show();
+  $("#main-search").slideDown();
   $("#sidebar").hide();
   $('#footer-social-links').hide();
   $("#content").hide();
@@ -10302,6 +10303,7 @@ function openMenu() {
 }
 
 function closeMenu() {
+  $("#main-nav").slideUp();
   $("#main-nav").removeClass("opened");
   $("#mobile-menu-btn").removeClass("main-nav__mobile-menu-btn--close");
   $("#main-search").removeClass("opened");
@@ -10341,25 +10343,25 @@ $(document).on('click', "#mobile-menu-btn", function() {
 //открывание разделов подменю
 $(".mobile-menu-link").click(function() {
   if ($(window).width() <= MAXMOBILEWIDTH) {
-    $(this).hide();
-    $(this).siblings().show();
-    $(this).parent().siblings().hide();
-    $("#main-search").hide();
+    $(this).slideUp();
+    $(this).siblings().slideDown();
+    $(this).parent().siblings().slideUp();
+    $("#main-search").slideUp();
   }
 
 });
 
 //возврат по кнопке "назад"
 $(document).on('click', ".link-back", function() {
-  $(this).parent().hide(); //скрываем подменю
-  $(this).parent().parent().children().first().show(); //показываем ссылку на родительский раздел
-  $(this).parent().parent().siblings(":not(.wide-only)").show(); //и остальные разделы этого уровня, если они не помечены как только для широкой версии
+  $(this).parent().slideUp(); //скрываем подменю
+  $(this).parent().parent().children().first().slideDown(); //показываем ссылку на родительский раздел
+  $(this).parent().parent().siblings(":not(.wide-only)").slideDown(); //и остальные разделы этого уровня, если они не помечены как только для широкой версии
 });
 
 //показываем поиск на первом уровне
 
 $(document).on('click', ".link-back--to-first-lvl", function() {
-  $("#main-search").show();
+  $("#main-search").slideDown();
 });
 //осветление страницы при выпадающем меню
 
