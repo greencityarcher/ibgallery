@@ -138,6 +138,7 @@
 }
 
 .good:hover {
+
   &::before {
     content: "";
     position: absolute;
@@ -153,18 +154,7 @@
     box-shadow: 0 0 13px rgba(49, 54, 54, 0.25);
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    padding-left: 13px;
-    padding-right: 13px;
-    height: 15px;
-    left: -13px;
-    top: -13px;
-    z-index: 10;
-    background-color: white;
-  }
+
 
   .good__info {
     position: absolute;
@@ -186,6 +176,18 @@
       height: 100%;
       background-color: white;
       box-shadow: 0 0 13px rgba(49, 54, 54, 0.25);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      padding-left: 13px;
+      padding-right: 13px;
+      height: 15px;
+      left: -13px;
+      top: -13px;
+      z-index: 10;
+      background-color: white;
     }
   }
   .good__id {

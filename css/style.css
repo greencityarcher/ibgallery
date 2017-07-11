@@ -936,18 +936,6 @@ h3 {
   -webkit-box-shadow: 0 0 13px rgba(49, 54, 54, 0.25);
           box-shadow: 0 0 13px rgba(49, 54, 54, 0.25); }
 
-.good:hover::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  padding-left: 13px;
-  padding-right: 13px;
-  height: 15px;
-  left: -13px;
-  top: -13px;
-  z-index: 10;
-  background-color: white; }
-
 .good:hover .good__info {
   position: absolute;
   background: white;
@@ -968,6 +956,17 @@ h3 {
     background-color: white;
     -webkit-box-shadow: 0 0 13px rgba(49, 54, 54, 0.25);
             box-shadow: 0 0 13px rgba(49, 54, 54, 0.25); }
+  .good:hover .good__info::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    padding-left: 13px;
+    padding-right: 13px;
+    height: 15px;
+    left: -13px;
+    top: -13px;
+    z-index: 10;
+    background-color: white; }
 
 .good:hover .good__id {
   display: inline-block; }
