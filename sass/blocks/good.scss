@@ -1,111 +1,28 @@
 .good {
   position: relative;
-  flex-basis: 265px;
+  width: 253px;
   max-width: 460px;
   flex-grow: 1;
+  flex-shrink: 0;
+  margin-bottom: 26px;
+  margin-right: 13px;
+  margin-left: 13px;
 
-
-}
-
-
-.good__link {
-  position: relative;
-  text-decoration: none;
-  display: block;
-  font-size: 0;
-  margin-bottom: 18px;
-}
-
-.good__id {
-  display: none;
-}
-
-.good__photo {
-  width: 100%;
-}
-
-.good__brand {
-  display: block;
-  font-size: 16px;
-  line-height: 20px;
-  color: #6e6e6e;
-}
-
-.good__name-link {
-  text-decoration: underline;
-  display: block;
-  color: #282828;
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 900;
-  letter-spacing: 1.4px;
-  margin-bottom: 10px;
-  max-height: 78px;
-  overflow: hidden;
-
-  &:hover {
-    color: #ff851e;
+  &__base-info{
+    margin-bottom: 15px;
   }
-}
 
-.good__price {
-  display: block;
-  font-size: 20px;
-  line-height: 22px;
-  color: #282828;
-}
-
-.good__price-value {
-  font-size: 28px;
-  line-height: 22px;
-  color: #282828;
-}
-
-.good__info {
-  display: none;
-}
-
-.good__description {
-  color: #282828;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 18px;
-}
-
-.good__to-liked {
-  display: inline-block;
-  font-size: 14px;
-  border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #d4d4d4;
-  background-image: linear-gradient(0,#ddd,transparent);
-  color: #807f76;
-  line-height: 35px;
-  text-decoration: none;
-  padding-left: 12px;
-  padding-right: 12px;
-}
-
-.good:hover {
-
-
-  .good__back {
-    position: absolute;
-    padding: 13px;
-    top: -13px;
-    left: -13px;
-    width: 100%;
+  &__link {
+    position: relative;
+    text-decoration: none;
     display: block;
-    z-index: 15;
-    background-color: white;
-    border-radius: 1px;
-    box-shadow: 0 0 15px rgba(49, 54, 54, 0.25);
-
+    font-size: 0;
+    margin-bottom: 9px;
+    z-index: 10;
   }
 
-  .good__id {
-    display: inline-block;
+  &__id {
+    display: none;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -115,11 +32,18 @@
     background-color: #282828;
     padding-left: 7px;
     padding-right: 7px;
+    box-sizing: border-box;
+    min-width: 72px;
     z-index: 10;
+    text-align: center;
   }
 
-  .good__zoom {
-    display: block;
+  &__photo {
+    width: 100%;
+    z-index: 10;
+  }
+  &__zoom{
+    display: none;
     position: absolute;
     @extend .absolute-center-positioned;
     width: 46px;
@@ -129,15 +53,152 @@
     background-image: url("../icons/zoom.png");
   }
 
-
-
-  .good__link {
+  &__brand {
+    display: block;
     position: relative;
+    z-index: 10;
+    font-size: 16px;
+    line-height: 20px;
+    color: #6e6e6e;
+
+  }
+  &__name-link {
+    text-decoration: underline;
+    display: block;
+    position: relative;
+    z-index: 10;
+    color: #282828;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    margin-bottom: 10px;
+    &:hover {
+      color: #ff851e;
+    }
+  }
+  &__price {
+    display: block;
+    font-size: 20px;
+    line-height: 22px;
+    color: #282828;
+    position: relative;
+    z-index: 10;
+    letter-spacing: 0.5px;
   }
 
+  &__price-value {
+    font-size: 28px;
+    line-height: 22px;
+    color: #282828;
+  }
+
+  &__info {
+    display: none;
+    padding-bottom: 5px;
+
+  }
+
+  &__description {
+    margin-top: -5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #282828;
+    font-weight: 300;
+    line-height: 18px;
+    position: relative;
+    z-index: 12;
+  }
+
+  &__to-liked {
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d4d4d4;
+    background-image: linear-gradient(0,#ddd,transparent);
+    color: #676258;
+    line-height: 30px;
+    text-decoration: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    &:hover{
+      background-image: linear-gradient(0,#fff2cd,#fffaeb);
+    }
+  }
+
+
+}
+
+
+.good:hover {
+
+
+  &::before{
+    content:"";
+    position: absolute;
+    top:-13px;
+    left: -13px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 13px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 13px rgba(49, 54, 54, 0.25);
+
+  }
   .good__info {
+    position: absolute;
+    background: white;
     display: block;
     width: 100%;
     z-index: 15;
+    &::before{
+      content:"";
+      position: absolute;
+      bottom:-13px;
+      left: -13px;
+      padding-left: 13px;
+      padding-right: 13px;
+      padding-bottom: 13px;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      box-shadow: 0 0 13px  rgba(49, 54, 54, 0.25);
+
+
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      padding-left: 13px;
+      padding-right: 13px;
+      height: 15px;
+      left: -13px;
+      top: -13px;
+      z-index: 10;
+      background-color: white;
+    }
+
   }
+
+  .good__id {
+    display: inline-block;
+  }
+
+  .good__zoom {
+    display: block;
+  }
+
 }

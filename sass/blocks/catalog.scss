@@ -3,7 +3,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: stretch;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-top: 25px;
+  margin-bottom: 15px;
+
+
 }
 
 

@@ -8,18 +8,16 @@
   z-index: 500;
   display: none;
 }
-
 @media #{$tablet-width} {
   .overlay {
     background-color: rgba(0,0,0,0.2);
+
+    &--soft {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      background-color: rgba(255,255,255,0.65);
+      z-index: 40;
+    }
   }
-
-
-.overlay--soft{
-  position: fixed;
-  top: 70px;
-  left: 0;
-  background-color: rgba(255,255,255,0.35);
-  z-index: 40;
-}
 }

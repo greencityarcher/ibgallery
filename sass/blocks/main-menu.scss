@@ -185,4 +185,20 @@
   .main-menu__item:hover .sub-menu.fabrics-menu {
     display: block;
   }
+
+  .active.main-menu__item{
+    .main-menu__link {
+      background-color: $lightorange-color;
+      color: white;
+      transition-property: color, background-color;
+
+      &::after {
+        background-color: white;
+        border-color: white;
+        transition-property: background-color;
+        transition-duration: $duration;
+        transition-delay: $delay;
+      }
+  }
+}
 }
