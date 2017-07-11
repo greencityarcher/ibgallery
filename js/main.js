@@ -27,12 +27,13 @@ $(document).ready(function(){
 //отслеживание ширины окна для предотвращения пропадания контента
 $(window).resize(function() {
   if (($(window).width() > MAXMOBILEWIDTH) && menuOpened) {
-    console.log(menuOpened);
+
     closeMenu();
+
     clearInlineStyles();
-    console.log(menuOpened);
+
     if ($(window).width() > MAXMOBILEWIDTH) {
-      $("#main-search").removeAttr("style");
+      $("#main-search").removeClass("opened");
     }
   }
 });

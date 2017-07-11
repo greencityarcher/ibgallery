@@ -1,6 +1,7 @@
 .call-modal {
   position: fixed;
   width: 100%;
+  min-width: 320px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -123,6 +124,8 @@
   line-height: 35px;
   color: white;
   text-align: center;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 900;
 }
 
 .call-modal__phone {

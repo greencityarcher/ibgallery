@@ -19,6 +19,10 @@
   outline: none;
   border: none;
   cursor: pointer;
+  
+  &::-moz-focus-inner {
+  border: 0;
+}
 
   &::before {
     content: "";
@@ -65,7 +69,7 @@
     display: block;
     position: static;
     margin-top: -69px;
-    
+
   }
 
   .main-nav__mobile-menu-btn {
