@@ -130,6 +130,7 @@
     &::-webkit-scrollbar-thumb {
       background-color: #ff851e;
     }
+
     /*мозилла*/
     &::-moz-scrollbar {
       width: 8px;
@@ -137,7 +138,12 @@
     }
     &::-moz-scrollbar-thumb {
       background-color: #ff851e;
+      width: 8px;
     }
+    ::-moz-scrollbar-track-piece{
+      width: 8px;
+    }
+
     /*ie*/
     scrollbar-base-color: #ff851e;
     scrollbar-3dlight-color: #ff851e;
@@ -214,7 +220,13 @@
     }
     &::-moz-scrollbar-thumb {
       background-color: #ff851e;
+      width: 8px;
     }
+    ::-moz-scrollbar-track{
+      width: 8px;
+    }
+
+
     scrollbar-base-color: #ff851e;
     scrollbar-3dlight-color: #ff851e;
     scrollbar-highlight-color: #fae7cf;

@@ -58,7 +58,8 @@
   background-color: #ff851e; }
 
 .orange-scroll::-moz-scrollbar-thumb {
-  background-color: #ff851e; }
+  background-color: #ff851e;
+  width: 8px; }
 
 @font-face {
   font-family: "Helvetica Neue";
@@ -1878,7 +1879,10 @@ h3 {
       width: 8px;
       background-color: #fae7cf; }
     .catalog-menu::-moz-scrollbar-thumb {
-      background-color: #ff851e; }
+      background-color: #ff851e;
+      width: 8px; }
+    .catalog-menu ::-moz-scrollbar-track-piece {
+      width: 8px; }
     .catalog-menu:hover {
       width: 320px;
       max-width: 320px;
@@ -1941,7 +1945,10 @@ h3 {
       width: 8px;
       background-color: #fae7cf; }
     .catalog-menu__item:hover .catalog-menu__category-list::-moz-scrollbar-thumb {
-      background-color: #ff851e; }
+      background-color: #ff851e;
+      width: 8px; }
+    .catalog-menu__item:hover .catalog-menu__category-list ::-moz-scrollbar-track {
+      width: 8px; }
   /*белая подложка стилизуется отдельно для плавной анимации*/
   .catalog-menu__item::before {
     content: "";

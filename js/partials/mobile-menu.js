@@ -1,6 +1,3 @@
-
-
-
 function openMenu() {
   $("#main-nav").addClass("opened");
   $("#mobile-menu-btn").addClass("main-nav__mobile-menu-btn--close");

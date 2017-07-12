@@ -1,4 +1,4 @@
-var MAXMOBILEWIDTH=980;
+var MAXMOBILEWIDTH = 979;
 
 //= partials/jquery-3.2.1.js
 //= partials/main-search.js
@@ -9,31 +9,34 @@ var MAXMOBILEWIDTH=980;
 //= partials/user-id.js
 //= partials/geo-drop.js
 
-
-
 var menuOpened = false;
-$("#main-search").prepend('<a id="back-from-search">Назад</a>');
-//ко всем спискам добавляется кнопка назад
-$(".main-menu ul").prepend('<li class="link-back">Назад</li>');
-$(".main-menu>li>ul>li:first-child").addClass("link-back--to-first-lvl");
+var searchOpened = false;
+var lastWidth = $(window).width();
 
-$(document).ready(function(){
+$(document).ready(function() {
+  //при активном js не происходит переход на отдельную страницу поиска
   $("#main-search-toggle").removeAttr("href");
+
+  $("#main-search").prepend('<a id="back-from-search">Назад</a>');
+  //ко всем спискам добавляется кнопка назад
+  $(".main-menu ul").prepend('<li class="link-back">Назад</li>');
+  $(".main-menu>li>ul>li:first-child").addClass("link-back--to-first-lvl");
 });
-
-
 
 
 //отслеживание ширины окна для предотвращения пропадания контента
 $(window).resize(function() {
-  if (($(window).width() > MAXMOBILEWIDTH) && menuOpened) {
-
+  //если переходм с мобилки на планшет
+  if ((lastWidth <= MAXMOBILEWIDTH) && ($(window).width() > MAXMOBILEWIDTH) && menuOpened) {
     closeMenu();
-
+    closeSearch();
     clearInlineStyles();
-
-    if ($(window).width() > MAXMOBILEWIDTH) {
-      $("#main-search").removeClass("opened");
-    }
   }
+  //если переходим с планшета или десктопа на мобилку
+  if ((lastWidth > MAXMOBILEWIDTH) && ($(window).width() <= MAXMOBILEWIDTH) && searchOpened) {
+    closeSearch();
+    clearInlineStyles();
+  }
+
+  lastWidth = $(window).width();
 });

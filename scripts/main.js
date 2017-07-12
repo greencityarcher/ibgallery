@@ -1,4 +1,4 @@
-var MAXMOBILEWIDTH=980;
+var MAXMOBILEWIDTH = 979;
 
 /*!
  * jQuery JavaScript Library v3.2.1
@@ -10255,32 +10255,39 @@ return jQuery;
 } );
 $("#main-search-toggle").click(function() {
   if ($("#main-search").hasClass("opened")) {
-    $("#main-search").removeClass("opened");
-    console.log("search closed");
-    if ($(window).width() <= MAXMOBILEWIDTH) {
-      $("#main-nav").slideDown();
-    }
-  } else {
-    $("#main-search").addClass("opened");
-
-    console.log("search active");
-    if ($(window).width() <= MAXMOBILEWIDTH) {
-      $("#main-nav").slideUp();
-    }
+  closeSearch();
+  }
+  else {
+  openSearch();
   }
 });
 
 
+function openSearch(){
+    $("#main-search").addClass("opened");
+    searchOpened=true;
+    if ($(window).width() <= MAXMOBILEWIDTH) {
+      $("#main-nav").slideUp();
+    }
+}
+
+function closeSearch(){
+  $("#main-search").removeClass("opened");
+  searchOpened=false;
+  if ($(window).width() <= MAXMOBILEWIDTH) {
+    $("#main-nav").slideDown();
+  }
+}
+
+
 //возврат по кнопке Назад
 $(document).on('click', "#back-from-search", function() {
-  console.log("search closed and visible");
   $("#main-search").removeClass("opened");
   $("#main-nav").slideDown();
 });
 
 
 //поисковые подсказки показываются, когда фокус переходит в строку поиска
-
 $("#search-query-input").focusin(function() {
   $("#search-hint").slideDown();
 });
@@ -10288,9 +10295,6 @@ $("#search-query-input").focusin(function() {
 $("#search-query-input").focusout(function() {
   $("#search-hint").slideUp();
 });
-
-
-
 function openMenu() {
   $("#main-nav").addClass("opened");
   $("#mobile-menu-btn").addClass("main-nav__mobile-menu-btn--close");
@@ -10489,31 +10493,34 @@ function hideDrop(id) {
   $(id).slideUp();
 }
 
-
-
 var menuOpened = false;
-$("#main-search").prepend('<a id="back-from-search">Назад</a>');
-//ко всем спискам добавляется кнопка назад
-$(".main-menu ul").prepend('<li class="link-back">Назад</li>');
-$(".main-menu>li>ul>li:first-child").addClass("link-back--to-first-lvl");
+var searchOpened = false;
+var lastWidth = $(window).width();
 
-$(document).ready(function(){
+$(document).ready(function() {
+  //при активном js не происходит переход на отдельную страницу поиска
   $("#main-search-toggle").removeAttr("href");
+
+  $("#main-search").prepend('<a id="back-from-search">Назад</a>');
+  //ко всем спискам добавляется кнопка назад
+  $(".main-menu ul").prepend('<li class="link-back">Назад</li>');
+  $(".main-menu>li>ul>li:first-child").addClass("link-back--to-first-lvl");
 });
-
-
 
 
 //отслеживание ширины окна для предотвращения пропадания контента
 $(window).resize(function() {
-  if (($(window).width() > MAXMOBILEWIDTH) && menuOpened) {
-
+  //если переходм с мобилки на планшет
+  if ((lastWidth <= MAXMOBILEWIDTH) && ($(window).width() > MAXMOBILEWIDTH) && menuOpened) {
     closeMenu();
-
+    closeSearch();
     clearInlineStyles();
-
-    if ($(window).width() > MAXMOBILEWIDTH) {
-      $("#main-search").removeClass("opened");
-    }
   }
+  //если переходим с планшета или десктопа на мобилку
+  if ((lastWidth > MAXMOBILEWIDTH) && ($(window).width() <= MAXMOBILEWIDTH) && searchOpened) {
+    closeSearch();
+    clearInlineStyles();
+  }
+
+  lastWidth = $(window).width();
 });
